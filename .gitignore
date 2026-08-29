@@ -1,0 +1,8 @@
+# Proton Drive / Sync conflicts
+*# Edit conflict*
+*sync-conflict*
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
