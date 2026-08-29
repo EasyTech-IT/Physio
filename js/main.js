@@ -63,9 +63,9 @@
     }
     var navigation = [
       ["index.html", "Startseite", "fa-home"],
+      ["service.html", "Leistungen", "fa-hand-holding-medical"],
       ["about.html", "Praxis", "fa-clinic-medical"],
-      ["service.html", "Therapieangebote", "fa-hand-holding-medical"],
-      ["appointment.html", "Termin", "fa-calendar-check"],
+      ["index.html#faq", "FAQ", "fa-circle-question"],
       ["contact.html", "Kontakt", "fa-envelope"],
     ];
     var links = navigation
@@ -211,6 +211,9 @@
       };
       showReview(0);
       startReviews();
+      reviewCarousel.after(
+        '<div class="text-center mt-4"><a class="btn btn-outline-primary rounded-pill px-4" href="https://www.google.com/maps/search/?api=1&amp;query=Integralis+Physiotherapie+Altenstadt" target="_blank" rel="noopener"><i class="fab fa-google me-2" aria-hidden="true"></i>Alle Google-Bewertungen ansehen</a></div>',
+      );
       reviewCarousel
         .on("mouseenter focusin", stopReviews)
         .on("mouseleave", startReviews);
@@ -249,7 +252,7 @@
 
     $(".footer .row").html(
       '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="text-white mb-4"><i class="fas fa-heartbeat footer-title-icon"></i>Integralis</h4><p>Praxis fuer Physiotherapie in der Alten Molkerei in Altenstadt.</p></div></div>' +
-        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-compass footer-title-icon"></i>Schnellzugriff</h4><a href="index.html"><i class="fas fa-angle-right me-2"></i> Startseite</a><a href="about.html"><i class="fas fa-angle-right me-2"></i> Praxis</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Therapieangebote</a><a href="contact.html"><i class="fas fa-angle-right me-2"></i> Kontakt</a><a href="#impressum" data-legal-modal="#impressumModal"><i class="fas fa-angle-right me-2"></i> Impressum</a><a href="#datenschutz" data-legal-modal="#datenschutzModal"><i class="fas fa-angle-right me-2"></i> Datenschutz</a></div></div>' +
+        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-compass footer-title-icon"></i>Schnellzugriff</h4><a href="index.html"><i class="fas fa-angle-right me-2"></i> Startseite</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Leistungen</a><a href="about.html"><i class="fas fa-angle-right me-2"></i> Praxis</a><a href="index.html#faq"><i class="fas fa-angle-right me-2"></i> FAQ</a><a href="contact.html"><i class="fas fa-angle-right me-2"></i> Kontakt</a><a href="#impressum" data-legal-modal="#impressumModal"><i class="fas fa-angle-right me-2"></i> Impressum</a><a href="#datenschutz" data-legal-modal="#datenschutzModal"><i class="fas fa-angle-right me-2"></i> Datenschutz</a></div></div>' +
         '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-notes-medical footer-title-icon"></i>Therapieangebote</h4><a href="service.html"><i class="fas fa-angle-right me-2"></i> Klassische Massage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Krankengymnastik</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Bobath</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Lymphdrainage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Wärme- und Kältetherapie</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Hausbesuche</a></div></div>' +
         '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-address-card footer-title-icon"></i>Kontakt</h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstrasse 47, 63674 Altenstadt</a><a href="mailto:info@integralis-physio.de"><i class="fas fa-envelope me-2"></i> info@integralis-physio.de</a><a href="tel:+4960473292615"><i class="fas fa-phone me-2"></i> 06047 / 3292615</a><span class="mb-3"><i class="fas fa-clock me-2"></i> Mo + Mi 10 - 19 Uhr</span></div></div>',
     );
@@ -270,86 +273,301 @@
       .before("Gestaltet von ");
 
     var serviceDetails = {
-      "Klassische Massage": [
-        "Klassische Massage",
-        "Gezielte Massagegriffe helfen, verspannte Muskulatur zu lockern und die Durchblutung des Gewebes zu unterstützen.",
-        "Geeignet bei muskulären Verspannungen und als ergänzende Maßnahme innerhalb Ihrer physiotherapeutischen Behandlung.",
-      ],
-      Krankengymnastik: [
-        "Krankengymnastik",
-        "Die Behandlung verbindet individuell angeleitete Übungen mit therapeutischen Maßnahmen für Kraft, Beweglichkeit und Koordination.",
-        "Geeignet für Menschen, die Bewegungsabläufe verbessern, Beschwerden reduzieren oder ihre Belastbarkeit steigern möchten.",
-      ],
-      "Krankengymnastik nach Bobath": [
-        "Krankengymnastik nach Bobath",
-        "Die neurologische Behandlung nach Bobath unterstützt funktionelle Bewegungen und orientiert sich an Ihren persönlichen Fähigkeiten.",
-        "Geeignet bei neurologischen Erkrankungen oder nach neurologischen Beeinträchtigungen.",
-      ],
-      Lymphdrainage: [
-        "Lymphdrainage",
-        "Sanfte, rhythmische Griffe unterstützen den Lymphabfluss und können Schwellungen im Gewebe reduzieren.",
-        "Geeignet bei ärztlich verordneter Behandlung von Lymphödemen oder nach bestimmten Eingriffen.",
-      ],
-      Kaeltetherapie: [
-        "Kaeltetherapie",
-        "Kälte wird gezielt als ergänzende therapeutische Maßnahme eingesetzt und auf Ihre Behandlung abgestimmt.",
-        "Geeignet bei Beschwerden, bei denen eine lokale Kälteanwendung sinnvoll ist.",
-      ],
-      Waermetherapie: [
-        "Waermetherapie",
-        "Wärmeanwendungen können die Durchblutung fördern und verspannte Muskulatur auf die weitere Behandlung vorbereiten.",
-        "Geeignet als ergänzende Maßnahme bei muskulären Verspannungen und eingeschränkter Beweglichkeit.",
-      ],
-      Hausbesuche: [
-        "Hausbesuche",
-        "Wenn ein Besuch in der Praxis nicht möglich ist, führen wir die physiotherapeutische Behandlung nach ärztlicher Verordnung bei Ihnen zu Hause durch.",
-        "Geeignet für Patientinnen und Patienten mit eingeschränkter Mobilität.",
-      ],
-      "Alle Kassen und Privatrezepte": [
-        "Behandlung auf Verordnung",
-        "Wir behandeln gesetzlich und privat Versicherte auf Grundlage einer ärztlichen Verordnung.",
-        "Bringen Sie Ihre gültige Verordnung zum ersten Termin mit.",
-      ],
+      "Klassische Massage": {
+        slug: "klassische-massage",
+        description:
+          "Gezielte Massagegriffe helfen, verspannte Muskulatur zu lockern und die Durchblutung des Gewebes zu unterstützen.",
+        audience:
+          "Geeignet bei muskulären Verspannungen und als ergänzende Maßnahme innerhalb Ihrer physiotherapeutischen Behandlung.",
+        steps: [
+          "Kurzes Gespräch über Ihre Beschwerden und betroffene Körperregionen.",
+          "Gezielte Massagegriffe zur Lockerung der verspannten Muskulatur.",
+          "Abschließende Empfehlung für Bewegung und Entspannung im Alltag.",
+        ],
+        benefits: [
+          "Lockert verspannte Muskulatur",
+          "Fördert die Durchblutung",
+          "Ergänzt Ihre physiotherapeutische Behandlung",
+        ],
+        faq: [
+          [
+            "Brauche ich fuer eine Massage ein Rezept?",
+            "Als ergänzende Maßnahme innerhalb einer Verordnung ist kein separates Rezept nötig. Als alleinige Leistung ist eine Behandlung auch als Selbstzahler möglich.",
+          ],
+          [
+            "Wie oft sollte ich zur Massage kommen?",
+            "Das hängt von Ihren Beschwerden ab. Wir empfehlen einen individuellen Rhythmus im persönlichen Gespräch.",
+          ],
+        ],
+      },
+      Krankengymnastik: {
+        slug: "krankengymnastik",
+        description:
+          "Die Behandlung verbindet individuell angeleitete Übungen mit therapeutischen Maßnahmen für Kraft, Beweglichkeit und Koordination.",
+        audience:
+          "Geeignet für Menschen, die Bewegungsabläufe verbessern, Beschwerden reduzieren oder ihre Belastbarkeit steigern möchten.",
+        steps: [
+          "Erstgespräch und Befundaufnahme Ihrer aktuellen Beweglichkeit.",
+          "Individuell angeleitete Übungen fuer Kraft und Koordination.",
+          "Regelmäßige Anpassung des Uebungsprogramms an Ihren Fortschritt.",
+        ],
+        benefits: [
+          "Verbessert Kraft und Beweglichkeit",
+          "Individuell auf Ihre Beschwerden abgestimmt",
+          "Kann von der Krankenkasse übernommen werden",
+        ],
+        faq: [
+          [
+            "Brauche ich ein Rezept fuer Krankengymnastik?",
+            "Ja, in der Regel benötigen Sie eine ärztliche Verordnung. Selbstzahler können auch ohne Rezept behandelt werden.",
+          ],
+          [
+            "Wie viele Behandlungen sind ueblich?",
+            "Die Anzahl richtet sich nach Ihrer Verordnung und wird gemeinsam mit Ihnen und Ihrem Arzt abgestimmt.",
+          ],
+        ],
+      },
+      "Krankengymnastik nach Bobath": {
+        slug: "krankengymnastik-bobath",
+        description:
+          "Die neurologische Behandlung nach Bobath unterstützt funktionelle Bewegungen und orientiert sich an Ihren persönlichen Fähigkeiten.",
+        audience:
+          "Geeignet bei neurologischen Erkrankungen oder nach neurologischen Beeinträchtigungen, zum Beispiel nach einem Schlaganfall.",
+        steps: [
+          "Ausführliche Befundaufnahme Ihrer neurologischen Situation.",
+          "Behandlung nach dem Bobath-Konzept zur Foerderung funktioneller Bewegungen.",
+          "Laufende Anpassung der Therapie an Ihre Fortschritte.",
+        ],
+        benefits: [
+          "Foerdert funktionelle Bewegungsabläufe",
+          "Orientiert sich an Ihren persönlichen Fähigkeiten",
+          "Schwerpunkt unserer Praxis seit 2010",
+        ],
+        faq: [
+          [
+            "Für wen ist Bobath besonders geeignet?",
+            "Insbesondere für Patientinnen und Patienten nach Schlaganfall oder mit anderen neurologischen Erkrankungen.",
+          ],
+          [
+            "Ist ein Hausbesuch im Rahmen der Bobath-Therapie möglich?",
+            "Ja, bei eingeschränkter Mobilität führen wir die Behandlung auch bei Ihnen zu Hause durch.",
+          ],
+        ],
+      },
+      Lymphdrainage: {
+        slug: "lymphdrainage",
+        description:
+          "Sanfte, rhythmische Griffe unterstützen den Lymphabfluss und können Schwellungen im Gewebe reduzieren.",
+        audience:
+          "Geeignet bei ärztlich verordneter Behandlung von Lymphödemen oder nach bestimmten Eingriffen.",
+        steps: [
+          "Gespräch über Ihre Verordnung und betroffene Koerperregionen.",
+          "Sanfte, rhythmische Grifftechnik zur Anregung des Lymphabflusses.",
+          "Empfehlung zu Kompression und Verhalten im Alltag.",
+        ],
+        benefits: [
+          "Kann Schwellungen im Gewebe reduzieren",
+          "Sanfte, gut verträgliche Behandlung",
+          "Unterstützt die Regeneration nach Eingriffen",
+        ],
+        faq: [
+          [
+            "Ist Lymphdrainage schmerzhaft?",
+            "Nein, die Griffe sind bewusst sanft und werden individuell auf Ihre Verordnung abgestimmt.",
+          ],
+          [
+            "Brauche ich ein Rezept für Lymphdrainage?",
+            "Ja, Lymphdrainage wird auf Grundlage einer ärztlichen Verordnung durchgeführt.",
+          ],
+        ],
+      },
+      Kaeltetherapie: {
+        slug: "kaeltetherapie",
+        description:
+          "Kälte wird gezielt als ergänzende therapeutische Maßnahme eingesetzt und auf Ihre Behandlung abgestimmt.",
+        audience:
+          "Geeignet bei Beschwerden, bei denen eine lokale Kälteanwendung sinnvoll ist, zum Beispiel bei akuten Reizzuständen.",
+        steps: [
+          "Einschätzung, ob eine Kälteanwendung fuer Ihre Beschwerden geeignet ist.",
+          "Gezielte, lokale Kälteanwendung an der betroffenen Koerperregion.",
+          "Einbindung in Ihren individuellen Behandlungsplan.",
+        ],
+        benefits: [
+          "Kann akute Reizzustände lindern",
+          "Ergänzt Ihre physiotherapeutische Behandlung",
+          "Individuell auf Ihre Beschwerden abgestimmt",
+        ],
+        faq: [
+          [
+            "Wann wird Kältetherapie eingesetzt?",
+            "Insbesondere bei akuten, entzündlichen Beschwerden, bei denen Kälte eine lindernde Wirkung haben kann.",
+          ],
+        ],
+      },
+      Waermetherapie: {
+        slug: "waermetherapie",
+        description:
+          "Wärmeanwendungen können die Durchblutung fördern und verspannte Muskulatur auf die weitere Behandlung vorbereiten.",
+        audience:
+          "Geeignet als ergänzende Maßnahme bei muskulären Verspannungen und eingeschränkter Beweglichkeit.",
+        steps: [
+          "Einschätzung, ob eine Wärmeanwendung fuer Ihre Beschwerden geeignet ist.",
+          "Gezielte Wärmeanwendung zur Lockerung der Muskulatur.",
+          "Anschließende Behandlung profitiert von der besseren Durchblutung.",
+        ],
+        benefits: [
+          "Fördert die Durchblutung",
+          "Bereitet die Muskulatur auf die Behandlung vor",
+          "Kann Verspannungen lösen",
+        ],
+        faq: [
+          [
+            "Wie lange dauert eine Wärmeanwendung?",
+            "In der Regel wenige Minuten, abgestimmt auf Ihre Behandlung und Verordnung.",
+          ],
+        ],
+      },
+      Hausbesuche: {
+        slug: "hausbesuche",
+        description:
+          "Wenn ein Besuch in der Praxis nicht möglich ist, führen wir die physiotherapeutische Behandlung nach ärztlicher Verordnung bei Ihnen zu Hause durch.",
+        audience:
+          "Geeignet für Patientinnen und Patienten mit eingeschränkter Mobilität.",
+        steps: [
+          "Telefonische Abstimmung Ihres Hausbesuchs und Ihrer Verordnung.",
+          "Behandlung nach ärztlicher Verordnung direkt bei Ihnen zu Hause.",
+          "Laufende Abstimmung weiterer Termine.",
+        ],
+        benefits: [
+          "Keine Anfahrt zur Praxis nötig",
+          "Behandlung in gewohnter Umgebung",
+          "Nach ärztlicher Verordnung möglich",
+        ],
+        faq: [
+          [
+            "Brauche ich fuer einen Hausbesuch ein spezielles Rezept?",
+            "Ihr Arzt oder Ihre Ärztin vermerkt den Hausbesuch auf der Verordnung. Sprechen Sie uns bei Fragen gerne an.",
+          ],
+        ],
+      },
+      "Alle Kassen und Privatrezepte": {
+        slug: "kassen-privatrezepte",
+        description:
+          "Wir behandeln gesetzlich und privat Versicherte auf Grundlage einer ärztlichen Verordnung.",
+        audience:
+          "Geeignet für alle Patientinnen und Patienten mit Kassen- oder Privatrezept sowie Selbstzahler.",
+        steps: [
+          "Vorlage Ihrer gültigen Verordnung bei Ihrem ersten Termin.",
+          "Abstimmung der Behandlung entsprechend Ihrer Verordnung.",
+          "Unkomplizierte Abrechnung mit Ihrer Krankenkasse oder privat.",
+        ],
+        benefits: [
+          "Gesetzlich und privat Versicherte willkommen",
+          "Unkomplizierte Terminvergabe",
+          "Auch als Selbstzahler möglich",
+        ],
+        faq: [
+          [
+            "Bringe ich die Verordnung zum ersten Termin mit?",
+            "Ja, bitte bringen Sie Ihre gültige Verordnung sowie Ihre Versichertenkarte mit.",
+          ],
+        ],
+      },
     };
 
-    $("body").append(
-      '<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="serviceModalTitle"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p id="serviceModalDescription"></p><h3 class="h5">Für wen ist diese Leistung geeignet?</h3><p id="serviceModalAudience"></p><h3 class="h5">Ihr nächster Schritt</h3><p>In einem persönlichen Gespräch klären wir, ob diese Behandlung zu Ihrer Verordnung und Ihren Zielen passt.</p></div><div class="modal-footer"><a href="tel:+4960473292615" class="btn btn-primary">Jetzt Termin vereinbaren</a></div></div></div></div><div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="impressumModalTitle">Impressum</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><h3 class="h5">Angaben gemäß § 5 TMG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt</p><p class="small text-muted mb-0">Bitte vor Veröffentlichung gegebenenfalls Berufsbezeichnung, zuständige Kammer, Aufsichtsbehörde und Umsatzsteuer-Identifikationsnummer ergänzen.</p></div></div></div></div><div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="datenschutzModalTitle">Datenschutzerklärung</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Website verarbeitet Daten nur, soweit dies für die technische Bereitstellung und Ihre Kontaktaufnahme erforderlich ist.</p><h3 class="h5">Verantwortliche Stelle</h3><p>Integralis Praxis für Physiotherapie, Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt<br><a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktaufnahme</h3><p>Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht ohne Ihre Einwilligung weiter.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.</p><p class="small text-muted mb-0">Bitte diese Datenschutzerklärung vor Veröffentlichung rechtlich prüfen und um Angaben zu Hosting, Server-Protokollen, Karten und weiteren eingesetzten Diensten ergänzen.</p></div></div></div></div>',
-    );
-
-    document.querySelectorAll(".modal .btn-close").forEach(function (button) {
-      button.addEventListener("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        var modal = button.closest(".modal");
-        modal.classList.remove("show");
-        modal.style.display = "none";
-        modal.setAttribute("aria-hidden", "true");
-        document
-          .querySelectorAll(".modal-backdrop")
-          .forEach(function (backdrop) {
-            backdrop.remove();
-          });
-        document.body.classList.remove("modal-open");
-        document.body.style.paddingRight = "";
-      });
+    $(".service-item").each(function () {
+      var serviceName = $(this).find("h5").text().trim();
+      var serviceDetail = serviceDetails[serviceName];
+      if (!serviceDetail) return;
+      $(this)
+        .find(".btn")
+        .attr(
+          "href",
+          (pageName === "service.html" ? "" : "service.html") +
+            "#leistungen/" +
+            serviceDetail.slug,
+        );
     });
 
-    $(document).on("click", ".service-item, .service-item a", function (event) {
-      var detail =
-        serviceDetails[
-          $(this).closest(".service-item").find("h5").text().trim()
-        ];
+    $("body").append(
+      '<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="serviceModalTitle"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body">' +
+        '<section class="service-modal-section"><h3 class="h5"><i class="fas fa-circle-question text-primary me-2" aria-hidden="true"></i>Was ist das?</h3><p id="serviceModalDescription"></p></section>' +
+        '<section class="service-modal-section"><h3 class="h5"><i class="fas fa-user-check text-primary me-2" aria-hidden="true"></i>Für wen geeignet?</h3><p id="serviceModalAudience"></p></section>' +
+        '<section class="service-modal-section"><h3 class="h5"><i class="fas fa-list-ol text-primary me-2" aria-hidden="true"></i>Wie läuft die Behandlung ab?</h3><ol id="serviceModalSteps" class="service-modal-steps"></ol></section>' +
+        '<section class="service-modal-section"><h3 class="h5"><i class="fas fa-star text-primary me-2" aria-hidden="true"></i>Ihre Vorteile</h3><ul id="serviceModalBenefits" class="service-modal-benefits"></ul></section>' +
+        '<section class="service-modal-section"><h3 class="h5"><i class="fas fa-comments text-primary me-2" aria-hidden="true"></i>Häufige Fragen</h3><div id="serviceModalFaq" class="service-modal-faq"></div></section>' +
+        '</div><div class="modal-footer"><a href="tel:+4960473292615" class="btn btn-primary w-100"><i class="fas fa-phone-alt me-2" aria-hidden="true"></i>Termin vereinbaren</a></div></div></div></div><div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="impressumModalTitle">Impressum</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><h3 class="h5">Angaben gemäß § 5 TMG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt</p><p class="small text-muted mb-0">Bitte vor Veröffentlichung gegebenenfalls Berufsbezeichnung, zuständige Kammer, Aufsichtsbehörde und Umsatzsteuer-Identifikationsnummer ergänzen.</p></div></div></div></div><div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="datenschutzModalTitle">Datenschutzerklärung</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Website verarbeitet Daten nur, soweit dies für die technische Bereitstellung und Ihre Kontaktaufnahme erforderlich ist.</p><h3 class="h5">Verantwortliche Stelle</h3><p>Integralis Praxis für Physiotherapie, Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt<br><a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktaufnahme</h3><p>Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht ohne Ihre Einwilligung weiter.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.</p><p class="small text-muted mb-0">Bitte diese Datenschutzerklärung vor Veröffentlichung rechtlich prüfen und um Angaben zu Hosting, Server-Protokollen, Karten und weiteren eingesetzten Diensten ergänzen.</p></div></div></div></div>',
+    );
+
+    var openServiceModal = function (name) {
+      var detail = serviceDetails[name];
       if (!detail) return;
-      event.preventDefault();
-      $("#serviceModalTitle").text(detail[0]);
-      $("#serviceModalDescription").text(detail[1]);
-      $("#serviceModalAudience").text(detail[2]);
+      $("#serviceModalTitle").text(name);
+      $("#serviceModalDescription").text(detail.description);
+      $("#serviceModalAudience").text(detail.audience);
+      $("#serviceModalSteps").html(
+        detail.steps
+          .map(function (step) {
+            return "<li>" + step + "</li>";
+          })
+          .join(""),
+      );
+      $("#serviceModalBenefits").html(
+        detail.benefits
+          .map(function (benefit) {
+            return (
+              '<li><i class="fas fa-check text-primary me-2" aria-hidden="true"></i>' +
+              benefit +
+              "</li>"
+            );
+          })
+          .join(""),
+      );
+      $("#serviceModalFaq").html(
+        detail.faq
+          .map(function (pair) {
+            return (
+              "<details><summary>" +
+              pair[0] +
+              "</summary><p>" +
+              pair[1] +
+              "</p></details>"
+            );
+          })
+          .join(""),
+      );
+      if (history.pushState) {
+        history.pushState(null, "", "#leistungen/" + detail.slug);
+      }
       var serviceModal = document.getElementById("serviceModal");
       (
         bootstrap.Modal.getInstance(serviceModal) ||
         new bootstrap.Modal(serviceModal)
       ).show();
+    };
+
+    $(document).on("click", ".service-item, .service-item a", function (event) {
+      var name = $(this).closest(".service-item").find("h5").text().trim();
+      if (!serviceDetails[name]) return;
+      event.preventDefault();
+      openServiceModal(name);
     });
+
+    $("#serviceModal").on("hidden.bs.modal", function () {
+      if (history.replaceState && location.hash.indexOf("#leistungen/") === 0) {
+        history.replaceState(null, "", location.pathname + location.search);
+      }
+    });
+
+    if (location.hash.indexOf("#leistungen/") === 0) {
+      var requestedSlug = location.hash.replace("#leistungen/", "");
+      var requestedName = Object.keys(serviceDetails).find(function (name) {
+        return serviceDetails[name].slug === requestedSlug;
+      });
+      if (requestedName) {
+        openServiceModal(requestedName);
+      }
+    }
 
     $(".footer [data-legal-modal]").on("click", function (event) {
       event.preventDefault();
@@ -365,19 +583,6 @@
     };
 
     $(".modal").on("hidden.bs.modal", clearModalOverlay);
-    $(document).on(
-      "click",
-      ".modal [data-bs-dismiss='modal']",
-      function (event) {
-        event.preventDefault();
-        var modal = $(this).closest(".modal")[0];
-        var modalInstance = bootstrap.Modal.getInstance(modal);
-        if (modalInstance) {
-          modalInstance.hide();
-        }
-        window.setTimeout(clearModalOverlay, 500);
-      },
-    );
 
     $(document).on("submit", "#contactForm", function (event) {
       event.preventDefault();
@@ -523,7 +728,9 @@
     ];
     if (pageName === "about.html" || pageName === "service.html") {
       var benefits = $(".feature").last();
-      benefits.find(".sub-title").text("Ihre Vorteile");
+      benefits
+        .find(".sub-title")
+        .text(pageName === "about.html" ? "Die Praxis" : "Ihre Vorteile");
       benefits
         .find(".section-title h1")
         .text("Zeit fuer eine Therapie, die Sie sieht.");
@@ -541,9 +748,6 @@
         .find(".btn")
         .attr("href", "tel:+4960473292615")
         .text("Termin vereinbaren");
-    }
-    if (pageName === "about.html") {
-      $(".team").addClass("d-none");
     }
     if (pageContent[pageName]) {
       var content = pageContent[pageName];
