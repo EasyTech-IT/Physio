@@ -1,0 +1,13 @@
+﻿RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^$ /index.html [L]
+RewriteRule ^praxis/?$ /about.html [L]
+RewriteRule ^therapieangebote/?$ /service.html [L]
+RewriteRule ^kontakt/?$ /contact.html [L]
+RewriteRule ^termin/?$ /appointment.html [L]
+RewriteRule ^feature/?$ /feature.html [L]
+RewriteRule ^blog/?$ /blog.html [L]
+RewriteRule ^team/?$ /team.html [L]
+RewriteRule ^testimonial/?$ /testimonial.html [L]
+RewriteRule ^404/?$ /404.html [L]
