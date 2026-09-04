@@ -16,6 +16,10 @@
         "Therapieangebote - Integralis Physiotherapie",
         "Klassische Massage, Krankengymnastik, Bobath, Lymphdrainage, Wärme- und Kältetherapie sowie Hausbesuche in Altenstadt.",
       ],
+      "preise.html": [
+        "Preise - Integralis Physiotherapie",
+        "Preise für physiotherapeutische Leistungen bei Integralis in Altenstadt.",
+      ],
       "appointment.html": [
         "Termin vereinbaren - Integralis Physiotherapie",
         "Vereinbaren Sie Ihren Termin bei Integralis Physiotherapie in Altenstadt telefonisch unter 06047 / 3292615.",
@@ -64,9 +68,10 @@
     var navigation = [
       ["index.html", "Startseite", "fa-home"],
       ["service.html", "Leistungen", "fa-hand-holding-medical"],
+      ["preise.html", "Preise", "fa-euro-sign"],
       ["about.html", "Praxis", "fa-clinic-medical"],
       ["index.html#faq", "FAQ", "fa-circle-question"],
-      ["contact.html", "Kontakt", "fa-envelope"],
+      ["contact.html", "Kontakt", "fa-comment-medical"],
     ];
     var links = navigation
       .map(function (item) {
@@ -90,8 +95,7 @@
       .find(".d-flex.flex-wrap")
       .html(
         '<a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Vogelsbergstrasse 47, 63674 Altenstadt</a>' +
-          '<a href="tel:+4960473292615" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>06047 / 3292615</a>' +
-          '<a href="mailto:info@integralis-physio.de" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>info@integralis-physio.de</a>',
+          '<a href="tel:+4960473292615" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>06047 / 3292615</a>',
       );
 
     $(".navbar-brand").html(
@@ -104,6 +108,46 @@
       .html(
         '<i class="fas fa-phone-alt me-2" aria-hidden="true"></i>Termin vereinbaren',
       );
+    var textFixes = {
+      "Ã¤": "ä",
+      "Ã¶": "ö",
+      "Ã¼": "ü",
+      "Ã„": "Ä",
+      "Ã–": "Ö",
+      Ãœ: "Ü",
+      ÃŸ: "ß",
+      "â€“": "-",
+      "â€”": "-",
+      "â€ž": "„",
+      "â€œ": "“",
+      "â€™": "'",
+      "â€¦": "...",
+    };
+    var fixText = function (value) {
+      Object.keys(textFixes).forEach(function (broken) {
+        value = value.split(broken).join(textFixes[broken]);
+      });
+      return value;
+    };
+    $("body *")
+      .contents()
+      .filter(function () {
+        return this.nodeType === 3 && !$(this).closest("script, style").length;
+      })
+      .each(function () {
+        this.nodeValue = fixText(this.nodeValue);
+      });
+    $(
+      "meta[content], img[alt], input[placeholder], textarea[placeholder]",
+    ).each(function () {
+      var attribute = this.hasAttribute("content")
+        ? "content"
+        : this.hasAttribute("alt")
+          ? "alt"
+          : "placeholder";
+      $(this).attr(attribute, fixText($(this).attr(attribute)));
+    });
+    $("a[href='']").removeAttr("href");
     $(".sr-only").text("Wird geladen...");
     $(
       ".nav-fill, .team-icon, .footer-item .btn-square, .contact .btn-lg-square",
@@ -155,6 +199,24 @@
     $(".feature-item h5").each(function () {
       $(this).prepend(
         '<i class="fas fa-check-circle feature-title-icon" aria-hidden="true"></i>',
+      );
+    });
+
+    $(".rooms .feature-item").each(function () {
+      var card = $(this);
+      var content = card.children().first();
+      content.find(".feature-title-icon").remove();
+      var title = content.find("h5").first().text();
+      var description = content.find("p").first().text();
+      card.empty().attr("tabindex", "0");
+      card.append(
+        $('<div class="rooms-card-inner"></div>').append(
+          $('<div class="rooms-card-front"></div>').append(content),
+          $('<div class="rooms-card-back"></div>').append(
+            $("<h5></h5>").text(title),
+            $("<p></p>").text(description),
+          ),
+        ),
       );
     });
 
@@ -245,7 +307,7 @@
 
     if (pageName === "contact.html") {
       $(".contact .section-title").after(
-        '<div class="contact-quick-actions wow fadeInUp" data-wow-delay="0.2s"><a href="tel:+4960473292615" class="contact-action contact-action-phone"><i class="fas fa-phone-alt"></i><span><strong>Jetzt anrufen</strong><small>06047 / 3292615</small></span></a><a href="mailto:info@integralis-physio.de" class="contact-action contact-action-mail"><i class="fas fa-envelope"></i><span><strong>E-Mail schreiben</strong><small>Antwort auf Ihre Anfrage</small></span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt" class="contact-action contact-action-map" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i><span><strong>Route planen</strong><small>Alte Molkerei, Altenstadt</small></span></a></div>',
+        '<div class="contact-quick-actions wow fadeInUp" data-wow-delay="0.2s"><a href="tel:+4960473292615" class="contact-action contact-action-phone"><i class="fas fa-phone-alt"></i><span><strong>Jetzt anrufen</strong><small>06047 / 3292615</small></span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt" class="contact-action contact-action-map" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i><span><strong>Route planen</strong><small>Alte Molkerei, Altenstadt</small></span></a></div>',
       );
       $(".contact-form").addClass("contact-form-panel");
     }
@@ -254,7 +316,7 @@
       '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="text-white mb-4"><i class="fas fa-heartbeat footer-title-icon"></i>Integralis</h4><p>Praxis fuer Physiotherapie in der Alten Molkerei in Altenstadt.</p></div></div>' +
         '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-compass footer-title-icon"></i>Schnellzugriff</h4><a href="index.html"><i class="fas fa-angle-right me-2"></i> Startseite</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Leistungen</a><a href="about.html"><i class="fas fa-angle-right me-2"></i> Praxis</a><a href="index.html#faq"><i class="fas fa-angle-right me-2"></i> FAQ</a><a href="contact.html"><i class="fas fa-angle-right me-2"></i> Kontakt</a><a href="#impressum" data-legal-modal="#impressumModal"><i class="fas fa-angle-right me-2"></i> Impressum</a><a href="#datenschutz" data-legal-modal="#datenschutzModal"><i class="fas fa-angle-right me-2"></i> Datenschutz</a></div></div>' +
         '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-notes-medical footer-title-icon"></i>Therapieangebote</h4><a href="service.html"><i class="fas fa-angle-right me-2"></i> Klassische Massage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Krankengymnastik</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Bobath</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Lymphdrainage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Wärme- und Kältetherapie</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Hausbesuche</a></div></div>' +
-        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-address-card footer-title-icon"></i>Kontakt</h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstrasse 47, 63674 Altenstadt</a><a href="mailto:info@integralis-physio.de"><i class="fas fa-envelope me-2"></i> info@integralis-physio.de</a><a href="tel:+4960473292615"><i class="fas fa-phone me-2"></i> 06047 / 3292615</a><span class="mb-3"><i class="fas fa-clock me-2"></i> Mo + Mi 10 - 19 Uhr</span></div></div>',
+        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-address-card footer-title-icon"></i>Kontakt</h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstrasse 47, 63674 Altenstadt</a><a href="tel:+4960473292615"><i class="fas fa-phone me-2"></i> 06047 / 3292615</a><span class="mb-3"><i class="fas fa-clock me-2"></i> Mo + Mi 10 - 19 Uhr</span></div></div>',
     );
     $(".copyright .text-white")
       .first()
@@ -499,6 +561,11 @@
         '</div><div class="modal-footer"><a href="tel:+4960473292615" class="btn btn-primary w-100"><i class="fas fa-phone-alt me-2" aria-hidden="true"></i>Termin vereinbaren</a></div></div></div></div><div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="impressumModalTitle">Impressum</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><h3 class="h5">Angaben gemäß § 5 TMG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt</p><p class="small text-muted mb-0">Bitte vor Veröffentlichung gegebenenfalls Berufsbezeichnung, zuständige Kammer, Aufsichtsbehörde und Umsatzsteuer-Identifikationsnummer ergänzen.</p></div></div></div></div><div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="datenschutzModalTitle">Datenschutzerklärung</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Website verarbeitet Daten nur, soweit dies für die technische Bereitstellung und Ihre Kontaktaufnahme erforderlich ist.</p><h3 class="h5">Verantwortliche Stelle</h3><p>Integralis Praxis für Physiotherapie, Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt<br><a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktaufnahme</h3><p>Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht ohne Ihre Einwilligung weiter.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.</p><p class="small text-muted mb-0">Bitte diese Datenschutzerklärung vor Veröffentlichung rechtlich prüfen und um Angaben zu Hosting, Server-Protokollen, Karten und weiteren eingesetzten Diensten ergänzen.</p></div></div></div></div>',
     );
 
+    $("#impressumModal .modal-body p")
+      .eq(1)
+      .html('Telefon: <a href="tel:+4960473292615">06047 / 3292615</a>');
+    $("#datenschutzModal .modal-body p").eq(1).find("a").remove();
+
     var openServiceModal = function (name) {
       var detail = serviceDetails[name];
       if (!detail) return;
@@ -584,11 +651,24 @@
 
     $(".modal").on("hidden.bs.modal", clearModalOverlay);
 
+    if (pageName === "contact.html") {
+      var contactQuery = new URLSearchParams(window.location.search);
+      if (contactQuery.get("anliegen") === "bewerbung") {
+        $("#contactSubject").val("Bewerbung als Physiotherapeut:in");
+        $("#contactFormSubject").val(
+          "Bewerbung als Physiotherapeut:in über die Website",
+        );
+        $("#contactMessage").val(
+          "Ich interessiere mich für die ausgeschriebene Stelle als Physiotherapeut:in und freue mich über Ihre Rückmeldung.",
+        );
+      }
+    }
+
     $(document).on("submit", "#contactForm", function (event) {
-      event.preventDefault();
       var form = this;
       var status = $("#contactFormStatus");
       if (!form.checkValidity()) {
+        event.preventDefault();
         form.classList.add("was-validated");
         status
           .removeClass("d-none alert-success")
@@ -600,40 +680,8 @@
       submitButton
         .prop("disabled", true)
         .html(
-          '<i class="fas fa-spinner fa-spin me-2" aria-hidden="true"></i>Anfrage wird vorbereitet',
+          '<i class="fas fa-spinner fa-spin me-2" aria-hidden="true"></i>Anfrage wird gesendet',
         );
-      var subject = "Kontaktanfrage von " + $("#contactName").val();
-      var body =
-        "Name: " +
-        $("#contactName").val() +
-        "\nE-Mail: " +
-        $("#contactEmail").val() +
-        "\nTelefon: " +
-        $("#contactPhone").val() +
-        "\nBevorzugte Rückrufzeit: " +
-        $("#contactPreferredTime").val() +
-        "\nBetreff: " +
-        $("#contactSubject").val() +
-        "\n\nNachricht:\n" +
-        $("#contactMessage").val();
-      status
-        .removeClass("d-none alert-danger")
-        .addClass("alert-success")
-        .text(
-          "Ihre E-Mail-Anwendung wird geöffnet. Bitte senden Sie die vorbereitete Nachricht dort ab.",
-        );
-      window.setTimeout(function () {
-        submitButton
-          .prop("disabled", false)
-          .html(
-            '<i class="fas fa-envelope me-2" aria-hidden="true"></i>Anfrage per E-Mail vorbereiten',
-          );
-        window.location.href =
-          "mailto:info@integralis-physio.de?subject=" +
-          encodeURIComponent(subject) +
-          "&body=" +
-          encodeURIComponent(body);
-      }, 350);
     });
 
     var pageContent = {
@@ -721,10 +769,7 @@
         "Hausbesuche",
         "Bei Bedarf kommen wir für Ihre physiotherapeutische Behandlung zu Ihnen.",
       ],
-      [
-        "Direkt erreichbar",
-        "Vereinbaren Sie Ihren Termin telefonisch oder per E-Mail.",
-      ],
+      ["Direkt erreichbar", "Vereinbaren Sie Ihren Termin telefonisch."],
     ];
     if (pageName === "about.html" || pageName === "service.html") {
       var benefits = $(".feature").last();
@@ -805,7 +850,7 @@
       );
       $(".bg-breadcrumb").nextUntil(".footer").remove();
       $(".bg-breadcrumb").after(
-        '<div class="container-fluid feature py-5"><div class="container py-5"><div class="section-title mb-5"><div class="sub-style"><h4 class="sub-title px-3 mb-0">Physiotherapie</h4></div><h1 class="display-3 mb-4">Ihre Fragen im Mittelpunkt.</h1><p class="mb-0">Ob Krankengymnastik, Lymphdrainage, neurologische Behandlung nach Bobath oder Hausbesuch: Wir informieren Sie im persönlichen Gespräch über die passende Therapie.</p></div><div class="text-center"><a href="mailto:info@integralis-physio.de" class="btn btn-secondary rounded-pill text-white py-3 px-5">E-Mail schreiben</a></div></div></div>',
+        '<div class="container-fluid feature py-5"><div class="container py-5"><div class="section-title mb-5"><div class="sub-style"><h4 class="sub-title px-3 mb-0">Physiotherapie</h4></div><h1 class="display-3 mb-4">Ihre Fragen im Mittelpunkt.</h1><p class="mb-0">Ob Krankengymnastik, Lymphdrainage, neurologische Behandlung nach Bobath oder Hausbesuch: Wir informieren Sie im persönlichen Gespräch über die passende Therapie.</p></div></div></div>',
       );
     }
 

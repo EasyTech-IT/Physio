@@ -1,0 +1,1530 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Preise | Integralis Physiotherapie</title>
+
+    <meta
+      name="description"
+      content="Preise und Leistungen der Integralis Physiotherapie in Altenstadt."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      /* =====================================================
+           INTEGRALIS – PREISSEITE
+        ===================================================== */
+
+      :root {
+        --green: #58ad0b;
+        --green-dark: #438b08;
+        --green-light: #c5ef8c;
+
+        --bg: #f6f9f2;
+        --card: #ffffff;
+
+        --text: #303030;
+        --muted: #6b6b6b;
+
+        --border: #e3e9dc;
+
+        --shadow: 0 18px 50px rgba(39, 60, 28, 0.09);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+
+        background: var(--bg);
+        color: var(--text);
+
+        line-height: 1.5;
+      }
+
+      /* =====================================================
+           HEADER
+        ===================================================== */
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        background: rgba(255, 255, 255, 0.88);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .header-inner {
+        width: min(1180px, calc(100% - 40px));
+
+        min-height: 76px;
+
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .logo {
+        color: var(--green);
+
+        font-size: 30px;
+        font-weight: 700;
+
+        letter-spacing: -1.5px;
+
+        text-decoration: none;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .nav a {
+        display: inline-flex;
+        align-items: center;
+
+        padding: 10px 15px;
+
+        border-radius: 12px;
+
+        color: var(--muted);
+
+        font-size: 14px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition: 0.2s ease;
+      }
+
+      .nav a:hover {
+        color: var(--green);
+
+        background: #f0f8e9;
+      }
+
+      .nav a.active {
+        color: var(--green);
+
+        background: #edf8e4;
+      }
+
+      /* =====================================================
+           HERO
+        ===================================================== */
+
+      .hero {
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 90px 20px 75px;
+
+        background: linear-gradient(135deg, #4fae08, #68bd1a);
+
+        color: white;
+      }
+
+      .hero::after {
+        content: "";
+
+        position: absolute;
+
+        width: 420px;
+        height: 420px;
+
+        right: -150px;
+        top: -180px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.09);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+
+        width: min(900px, 100%);
+
+        margin: auto;
+
+        text-align: center;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        margin-bottom: 20px;
+
+        padding: 8px 14px;
+
+        border-radius: 999px;
+
+        background: rgba(255, 255, 255, 0.15);
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .hero-badge svg {
+        width: 17px;
+        height: 17px;
+      }
+
+      .hero h1 {
+        margin-bottom: 18px;
+
+        font-size: clamp(42px, 7vw, 72px);
+
+        line-height: 0.98;
+
+        letter-spacing: -3px;
+      }
+
+      .hero p {
+        max-width: 650px;
+
+        margin: auto;
+
+        color: rgba(255, 255, 255, 0.9);
+
+        font-size: 18px;
+
+        line-height: 1.6;
+      }
+
+      /* =====================================================
+           CONTENT
+        ===================================================== */
+
+      .content {
+        width: min(1080px, calc(100% - 40px));
+
+        margin: -35px auto 80px;
+
+        position: relative;
+        z-index: 5;
+      }
+
+      /* =====================================================
+           PRICE INTRO
+        ===================================================== */
+
+      .price-intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 20px;
+
+        margin-bottom: 18px;
+
+        padding: 20px 24px;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 18px;
+
+        box-shadow: var(--shadow);
+      }
+
+      .price-intro-left {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+      }
+
+      .intro-icon {
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+
+        background: #edf8e4;
+
+        color: var(--green);
+      }
+
+      .intro-icon svg {
+        width: 21px;
+        height: 21px;
+      }
+
+      .price-intro strong {
+        display: block;
+
+        font-size: 15px;
+      }
+
+      .price-intro span {
+        color: var(--muted);
+
+        font-size: 13px;
+      }
+
+      .date-badge {
+        padding: 8px 12px;
+
+        border-radius: 10px;
+
+        background: #f4f6f2;
+
+        color: var(--muted);
+
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      /* =====================================================
+           PRICE LEGEND
+        ===================================================== */
+
+      .price-legend {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+        margin-bottom: 25px;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 16px 20px;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 15px;
+      }
+
+      .legend-name {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .legend-dot {
+        width: 10px;
+        height: 10px;
+
+        border-radius: 50%;
+
+        background: var(--green);
+      }
+
+      .legend-dot.dark {
+        background: #303030;
+      }
+
+      .legend-price {
+        color: var(--muted);
+
+        font-size: 13px;
+      }
+
+      /* =====================================================
+           CATEGORY
+        ===================================================== */
+
+      .price-category {
+        margin-bottom: 22px;
+
+        overflow: hidden;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 22px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      }
+
+      .category-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        padding: 22px 25px;
+
+        background: #f2f9eb;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .category-icon {
+        width: 43px;
+        height: 43px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 13px;
+
+        background: var(--green);
+
+        color: white;
+      }
+
+      .category-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .category-header h2 {
+        font-size: 20px;
+
+        letter-spacing: -0.3px;
+      }
+
+      .category-header p {
+        margin-top: 2px;
+
+        color: var(--muted);
+
+        font-size: 13px;
+      }
+
+      /* =====================================================
+           PRICE TABLE
+        ===================================================== */
+
+      .price-head {
+        display: grid;
+
+        grid-template-columns: 1fr 130px 130px;
+
+        padding: 14px 25px;
+
+        background: #fafcf8;
+
+        border-bottom: 1px solid var(--border);
+
+        color: var(--muted);
+
+        font-size: 12px;
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.5px;
+      }
+
+      .price-head div:not(:first-child) {
+        text-align: right;
+      }
+
+      .price-row {
+        display: grid;
+
+        grid-template-columns: 1fr 130px 130px;
+
+        align-items: center;
+
+        min-height: 66px;
+
+        padding: 12px 25px;
+
+        border-bottom: 1px solid #edf0ea;
+
+        transition: background 0.2s ease;
+      }
+
+      .price-row:last-child {
+        border-bottom: none;
+      }
+
+      .price-row:hover {
+        background: #fafdf7;
+      }
+
+      .service {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .service-icon {
+        width: 32px;
+        height: 32px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 9px;
+
+        background: #f0f8e8;
+
+        color: var(--green);
+      }
+
+      .service-icon svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .price {
+        text-align: right;
+
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .price.private {
+        color: var(--text);
+      }
+
+      .price.sz {
+        color: var(--green-dark);
+      }
+
+      /* =====================================================
+           NOTE
+        ===================================================== */
+
+      .price-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 13px;
+
+        margin-top: 28px;
+
+        padding: 20px;
+
+        background: #fff;
+
+        border: 1px solid var(--border);
+
+        border-radius: 17px;
+      }
+
+      .price-note-icon {
+        width: 36px;
+        height: 36px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 10px;
+
+        background: #edf8e4;
+
+        color: var(--green);
+      }
+
+      .price-note-icon svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .price-note strong {
+        display: block;
+
+        margin-bottom: 3px;
+
+        font-size: 14px;
+      }
+
+      .price-note p {
+        color: var(--muted);
+
+        font-size: 13px;
+
+        line-height: 1.55;
+      }
+
+      /* =====================================================
+           CTA
+        ===================================================== */
+
+      .cta {
+        position: relative;
+
+        overflow: hidden;
+
+        margin-top: 55px;
+
+        padding: 45px 35px;
+
+        border-radius: 25px;
+
+        background: linear-gradient(135deg, #4fae08, #65bd18);
+
+        color: white;
+
+        text-align: center;
+      }
+
+      .cta::after {
+        content: "";
+
+        position: absolute;
+
+        width: 300px;
+        height: 300px;
+
+        right: -120px;
+        bottom: -180px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .cta-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .cta h2 {
+        margin-bottom: 10px;
+
+        font-size: 30px;
+
+        letter-spacing: -1px;
+      }
+
+      .cta p {
+        margin-bottom: 25px;
+
+        color: rgba(255, 255, 255, 0.9);
+
+        font-size: 15px;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+
+        padding: 14px 22px;
+
+        border-radius: 999px;
+
+        background: white;
+
+        color: var(--green-dark);
+
+        font-size: 14px;
+        font-weight: 800;
+
+        text-decoration: none;
+
+        transition: 0.2s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      }
+
+      .cta-button svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      /* =====================================================
+           FOOTER
+        ===================================================== */
+
+      /* =====================================================
+           MOBILE
+        ===================================================== */
+
+      @media (max-width: 720px) {
+        .header-inner {
+          width: calc(100% - 30px);
+
+          min-height: 66px;
+        }
+
+        .logo {
+          font-size: 25px;
+        }
+
+        .hero {
+          padding: 65px 20px 70px;
+        }
+
+        .hero h1 {
+          letter-spacing: -2px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .content {
+          width: calc(100% - 24px);
+
+          margin-top: -25px;
+        }
+
+        .price-intro {
+          flex-direction: column;
+
+          align-items: flex-start;
+        }
+
+        .price-legend {
+          grid-template-columns: 1fr;
+        }
+
+        .price-head {
+          grid-template-columns: 1fr 90px 90px;
+
+          padding: 12px 15px;
+        }
+
+        .price-row {
+          grid-template-columns: 1fr 90px 90px;
+
+          padding: 12px 15px;
+        }
+
+        .service {
+          font-size: 13px;
+
+          gap: 8px;
+        }
+
+        .service-icon {
+          width: 29px;
+          height: 29px;
+        }
+
+        .price {
+          font-size: 14px;
+        }
+
+        .category-header {
+          padding: 18px;
+        }
+
+        .category-header h2 {
+          font-size: 18px;
+        }
+
+        .price-note {
+          padding: 17px;
+        }
+
+        .cta {
+          padding: 35px 22px;
+        }
+
+        .cta h2 {
+          font-size: 25px;
+        }
+      }
+
+      /* =====================================================
+           VERY SMALL MOBILE
+        ===================================================== */
+
+      @media (max-width: 430px) {
+        .price-head {
+          grid-template-columns: minmax(0, 1fr) 76px 76px;
+
+          font-size: 10px;
+        }
+
+        .price-row {
+          grid-template-columns: minmax(0, 1fr) 76px 76px;
+        }
+
+        .service {
+          align-items: flex-start;
+
+          line-height: 1.35;
+        }
+
+        .service-icon {
+          display: none;
+        }
+
+        .price {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================================
+     HEADER
+========================================================= -->
+
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+      <div class="row gx-0 align-items-center" style="height: 45px">
+        <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+          <div class="d-flex flex-wrap">
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"
+              class="text-light me-4"
+              ><i class="fas fa-map-marker-alt text-primary me-2"></i
+              >Vogelsbergstrasse 47, 63674 Altenstadt</a
+            >
+            <a href="tel:+4960473292615" class="text-light me-4"
+              ><i class="fas fa-phone-alt text-primary me-2"></i>06047 /
+              3292615</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid position-relative p-0">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0"
+      >
+        <a href="index.html" class="navbar-brand p-0">
+          <img
+            class="integralis-logo"
+            src="https://res.cloudinary.com/dlpdbr0ey/image/upload/c_crop,g_north_west,h_503,w_1192/f_auto/q_auto/copy_of_brave_screenshot_wwwgooglede_1_l3e4o9.png"
+            alt="Integralis Praxis fuer Physiotherapie"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-label="Navigation öffnen"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0"></div>
+          <a
+            href="tel:+4960473292615"
+            class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0"
+            >Termin vereinbaren</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <!-- =========================================================
+     HERO
+========================================================= -->
+
+    <section
+      class="hero"
+      style="
+        background-image:
+          linear-gradient(
+            135deg,
+            rgba(79, 174, 8, 0.72),
+            rgba(104, 189, 26, 0.72)
+          ),
+          url(&quot;https://res.cloudinary.com/k3cqt6uc/image/upload/v1788500256/11846289-c833-41e0-8d65-ded209c34d41.jpg&quot;);
+      "
+    >
+      <div class="hero-inner">
+        <div class="hero-badge">
+          <!-- Euro Icon -->
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M4 10h11"></path>
+            <path d="M4 14h10"></path>
+            <path d="M18 6.5A7 7 0 1 0 18 17.5"></path>
+          </svg>
+
+          Transparente Preise
+        </div>
+
+        <h1>Unsere Preise</h1>
+
+        <p>
+          Eine übersichtliche Zusammenstellung unserer physiotherapeutischen
+          Leistungen und Preise. Damit Du bereits vor der Behandlung weißt, was
+          auf Dich zukommt.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     CONTENT
+========================================================= -->
+
+    <main class="content">
+      <!-- =====================================================
+         INTRO
+    ===================================================== -->
+
+      <div class="price-intro">
+        <div class="price-intro-left">
+          <div class="intro-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 4h16v16H4z"></path>
+              <path d="M8 9h8"></path>
+              <path d="M8 13h6"></path>
+              <path d="M8 17h4"></path>
+            </svg>
+          </div>
+
+          <div>
+            <strong> Preisliste </strong>
+
+            <span> Privat & Selbstzahler </span>
+          </div>
+        </div>
+
+        <div class="date-badge">Stand April 2025</div>
+      </div>
+
+      <!-- =====================================================
+         LEGEND
+    ===================================================== -->
+
+      <div class="price-legend">
+        <div class="legend-item">
+          <div class="legend-name">
+            <span class="legend-dot"></span>
+
+            Privat
+          </div>
+
+          <div class="legend-price">regulärer Privatpreis</div>
+        </div>
+
+        <div class="legend-item">
+          <div class="legend-name">
+            <span class="legend-dot dark"></span>
+
+            SZ inkl. 19 % MwSt.
+          </div>
+
+          <div class="legend-price">Selbstzahler</div>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         THERAPIE
+    ===================================================== -->
+
+      <section class="price-category">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 2v20"></path>
+              <path
+                d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"
+              ></path>
+            </svg>
+          </div>
+
+          <div>
+            <h2>Physiotherapie & Therapie</h2>
+
+            <p>Unsere therapeutischen Hauptleistungen</p>
+          </div>
+        </div>
+
+        <div class="price-head">
+          <div>Art der Behandlung</div>
+
+          <div>Privat</div>
+
+          <div>SZ</div>
+        </div>
+
+        <!-- Massage -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="8" r="3"></circle>
+                <path d="M5 21c1-4 3.5-6 7-6s6 2 7 6"></path>
+              </svg>
+            </div>
+
+            Klassische Massage Therapie · 20 Min.
+          </div>
+
+          <div class="price private">28,50 €</div>
+
+          <div class="price sz">26,00 €</div>
+        </div>
+
+        <!-- KG -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="5" r="3"></circle>
+                <path d="M12 8v7"></path>
+                <path d="M7 11l5 4 5-4"></path>
+                <path d="M8 22l4-7 4 7"></path>
+              </svg>
+            </div>
+
+            Krankengymnastik · 20 Min.
+          </div>
+
+          <div class="price private">39,50 €</div>
+
+          <div class="price sz">36,00 €</div>
+        </div>
+
+        <!-- Bobath -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M8 12l2.5 2.5L16 9"></path>
+              </svg>
+            </div>
+
+            Krankengymnastik Bobath / PNF
+          </div>
+
+          <div class="price private">63,00 €</div>
+
+          <div class="price sz">57,00 €</div>
+        </div>
+
+        <!-- Manuelle Therapie -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 11l4-4 6 6"></path>
+                <path d="M4 20l5-5"></path>
+                <path d="M15 5l4 4"></path>
+              </svg>
+            </div>
+
+            Manuelle Therapie
+          </div>
+
+          <div class="price private">47,00 €</div>
+
+          <div class="price sz">43,00 €</div>
+        </div>
+
+        <!-- Lymph 30 -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 2c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"
+                ></path>
+              </svg>
+            </div>
+
+            Manuelle Lymphdrainage · 30 Min.
+          </div>
+
+          <div class="price private">47,50 €</div>
+
+          <div class="price sz">43,00 €</div>
+        </div>
+
+        <!-- Lymph 45 -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v5l3 2"></path>
+              </svg>
+            </div>
+
+            Manuelle Lymphdrainage · 45 Min.
+          </div>
+
+          <div class="price private">71,50 €</div>
+
+          <div class="price sz">65,00 €</div>
+        </div>
+
+        <!-- Lymph 60 -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v5l4 2"></path>
+              </svg>
+            </div>
+
+            Manuelle Lymphdrainage · 60 Min.
+          </div>
+
+          <div class="price private">95,00 €</div>
+
+          <div class="price sz">87,50 €</div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         ERGÄNZENDE MASSNAHMEN
+    ===================================================== -->
+
+      <section class="price-category">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 3v18"></path>
+              <path d="M3 12h18"></path>
+            </svg>
+          </div>
+
+          <div>
+            <h2>Ergänzende Maßnahmen</h2>
+
+            <p>Zusätzliche Anwendungen zur Therapie</p>
+          </div>
+        </div>
+
+        <div class="price-head">
+          <div>Leistung</div>
+
+          <div>Privat</div>
+
+          <div>SZ</div>
+        </div>
+
+        <!-- Fango -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M4 17c3-5 5-5 8 0s5 5 8 0"></path>
+                <path d="M4 12c3-5 5-5 8 0s5 5 8 0"></path>
+              </svg>
+            </div>
+
+            Fango
+          </div>
+
+          <div class="price private">11,00 €</div>
+
+          <div class="price sz">11,00 €</div>
+        </div>
+
+        <!-- Heißluft -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 3c3 3 4 5 4 8a4 4 0 0 1-8 0c0-2 1-4 2-5"></path>
+                <path d="M12 21a5 5 0 0 0 5-5"></path>
+              </svg>
+            </div>
+
+            Heißluft
+          </div>
+
+          <div class="price private">16,00 €</div>
+
+          <div class="price sz">15,00 €</div>
+        </div>
+
+        <!-- Kältetherapie -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 2v20"></path>
+                <path d="M4.9 6l14.2 12"></path>
+                <path d="M19.1 6L4.9 18"></path>
+              </svg>
+            </div>
+
+            Kältetherapie
+          </div>
+
+          <div class="price private">20,00 €</div>
+
+          <div class="price sz">18,00 €</div>
+        </div>
+
+        <!-- Ultraschall -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M4 12h16"></path>
+                <path d="M7 8c2-2 4-2 6 0s4 2 7 0"></path>
+                <path d="M7 16c2 2 4 2 6 0s4-2 7 0"></path>
+              </svg>
+            </div>
+
+            Ultraschall
+          </div>
+
+          <div class="price private">18,00 €</div>
+
+          <div class="price sz">17,00 €</div>
+        </div>
+
+        <!-- Heiße Rolle -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="7"></circle>
+                <path d="M12 8v4l2 2"></path>
+              </svg>
+            </div>
+
+            Heiße Rolle
+          </div>
+
+          <div class="price private">1,00 €</div>
+
+          <div class="price sz">1,00 €</div>
+        </div>
+
+        <!-- 1 Euro / 10 cm -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M3 12h18"></path>
+                <path d="M6 9v6"></path>
+                <path d="M10 10v4"></path>
+                <path d="M14 10v4"></path>
+                <path d="M18 9v6"></path>
+              </svg>
+            </div>
+
+            1 € / 10 cm
+          </div>
+
+          <div class="price private">25,00 €</div>
+
+          <div class="price sz">25,00 €</div>
+        </div>
+
+        <!-- Beratung -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.8 9.8 0 0 1-4-.8L3 21l1.8-4.2A8.2 8.2 0 0 1 3 11.5a8.5 8.5 0 0 1 18 0z"
+                ></path>
+              </svg>
+            </div>
+
+            Beratungsgespräch · 20 Min.
+          </div>
+
+          <div class="price private">30,00 €</div>
+
+          <div class="price sz">26,00 €</div>
+        </div>
+
+        <!-- Hausbesuch -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M3 11l9-8 9 8"></path>
+                <path d="M5 10v10h14V10"></path>
+                <path d="M9 20v-6h6v6"></path>
+              </svg>
+            </div>
+
+            km-Pauschale pro Hausbesuch
+          </div>
+
+          <div class="price private">30,00 €</div>
+
+          <div class="price sz">28,00 €</div>
+        </div>
+
+        <!-- Kompression -->
+
+        <div class="price-row">
+          <div class="service">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 4h10"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 12h12"></path>
+                <path d="M7 16h10"></path>
+                <path d="M9 20h6"></path>
+              </svg>
+            </div>
+
+            Kompressionen pro Extremität
+          </div>
+
+          <div class="price private">30,00 €</div>
+
+          <div class="price sz">28,00 €</div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         NOTE
+    ===================================================== -->
+
+      <div class="price-note">
+        <div class="price-note-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 11v5"></path>
+            <path d="M12 8h.01"></path>
+          </svg>
+        </div>
+
+        <div>
+          <strong> Hinweis zur Preisliste </strong>
+
+          <p>
+            Die hier aufgeführten Preise entsprechen der vorliegenden Preisliste
+            mit Stand April 2025. Für aktuelle Preise und individuelle Fragen
+            sprich uns bitte direkt an.
+          </p>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         CTA
+    ===================================================== -->
+
+      <section class="cta" id="kontakt">
+        <div class="cta-content">
+          <h2>Du hast noch Fragen?</h2>
+
+          <p>
+            Wir helfen Dir gerne weiter und beantworten Deine Fragen zu unseren
+            Leistungen und Preisen.
+          </p>
+
+          <!-- HIER TELEFON / KONTAKT EINTRAGEN -->
+
+          <a href="tel:+496047000000" class="cta-button">
+            Kontakt aufnehmen
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14"></path>
+              <path d="M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+    <div class="container-fluid footer py-5">
+      <div class="container py-5">
+        <div class="row g-5"></div>
+      </div>
+    </div>
+
+    <a
+      href="#"
+      class="btn btn-primary btn-lg-square back-to-top"
+      aria-label="Zum Seitenanfang"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

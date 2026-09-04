@@ -732,11 +732,19 @@ select:focus-visible {
 }
 
 #spinner.show {
+  animation: spinnerFailsafe 2s forwards;
   transition:
     opacity 0.5s ease-out,
     visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
+}
+
+@keyframes spinnerFailsafe {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 /*** Spinner End ***/
 
@@ -1235,6 +1243,163 @@ select:focus-visible {
 /*** Single Page Hero Header End ***/
 
 /*** Service Start ***/
+.rooms .feature-item {
+  min-height: 270px;
+  padding: 0 !important;
+  background: transparent;
+  border: 0;
+  perspective: 1000px;
+}
+
+.rooms-card-inner {
+  position: relative;
+  min-height: 270px;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s ease;
+}
+
+.rooms .feature-item:hover .rooms-card-inner,
+.rooms .feature-item:focus-within .rooms-card-inner {
+  transform: rotateY(180deg);
+}
+
+.rooms-card-front,
+.rooms-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 22px;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rooms-card-front {
+  background: var(--bs-white);
+}
+
+.rooms-card-front .feature-icon {
+  margin-bottom: 18px !important;
+}
+
+.rooms-card-front .feature-content {
+  align-items: center;
+  text-align: center;
+}
+
+.rooms-card-front .feature-content p {
+  display: none;
+}
+
+.rooms-card-front .feature-content h5 {
+  text-align: center;
+}
+
+.rooms-card-front h5,
+.rooms-card-back h5 {
+  margin-bottom: 0 !important;
+}
+.rooms-card-front > .col-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.rooms-card-front .feature-icon {
+  margin-bottom: 18px !important;
+  margin-inline: auto;
+}
+
+.rooms-card-front .feature-icon i {
+  font-size: 2.5rem;
+}
+.rooms-card-back {
+  transform: rotateY(180deg);
+  width: 100%;
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  text-align: center;
+}
+
+.rooms-card-back h5 {
+  color: var(--bs-white);
+  font-size: 1.15rem;
+}
+
+.rooms-card-back p {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.philosophy .feature-item {
+  height: 100%;
+  text-align: center;
+}
+
+.philosophy .feature-item > .col-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.philosophy .feature-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy .feature-icon > div {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+}
+
+.philosophy .feature-icon .fa-4x {
+  font-size: 2.5rem;
+}
+
+.philosophy .feature-content {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.philosophy .feature-content h5,
+.philosophy .feature-content p {
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  .philosophy .feature-icon,
+  .philosophy .feature-icon > div {
+    width: 64px;
+    height: 64px;
+  }
+
+  .philosophy .feature-icon .fa-4x {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rooms-card-inner {
+    transition: none;
+  }
+}
+
 .service {
   overflow: hidden;
 } /* ========================================== Service Card ========================================== */
@@ -1582,6 +1747,12 @@ select:focus-visible {
   }
 }
 /*** Feature End ***/
+
+.integralis-job-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
 /*** Appointment Start ***/
 .appointment {

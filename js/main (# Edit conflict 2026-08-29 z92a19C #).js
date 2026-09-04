@@ -31,7 +31,7 @@
       .html(
         '<a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Vogelsbergstrasse 47, 63674 Altenstadt</a>' +
           '<a href="tel:+4960473292615" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>06047 / 3292615</a>' +
-          '<a href="mailto:info@integralis-physio.de" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>info@integralis-physio.de</a>',
+          "",
       );
 
     $(".navbar-brand").html(
@@ -47,7 +47,7 @@
       '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="text-white mb-4">Integralis</h4><p>Praxis fuer Physiotherapie in der Alten Molkerei in Altenstadt.</p></div></div>' +
         '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white">Schnellzugriff</h4><a href="index.html"><i class="fas fa-angle-right me-2"></i> Startseite</a><a href="about.html"><i class="fas fa-angle-right me-2"></i> Praxis</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Therapieangebote</a><a href="contact.html"><i class="fas fa-angle-right me-2"></i> Kontakt</a><a href="#impressum" data-bs-toggle="modal" data-bs-target="#impressumModal"><i class="fas fa-angle-right me-2"></i> Impressum</a><a href="#datenschutz" data-bs-toggle="modal" data-bs-target="#datenschutzModal"><i class="fas fa-angle-right me-2"></i> Datenschutz</a></div></div>' +
         '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white">Therapieangebote</h4><a href="service.html"><i class="fas fa-angle-right me-2"></i> Klassische Massage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Krankengymnastik</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Bobath</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Lymphdrainage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Wärme- und Kältetherapie</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Hausbesuche</a></div></div>' +
-        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white">Kontakt</h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstrasse 47, 63674 Altenstadt</a><a href="mailto:info@integralis-physio.de"><i class="fas fa-envelope me-2"></i> info@integralis-physio.de</a><a href="tel:+4960473292615"><i class="fas fa-phone me-2"></i> 06047 / 3292615</a><span class="mb-3"><i class="fas fa-clock me-2"></i> Mo + Mi 10 - 19 Uhr</span></div></div>',
+        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white">Kontakt</h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstrasse 47, 63674 Altenstadt</a><a href="tel:+4960473292615"><i class="fas fa-phone me-2"></i> 06047 / 3292615</a><span class="mb-3"><i class="fas fa-clock me-2"></i> Mo + Mi 10 - 19 Uhr</span></div></div>',
     );
     $(".copyright .text-white")
       .first()
@@ -63,26 +63,65 @@
     $(".copyright .text-md-end a").before("Gestaltet von ");
 
     var serviceDetails = {
-      "Klassische Massage": ["Klassische Massage", "Gezielte Massagegriffe helfen, verspannte Muskulatur zu lockern und die Durchblutung des Gewebes zu unterstützen.", "Geeignet bei muskulären Verspannungen und als ergänzende Maßnahme innerhalb Ihrer physiotherapeutischen Behandlung."],
-      "Krankengymnastik": ["Krankengymnastik", "Die Behandlung verbindet individuell angeleitete Übungen mit therapeutischen Maßnahmen für Kraft, Beweglichkeit und Koordination.", "Geeignet für Menschen, die Bewegungsabläufe verbessern, Beschwerden reduzieren oder ihre Belastbarkeit steigern möchten."],
-      "Krankengymnastik nach Bobath": ["Krankengymnastik nach Bobath", "Die neurologische Behandlung nach Bobath unterstützt funktionelle Bewegungen und orientiert sich an Ihren persönlichen Fähigkeiten.", "Geeignet bei neurologischen Erkrankungen oder nach neurologischen Beeinträchtigungen."],
-      "Lymphdrainage": ["Lymphdrainage", "Sanfte, rhythmische Griffe unterstützen den Lymphabfluss und können Schwellungen im Gewebe reduzieren.", "Geeignet bei ärztlich verordneter Behandlung von Lymphödemen oder nach bestimmten Eingriffen."],
-      "Kaeltetherapie": ["Kaeltetherapie", "Kälte wird gezielt als ergänzende therapeutische Maßnahme eingesetzt und auf Ihre Behandlung abgestimmt.", "Geeignet bei Beschwerden, bei denen eine lokale Kälteanwendung sinnvoll ist."],
-      "Waermetherapie": ["Waermetherapie", "Wärmeanwendungen können die Durchblutung fördern und verspannte Muskulatur auf die weitere Behandlung vorbereiten.", "Geeignet als ergänzende Maßnahme bei muskulären Verspannungen und eingeschränkter Beweglichkeit."],
-      "Hausbesuche": ["Hausbesuche", "Wenn ein Besuch in der Praxis nicht möglich ist, führen wir die physiotherapeutische Behandlung nach ärztlicher Verordnung bei Ihnen zu Hause durch.", "Geeignet für Patientinnen und Patienten mit eingeschränkter Mobilität."],
-      "Alle Kassen und Privatrezepte": ["Behandlung auf Verordnung", "Wir behandeln gesetzlich und privat Versicherte auf Grundlage einer ärztlichen Verordnung.", "Bringen Sie Ihre gültige Verordnung zum ersten Termin mit."]
+      "Klassische Massage": [
+        "Klassische Massage",
+        "Gezielte Massagegriffe helfen, verspannte Muskulatur zu lockern und die Durchblutung des Gewebes zu unterstützen.",
+        "Geeignet bei muskulären Verspannungen und als ergänzende Maßnahme innerhalb Ihrer physiotherapeutischen Behandlung.",
+      ],
+      Krankengymnastik: [
+        "Krankengymnastik",
+        "Die Behandlung verbindet individuell angeleitete Übungen mit therapeutischen Maßnahmen für Kraft, Beweglichkeit und Koordination.",
+        "Geeignet für Menschen, die Bewegungsabläufe verbessern, Beschwerden reduzieren oder ihre Belastbarkeit steigern möchten.",
+      ],
+      "Krankengymnastik nach Bobath": [
+        "Krankengymnastik nach Bobath",
+        "Die neurologische Behandlung nach Bobath unterstützt funktionelle Bewegungen und orientiert sich an Ihren persönlichen Fähigkeiten.",
+        "Geeignet bei neurologischen Erkrankungen oder nach neurologischen Beeinträchtigungen.",
+      ],
+      Lymphdrainage: [
+        "Lymphdrainage",
+        "Sanfte, rhythmische Griffe unterstützen den Lymphabfluss und können Schwellungen im Gewebe reduzieren.",
+        "Geeignet bei ärztlich verordneter Behandlung von Lymphödemen oder nach bestimmten Eingriffen.",
+      ],
+      Kaeltetherapie: [
+        "Kaeltetherapie",
+        "Kälte wird gezielt als ergänzende therapeutische Maßnahme eingesetzt und auf Ihre Behandlung abgestimmt.",
+        "Geeignet bei Beschwerden, bei denen eine lokale Kälteanwendung sinnvoll ist.",
+      ],
+      Waermetherapie: [
+        "Waermetherapie",
+        "Wärmeanwendungen können die Durchblutung fördern und verspannte Muskulatur auf die weitere Behandlung vorbereiten.",
+        "Geeignet als ergänzende Maßnahme bei muskulären Verspannungen und eingeschränkter Beweglichkeit.",
+      ],
+      Hausbesuche: [
+        "Hausbesuche",
+        "Wenn ein Besuch in der Praxis nicht möglich ist, führen wir die physiotherapeutische Behandlung nach ärztlicher Verordnung bei Ihnen zu Hause durch.",
+        "Geeignet für Patientinnen und Patienten mit eingeschränkter Mobilität.",
+      ],
+      "Alle Kassen und Privatrezepte": [
+        "Behandlung auf Verordnung",
+        "Wir behandeln gesetzlich und privat Versicherte auf Grundlage einer ärztlichen Verordnung.",
+        "Bringen Sie Ihre gültige Verordnung zum ersten Termin mit.",
+      ],
     };
 
-    $("body").append('<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="serviceModalTitle"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p id="serviceModalDescription"></p><h3 class="h5">Für wen ist diese Leistung geeignet?</h3><p id="serviceModalAudience"></p><h3 class="h5">Ihr nächster Schritt</h3><p>In einem persönlichen Gespräch klären wir, ob diese Behandlung zu Ihrer Verordnung und Ihren Zielen passt.</p></div><div class="modal-footer"><a href="tel:+4960473292615" class="btn btn-primary">Jetzt Termin vereinbaren</a></div></div></div></div><div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="impressumModalTitle">Impressum</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><h3 class="h5">Angaben gemäß § 5 TMG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt</p><p class="small text-muted mb-0">Bitte vor Veröffentlichung gegebenenfalls Berufsbezeichnung, zuständige Kammer, Aufsichtsbehörde und Umsatzsteuer-Identifikationsnummer ergänzen.</p></div></div></div></div><div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="datenschutzModalTitle">Datenschutzerklärung</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Website verarbeitet Daten nur, soweit dies für die technische Bereitstellung und Ihre Kontaktaufnahme erforderlich ist.</p><h3 class="h5">Verantwortliche Stelle</h3><p>Integralis Praxis für Physiotherapie, Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt<br><a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktaufnahme</h3><p>Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht ohne Ihre Einwilligung weiter.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.</p><p class="small text-muted mb-0">Bitte diese Datenschutzerklärung vor Veröffentlichung rechtlich prüfen und um Angaben zu Hosting, Server-Protokollen, Karten und weiteren eingesetzten Diensten ergänzen.</p></div></div></div></div>');
+    $("body").append(
+      '<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="serviceModalTitle"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p id="serviceModalDescription"></p><h3 class="h5">Für wen ist diese Leistung geeignet?</h3><p id="serviceModalAudience"></p><h3 class="h5">Ihr nächster Schritt</h3><p>In einem persönlichen Gespräch klären wir, ob diese Behandlung zu Ihrer Verordnung und Ihren Zielen passt.</p></div><div class="modal-footer"><a href="tel:+4960473292615" class="btn btn-primary">Jetzt Termin vereinbaren</a></div></div></div></div><div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="impressumModalTitle">Impressum</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><h3 class="h5">Angaben gemäß § 5 TMG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt</p><p class="small text-muted mb-0">Bitte vor Veröffentlichung gegebenenfalls Berufsbezeichnung, zuständige Kammer, Aufsichtsbehörde und Umsatzsteuer-Identifikationsnummer ergänzen.</p></div></div></div></div><div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="datenschutzModalTitle">Datenschutzerklärung</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Website verarbeitet Daten nur, soweit dies für die technische Bereitstellung und Ihre Kontaktaufnahme erforderlich ist.</p><h3 class="h5">Verantwortliche Stelle</h3><p>Integralis Praxis für Physiotherapie, Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt<br><a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktaufnahme</h3><p>Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht ohne Ihre Einwilligung weiter.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.</p><p class="small text-muted mb-0">Bitte diese Datenschutzerklärung vor Veröffentlichung rechtlich prüfen und um Angaben zu Hosting, Server-Protokollen, Karten und weiteren eingesetzten Diensten ergänzen.</p></div></div></div></div>',
+    );
 
     $(document).on("click", ".service-item, .service-item a", function (event) {
-      var detail = serviceDetails[$(this).closest(".service-item").find("h5").text().trim()];
+      var detail =
+        serviceDetails[
+          $(this).closest(".service-item").find("h5").text().trim()
+        ];
       if (!detail) return;
       event.preventDefault();
       $("#serviceModalTitle").text(detail[0]);
       $("#serviceModalDescription").text(detail[1]);
       $("#serviceModalAudience").text(detail[2]);
-      bootstrap.Modal.getOrCreateInstance(document.getElementById("serviceModal")).show();
+      bootstrap.Modal.getOrCreateInstance(
+        document.getElementById("serviceModal"),
+      ).show();
     });
 
     $(document).on("submit", "#contactForm", function (event) {
@@ -91,13 +130,18 @@
       var status = $("#contactFormStatus");
       if (!form.checkValidity()) {
         form.classList.add("was-validated");
-        status.removeClass("d-none alert-success").addClass("alert-danger").text("Bitte füllen Sie alle Pflichtfelder korrekt aus.");
+        status
+          .removeClass("d-none alert-success")
+          .addClass("alert-danger")
+          .text("Bitte füllen Sie alle Pflichtfelder korrekt aus.");
         return;
       }
-      var subject = "Kontaktanfrage von " + $("#contactName").val();
-      var body = "Name: " + $("#contactName").val() + "\nE-Mail: " + $("#contactEmail").val() + "\nTelefon: " + $("#contactPhone").val() + "\nBetreff: " + $("#contactSubject").val() + "\n\nNachricht:\n" + $("#contactMessage").val();
-      status.removeClass("d-none alert-danger").addClass("alert-success").text("Ihre E-Mail-Anwendung wird geöffnet. Bitte senden Sie die vorbereitete Nachricht dort ab.");
-      window.location.href = "mailto:info@integralis-physio.de?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      status
+        .removeClass("d-none alert-danger")
+        .addClass("alert-success")
+        .text(
+          "Bitte rufen Sie uns für Ihre Anfrage direkt an: 06047 / 3292615.",
+        );
     });
 
     var pageContent = {
@@ -185,10 +229,7 @@
         "Hausbesuche",
         "Bei Bedarf kommen wir für Ihre physiotherapeutische Behandlung zu Ihnen.",
       ],
-      [
-        "Direkt erreichbar",
-        "Vereinbaren Sie Ihren Termin telefonisch oder per E-Mail.",
-      ],
+      ["Direkt erreichbar", "Vereinbaren Sie Ihren Termin telefonisch."],
     ];
     if (pageName === "about.html" || pageName === "service.html") {
       var benefits = $(".feature").last();
@@ -267,7 +308,7 @@
       );
       $(".bg-breadcrumb").nextUntil(".footer").remove();
       $(".bg-breadcrumb").after(
-        '<div class="container-fluid feature py-5"><div class="container py-5"><div class="section-title mb-5"><div class="sub-style"><h4 class="sub-title px-3 mb-0">Physiotherapie</h4></div><h1 class="display-3 mb-4">Ihre Fragen im Mittelpunkt.</h1><p class="mb-0">Ob Krankengymnastik, Lymphdrainage, neurologische Behandlung nach Bobath oder Hausbesuch: Wir informieren Sie im persönlichen Gespräch über die passende Therapie.</p></div><div class="text-center"><a href="mailto:info@integralis-physio.de" class="btn btn-secondary rounded-pill text-white py-3 px-5">E-Mail schreiben</a></div></div></div>',
+        '<div class="container-fluid feature py-5"><div class="container py-5"><div class="section-title mb-5"><div class="sub-style"><h4 class="sub-title px-3 mb-0">Physiotherapie</h4></div><h1 class="display-3 mb-4">Ihre Fragen im Mittelpunkt.</h1><p class="mb-0">Ob Krankengymnastik, Lymphdrainage, neurologische Behandlung nach Bobath oder Hausbesuch: Wir informieren Sie im persönlichen Gespräch über die passende Therapie.</p></div></div></div>',
       );
     }
 

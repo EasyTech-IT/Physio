@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
   <head>
     <meta charset="utf-8" />
@@ -70,10 +70,6 @@
               ><i class="fas fa-phone-alt text-primary me-2"></i>06047 /
               3292615</a
             >
-            <a href="mailto:info@integralis-physio.de" class="text-light me-0"
-              ><i class="fas fa-envelope text-primary me-2"></i
-              >info@integralis-physio.de</a
-            >
           </div>
         </div>
         <div class="col-lg-4 text-center text-lg-end">
@@ -131,7 +127,9 @@
             <a href="service.html" class="nav-item nav-link"
               >Therapieangebote</a
             >
-            <a href="contact.html" class="nav-item nav-link">Kontakt</a>
+            <a href="service.html" class="nav-item nav-link"
+              >Unsere Leistungen</a
+            >
           </div>
           <a
             href="tel:+4960473292615"
@@ -179,9 +177,9 @@
 
               <a
                 class="btn btn-outline-light rounded-pill py-3 px-5"
-                href="contact.html"
+                href="service.html"
               >
-                Kontakt aufnehmen
+                Unsere Leistungen
               </a>
             </div>
           </div>
@@ -231,9 +229,9 @@
 
               <a
                 class="btn btn-outline-light rounded-pill py-3 px-5"
-                href="contact.html"
+                href="service.html"
               >
-                Kontakt aufnehmen
+                Unsere Leistungen
               </a>
             </div>
           </div>
@@ -285,6 +283,1604 @@
       <!-- Carousel End -->
     </div>
     <!-- Navbar & Hero End -->
+
+    <!-- =========================================================
+     INTEGRALIS – RECRUITING POPUP
+     Popup erscheint 3 Sekunden nach Seitenaufruf
+========================================================= -->
+
+    <style>
+      /* =========================================================
+   VARIABLES
+========================================================= */
+
+      :root {
+        --integralis-green: #55ad0b;
+        --integralis-green-dark: #438d08;
+        --integralis-green-light: #c4ee88;
+        --integralis-bg: #f7f9f4;
+        --integralis-dark: #303030;
+        --integralis-muted: #666;
+        --integralis-white: #ffffff;
+        --integralis-border: #e5e9df;
+        --integralis-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+      }
+
+      /* =========================================================
+   STICKY RECRUITING BUTTON
+========================================================= */
+
+      .integralis-job-trigger {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 9998;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 14px 20px;
+
+        border: none;
+        border-radius: 999px;
+
+        background: var(--integralis-green);
+        color: white;
+
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        box-shadow: 0 10px 30px rgba(85, 173, 11, 0.35);
+
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .integralis-job-trigger:hover {
+        transform: translateY(-3px);
+        background: var(--integralis-green-dark);
+        box-shadow: 0 14px 35px rgba(85, 173, 11, 0.42);
+      }
+
+      .integralis-job-trigger svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+
+      /* =========================================================
+   OVERLAY
+========================================================= */
+
+      .integralis-job-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+
+        display: none;
+
+        padding: 20px;
+
+        background: rgba(20, 25, 17, 0.62);
+
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+
+        overflow-y: auto;
+      }
+
+      .integralis-job-overlay.is-open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        animation: integralisFadeIn 0.25s ease;
+      }
+
+      /* =========================================================
+   MODAL
+========================================================= */
+
+      .integralis-job-modal {
+        position: relative;
+
+        width: min(960px, 100%);
+
+        max-height: calc(100vh - 40px);
+
+        overflow-y: auto;
+
+        background: var(--integralis-white);
+
+        border-radius: 28px;
+
+        box-shadow: var(--integralis-shadow);
+
+        animation: integralisModalIn 0.3s ease;
+
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+      .integralis-job-close {
+        position: absolute;
+
+        top: 18px;
+        right: 18px;
+
+        z-index: 20;
+
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(0, 0, 0, 0.08);
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.92);
+
+        color: var(--integralis-dark);
+
+        cursor: pointer;
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+        transition: 0.2s ease;
+      }
+
+      .integralis-job-close:hover {
+        background: var(--integralis-green);
+        color: white;
+        transform: rotate(5deg);
+      }
+
+      /* =========================================================
+   HERO
+========================================================= */
+
+      .integralis-job-hero {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+
+        background: linear-gradient(
+          135deg,
+          #4fae08 0%,
+          #65bd18 55%,
+          #c4ee88 100%
+        );
+
+        color: white;
+      }
+
+      /* Hero text */
+
+      .integralis-job-hero-content {
+        padding: 56px 48px;
+      }
+
+      .integralis-job-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        margin-bottom: 28px;
+
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+
+      .integralis-job-brand span {
+        width: 9px;
+        height: 9px;
+
+        border-radius: 50%;
+
+        background: white;
+      }
+
+      .integralis-job-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 8px 13px;
+
+        margin-bottom: 18px;
+
+        border-radius: 999px;
+
+        background: rgba(255, 255, 255, 0.18);
+
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .integralis-job-hero h2 {
+        margin: 0 0 16px;
+
+        font-size: clamp(36px, 5vw, 58px);
+
+        line-height: 0.98;
+
+        letter-spacing: -2px;
+      }
+
+      .integralis-job-hero h2 span {
+        display: block;
+
+        color: #eaffd3;
+      }
+
+      .integralis-job-hero-description {
+        max-width: 560px;
+
+        margin: 0 0 28px;
+
+        font-size: 18px;
+
+        line-height: 1.55;
+
+        color: rgba(255, 255, 255, 0.93);
+      }
+
+      /* Hero image */
+
+      .integralis-job-hero-image {
+        min-height: 420px;
+
+        overflow: hidden;
+
+        background: #dff6bd;
+      }
+
+      .integralis-job-hero-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center;
+
+        /* Original aspect ratio preserved visually */
+      }
+
+      /* =========================================================
+   HERO BENEFITS
+========================================================= */
+
+      .integralis-job-benefits {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 10px;
+      }
+
+      .integralis-job-benefit {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 10px 13px;
+
+        border-radius: 12px;
+
+        background: rgba(255, 255, 255, 0.16);
+
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .integralis-job-benefit svg {
+        width: 17px;
+        height: 17px;
+      }
+
+      /* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+      .integralis-job-content {
+        padding: 42px 48px 48px;
+      }
+
+      /* =========================================================
+   QUICK FACTS
+========================================================= */
+
+      .integralis-job-facts {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 12px;
+
+        margin-bottom: 42px;
+      }
+
+      .integralis-job-fact {
+        padding: 20px;
+
+        border: 1px solid var(--integralis-border);
+
+        border-radius: 18px;
+
+        background: #fbfcfa;
+      }
+
+      .integralis-job-fact-icon {
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 14px;
+
+        border-radius: 12px;
+
+        background: #e9f8d7;
+
+        color: var(--integralis-green);
+      }
+
+      .integralis-job-fact-icon svg {
+        width: 21px;
+        height: 21px;
+      }
+
+      .integralis-job-fact strong {
+        display: block;
+
+        margin-bottom: 4px;
+
+        color: var(--integralis-dark);
+
+        font-size: 18px;
+      }
+
+      .integralis-job-fact span {
+        color: var(--integralis-muted);
+
+        font-size: 13px;
+
+        line-height: 1.4;
+      }
+
+      /* =========================================================
+   SECTION
+========================================================= */
+
+      .integralis-job-section {
+        margin-bottom: 42px;
+      }
+
+      .integralis-job-section-title {
+        display: flex;
+        align-items: flex-start;
+        gap: 13px;
+
+        margin-bottom: 20px;
+      }
+
+      .integralis-job-section-title-icon {
+        width: 44px;
+        height: 44px;
+
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 13px;
+
+        background: var(--integralis-green);
+
+        color: white;
+      }
+
+      .integralis-job-section-title-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .integralis-job-section h3 {
+        margin: 0;
+
+        color: var(--integralis-dark);
+
+        font-size: 25px;
+      }
+
+      .integralis-job-section-subtitle {
+        margin: 4px 0 0;
+
+        color: var(--integralis-muted);
+
+        font-size: 14px;
+      }
+
+      /* =========================================================
+   ADVANTAGES GRID
+========================================================= */
+
+      .integralis-job-advantages {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+      }
+
+      .integralis-job-advantage {
+        display: flex;
+        gap: 14px;
+
+        padding: 18px;
+
+        border: 1px solid var(--integralis-border);
+
+        border-radius: 16px;
+
+        background: white;
+      }
+
+      .integralis-job-advantage-icon {
+        width: 38px;
+        height: 38px;
+
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 11px;
+
+        background: #eff9e5;
+
+        color: var(--integralis-green);
+      }
+
+      .integralis-job-advantage-icon svg {
+        width: 19px;
+        height: 19px;
+      }
+
+      .integralis-job-advantage strong {
+        display: block;
+
+        margin-bottom: 4px;
+
+        color: var(--integralis-dark);
+
+        font-size: 15px;
+      }
+
+      .integralis-job-advantage p {
+        margin: 0;
+
+        color: var(--integralis-muted);
+
+        font-size: 13px;
+
+        line-height: 1.45;
+      }
+
+      /* =========================================================
+   IMAGE GALLERY
+========================================================= */
+
+      .integralis-job-gallery {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 14px;
+      }
+
+      .integralis-job-gallery figure {
+        margin: 0;
+
+        overflow: hidden;
+
+        border-radius: 18px;
+
+        background: #edf2e8;
+      }
+
+      .integralis-job-gallery figure:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .integralis-job-gallery img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        /*
+       Wichtig:
+       Kein künstliches aspect-ratio.
+       Dadurch bleibt das originale Bildformat erhalten.
+    */
+
+        object-fit: contain;
+
+        transition: transform 0.35s ease;
+      }
+
+      .integralis-job-gallery figure:hover img {
+        transform: scale(1.015);
+      }
+
+      /* =========================================================
+   APPLICATION GUIDE
+========================================================= */
+
+      .integralis-job-application {
+        padding: 28px;
+
+        border-radius: 22px;
+
+        background: linear-gradient(135deg, #f1fbe7, #f9fcf6);
+
+        border: 1px solid #dceecb;
+      }
+
+      .integralis-job-steps {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 15px;
+      }
+
+      .integralis-job-step {
+        position: relative;
+
+        padding: 20px;
+
+        border-radius: 17px;
+
+        background: white;
+
+        border: 1px solid #e4ecd9;
+      }
+
+      .integralis-job-step-number {
+        width: 35px;
+        height: 35px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 14px;
+
+        border-radius: 50%;
+
+        background: var(--integralis-green);
+
+        color: white;
+
+        font-weight: 800;
+      }
+
+      .integralis-job-step h4 {
+        margin: 0 0 7px;
+
+        color: var(--integralis-dark);
+
+        font-size: 16px;
+      }
+
+      .integralis-job-step p {
+        margin: 0;
+
+        color: var(--integralis-muted);
+
+        font-size: 13px;
+
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+   CTA
+========================================================= */
+
+      .integralis-job-cta {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 20px;
+
+        padding-top: 30px;
+
+        border-top: 1px solid var(--integralis-border);
+      }
+
+      .integralis-job-cta-text strong {
+        display: block;
+
+        margin-bottom: 5px;
+
+        color: var(--integralis-dark);
+
+        font-size: 20px;
+      }
+
+      .integralis-job-cta-text span {
+        color: var(--integralis-muted);
+
+        font-size: 14px;
+      }
+
+      .integralis-job-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        min-height: 54px;
+
+        padding: 0 26px;
+
+        border: none;
+
+        border-radius: 999px;
+
+        background: var(--integralis-green);
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 15px;
+        font-weight: 800;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+      }
+
+      .integralis-job-button:hover {
+        background: var(--integralis-green-dark);
+
+        transform: translateY(-2px);
+      }
+
+      .integralis-job-button svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* =========================================================
+   FOOTER INFO
+========================================================= */
+
+      .integralis-job-location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        margin-top: 22px;
+
+        color: var(--integralis-muted);
+
+        font-size: 13px;
+      }
+
+      .integralis-job-location svg {
+        width: 18px;
+        color: var(--integralis-green);
+      }
+
+      /* =========================================================
+   ANIMATIONS
+========================================================= */
+
+      @keyframes integralisFadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes integralisModalIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.98);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      /* =========================================================
+   MOBILE
+========================================================= */
+
+      @media (max-width: 760px) {
+        .integralis-job-overlay {
+          padding: 0;
+        }
+
+        .integralis-job-modal {
+          width: 100%;
+
+          max-height: 100vh;
+
+          border-radius: 0;
+        }
+
+        .integralis-job-hero {
+          grid-template-columns: 1fr;
+        }
+
+        .integralis-job-hero-content {
+          padding: 42px 24px 30px;
+        }
+
+        .integralis-job-hero-image {
+          min-height: auto;
+        }
+
+        .integralis-job-hero-image img {
+          width: 100%;
+          height: auto;
+
+          object-fit: contain;
+        }
+
+        .integralis-job-hero h2 {
+          font-size: 40px;
+        }
+
+        .integralis-job-content {
+          padding: 30px 20px 110px;
+        }
+
+        .integralis-job-facts {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .integralis-job-advantages {
+          grid-template-columns: 1fr;
+        }
+
+        .integralis-job-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .integralis-job-gallery figure:first-child {
+          grid-column: auto;
+        }
+
+        .integralis-job-steps {
+          grid-template-columns: 1fr;
+        }
+
+        .integralis-job-cta {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .integralis-job-button {
+          width: 100%;
+        }
+
+        .integralis-job-trigger {
+          right: 15px;
+          bottom: 15px;
+
+          padding: 14px 17px;
+        }
+
+        .integralis-job-trigger span {
+          display: none;
+        }
+
+        .integralis-job-trigger {
+          width: 54px;
+          height: 54px;
+
+          justify-content: center;
+        }
+      }
+
+      /* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+      @media (prefers-reduced-motion: reduce) {
+        .integralis-job-overlay,
+        .integralis-job-modal,
+        .integralis-job-trigger,
+        .integralis-job-button,
+        .integralis-job-gallery img {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+
+    <!-- =========================================================
+     STICKY BUTTON
+========================================================= -->
+
+    <button
+      class="integralis-job-trigger"
+      id="integralisJobTrigger"
+      type="button"
+      aria-label="Stellenangebot Physiotherapeut öffnen"
+    >
+      <!-- Briefcase Icon -->
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+        <path d="M3 12h18"></path>
+        <path d="M10 12v2h4v-2"></path>
+      </svg>
+
+      <span>Physiotherapeut:in gesucht</span>
+    </button>
+
+    <!-- =========================================================
+     POPUP
+========================================================= -->
+
+    <div
+      class="integralis-job-overlay"
+      id="integralisJobOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="integralisJobTitle"
+    >
+      <div class="integralis-job-modal">
+        <!-- CLOSE -->
+
+        <button
+          class="integralis-job-close"
+          id="integralisJobClose"
+          type="button"
+          aria-label="Fenster schließen"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M6 6l12 12"></path>
+            <path d="M18 6L6 18"></path>
+          </svg>
+        </button>
+
+        <!-- =================================================
+             HERO
+        ================================================= -->
+
+        <section class="integralis-job-hero">
+          <div class="integralis-job-hero-content">
+            <div class="integralis-job-brand">
+              Integralis
+              <span></span>
+            </div>
+
+            <div class="integralis-job-kicker">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v5l3 2"></path>
+              </svg>
+
+              Vollzeit · Altenstadt
+            </div>
+
+            <h2 id="integralisJobTitle">
+              Arbeit, die sich
+              <span>für Dich lohnt.</span>
+            </h2>
+
+            <p class="integralis-job-hero-description">
+              Wir suchen eine:n Physiotherapeut:in (m/w/d), der oder die Lust
+              auf gute Therapie, ein starkes Team und einen entspannten
+              Arbeitsalltag hat.
+            </p>
+
+            <div class="integralis-job-benefits">
+              <div class="integralis-job-benefit">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 2v20"></path>
+                  <path
+                    d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"
+                  ></path>
+                </svg>
+
+                4.200 € monatlich
+              </div>
+
+              <div class="integralis-job-benefit">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                  <path d="M16 2v4"></path>
+                  <path d="M8 2v4"></path>
+                  <path d="M3 10h18"></path>
+                </svg>
+
+                32 Tage Urlaub
+              </div>
+
+              <div class="integralis-job-benefit">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+
+                Ab 35 Std.
+              </div>
+            </div>
+          </div>
+
+          <div class="integralis-job-hero-image">
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788441531/b21d2684-e2c7-4714-b2e4-15c71e5a5ebd.jpg"
+              alt="Integralis Physiotherapie – Teammitglied mit Skelett"
+            />
+          </div>
+        </section>
+
+        <!-- =================================================
+             CONTENT
+        ================================================= -->
+
+        <div class="integralis-job-content">
+          <!-- QUICK FACTS -->
+
+          <section class="integralis-job-facts">
+            <div class="integralis-job-fact">
+              <div class="integralis-job-fact-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 2v20"></path>
+                  <path
+                    d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"
+                  ></path>
+                </svg>
+              </div>
+
+              <strong>4.200 €</strong>
+              <span>monatliche Vergütung</span>
+            </div>
+
+            <div class="integralis-job-fact">
+              <div class="integralis-job-fact-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                  <path d="M16 2v4"></path>
+                  <path d="M8 2v4"></path>
+                  <path d="M3 10h18"></path>
+                </svg>
+              </div>
+
+              <strong>32 Tage</strong>
+              <span>Urlaub pro Jahr</span>
+            </div>
+
+            <div class="integralis-job-fact">
+              <div class="integralis-job-fact-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+              </div>
+
+              <strong>35+ Std.</strong>
+              <span>flexibel möglich</span>
+            </div>
+
+            <div class="integralis-job-fact">
+              <div class="integralis-job-fact-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 11a8 8 0 1 1-2.34-5.66"></path>
+                  <path d="M20 4v7h-7"></path>
+                </svg>
+              </div>
+
+              <strong>5 Patienten</strong>
+              <span>statt 6 in 2 Stunden</span>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 WHY INTEGRALIS
+            ================================================= -->
+
+          <section class="integralis-job-section">
+            <div class="integralis-job-section-title">
+              <div class="integralis-job-section-title-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+
+              <div>
+                <h3>Warum Integralis?</h3>
+
+                <p class="integralis-job-section-subtitle">
+                  Gemeinsam statt nebeneinander.
+                </p>
+              </div>
+            </div>
+
+            <div class="integralis-job-advantages">
+              <div class="integralis-job-advantage">
+                <div class="integralis-job-advantage-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Mehr Zeit für Therapie</strong>
+
+                  <p>
+                    5 statt 6 Patienten in 2 Stunden. Dadurch entsteht mehr Luft
+                    zwischen den Terminen.
+                  </p>
+                </div>
+              </div>
+
+              <div class="integralis-job-advantage">
+                <div class="integralis-job-advantage-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Kleines, starkes Team</strong>
+
+                  <p>
+                    Direkte Kommunikation, regelmäßige Teamsitzungen und
+                    gemeinsames Arbeiten.
+                  </p>
+                </div>
+              </div>
+
+              <div class="integralis-job-advantage">
+                <div class="integralis-job-advantage-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M3 12h18"></path>
+                    <path d="M12 3v18"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Deine Bedürfnisse zählen</strong>
+
+                  <p>
+                    Wir möchten, dass Du Dich langfristig bei uns wohlfühlst und
+                    Raum für Deine persönlichen Bedürfnisse hast.
+                  </p>
+                </div>
+              </div>
+
+              <div class="integralis-job-advantage">
+                <div class="integralis-job-advantage-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 17l-6.5 4L7.5 13.5 2 9h7z"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Gemeinsame Team-Events</strong>
+
+                  <p>
+                    Nicht nur zusammenarbeiten, sondern auch als Team Zeit
+                    verbringen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 IMAGE GALLERY
+            ================================================= -->
+
+          <section class="integralis-job-section">
+            <div class="integralis-job-section-title">
+              <div class="integralis-job-section-title-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <path d="M21 15l-5-5L5 21"></path>
+                </svg>
+              </div>
+
+              <div>
+                <h3>So sieht Dein Arbeitsumfeld aus</h3>
+
+                <p class="integralis-job-section-subtitle">
+                  Ein kleiner Einblick in unser Team und unseren Praxisalltag.
+                </p>
+              </div>
+            </div>
+
+            <div class="integralis-job-gallery">
+              <figure>
+                <img
+                  src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788441535/8fd5d85f-bcb2-481c-812d-36ba79ebfa73.jpg"
+                  alt="Integralis Physiotherapie Team"
+                  loading="lazy"
+                />
+              </figure>
+
+              <figure>
+                <img
+                  src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788441532/af2460de-0676-44ac-b8d9-ecc2c3b8fe70.jpg"
+                  alt="Physiotherapie Behandlung bei Integralis"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 TASKS
+            ================================================= -->
+
+          <section class="integralis-job-section">
+            <div class="integralis-job-section-title">
+              <div class="integralis-job-section-title-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 11l3 3L22 4"></path>
+                  <path
+                    d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                  ></path>
+                </svg>
+              </div>
+
+              <div>
+                <h3>Deine Aufgaben</h3>
+
+                <p class="integralis-job-section-subtitle">
+                  Eigenverantwortlich, professionell und patientenorientiert.
+                </p>
+              </div>
+            </div>
+
+            <div class="integralis-job-advantages">
+              <div class="integralis-job-advantage">
+                <div class="integralis-job-advantage-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Patienten behandeln</strong>
+
+                  <p>
+                    Eigenständige Durchführung physiotherapeutischer
+                    Behandlungen und Befunderhebungen.
+                  </p>
+                </div>
+              </div>
+
+              <div class="integralis-job-advantage">
+                <div class="integralis-job-advantage-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 4h16v16H4z"></path>
+                    <path d="M8 9h8"></path>
+                    <path d="M8 13h5"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Dokumentation & Austausch</strong>
+
+                  <p>
+                    Professioneller Austausch im Team und kontinuierliche
+                    Optimierung unserer Abläufe.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 REQUIREMENTS
+            ================================================= -->
+
+          <section class="integralis-job-section">
+            <div class="integralis-job-section-title">
+              <div class="integralis-job-section-title-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2l9 4.5v6c0 5.5-3.8 8.5-9 9.5-5.2-1-9-4-9-9.5v-6z"
+                  ></path>
+                  <path d="M8 12l2.5 2.5L16 9"></path>
+                </svg>
+              </div>
+
+              <div>
+                <h3>Das bringst Du mit</h3>
+
+                <p class="integralis-job-section-subtitle">
+                  Fachlich qualifiziert und menschlich passend.
+                </p>
+              </div>
+            </div>
+
+            <div class="integralis-job-advantages">
+              <div class="integralis-job-advantage">
+                <div class="integralis-job-advantage-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 4h16v16H4z"></path>
+                    <path d="M8 8h8"></path>
+                    <path d="M8 12h6"></path>
+                    <path d="M8 16h4"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Qualifikation</strong>
+
+                  <p>
+                    Abgeschlossene Ausbildung oder Studium als
+                    Physiotherapeut:in (m/w/d).
+                  </p>
+                </div>
+              </div>
+
+              <div class="integralis-job-advantage">
+                <div class="integralis-job-advantage-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Teamgeist</strong>
+
+                  <p>
+                    Freude an der Arbeit mit Menschen und an offenem,
+                    kollegialem Austausch.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 APPLICATION GUIDE
+            ================================================= -->
+
+          <section class="integralis-job-section">
+            <div class="integralis-job-application">
+              <div class="integralis-job-section-title">
+                <div class="integralis-job-section-title-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 4h16v16H4z"></path>
+                    <path d="M8 8h8"></path>
+                    <path d="M8 12h5"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <h3>So einfach bewirbst Du Dich</h3>
+
+                  <p class="integralis-job-section-subtitle">
+                    Kein komplizierter Bewerbungsprozess.
+                  </p>
+                </div>
+              </div>
+
+              <div class="integralis-job-steps">
+                <div class="integralis-job-step">
+                  <div class="integralis-job-step-number">1</div>
+
+                  <h4>Kontakt aufnehmen</h4>
+
+                  <p>
+                    Klick auf „Jetzt bewerben“ und nimm unkompliziert Kontakt
+                    mit uns auf.
+                  </p>
+                </div>
+
+                <div class="integralis-job-step">
+                  <div class="integralis-job-step-number">2</div>
+
+                  <h4>Kurz kennenlernen</h4>
+
+                  <p>
+                    Wir sprechen persönlich über Dich, Deine Wünsche und Deine
+                    Vorstellungen.
+                  </p>
+                </div>
+
+                <div class="integralis-job-step">
+                  <div class="integralis-job-step-number">3</div>
+
+                  <h4>Team kennenlernen</h4>
+
+                  <p>Lerne unsere Praxis und unser Team persönlich kennen.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+                 FINAL CTA
+            ================================================= -->
+
+          <div class="integralis-job-cta">
+            <div class="integralis-job-cta-text">
+              <strong> Lust auf einen besseren Arbeitsalltag? </strong>
+
+              <span> Wir freuen uns, Dich kennenzulernen. </span>
+
+              <div class="integralis-job-location">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="2.5"></circle>
+                </svg>
+
+                Altenstadt
+              </div>
+            </div>
+
+            <a
+              class="integralis-job-button"
+              href="contact.html?anliegen=bewerbung#contactForm"
+            >
+              Jetzt bewerben
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* =========================================================
+   INTEGRALIS POPUP LOGIC
+========================================================= */
+
+      (function () {
+        const overlay = document.getElementById("integralisJobOverlay");
+
+        const trigger = document.getElementById("integralisJobTrigger");
+
+        const closeButton = document.getElementById("integralisJobClose");
+
+        /*
+       Popup nach 3 Sekunden öffnen
+    */
+
+        function openJobPopup() {
+          overlay.classList.add("is-open");
+
+          document.body.style.overflow = "hidden";
+        }
+
+        /*
+       Popup schließen
+    */
+
+        function closeJobPopup() {
+          overlay.classList.remove("is-open");
+
+          document.body.style.overflow = "";
+        }
+
+        /*
+       Sticky Button
+    */
+
+        trigger.addEventListener("click", openJobPopup);
+
+        /*
+       X Button
+    */
+
+        closeButton.addEventListener("click", closeJobPopup);
+
+        /*
+       Klick auf dunklen Hintergrund
+    */
+
+        overlay.addEventListener("click", function (event) {
+          if (event.target === overlay) {
+            closeJobPopup();
+          }
+        });
+
+        /*
+       ESC-Taste
+    */
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && overlay.classList.contains("is-open")) {
+            closeJobPopup();
+          }
+        });
+
+        /*
+       3 Sekunden Verzögerung
+    */
+
+        setTimeout(openJobPopup, 3000);
+      })();
+    </script>
 
     <!-- Services Start -->
     <div class="container-fluid service py-5">
@@ -724,6 +2320,517 @@
     </div>
     <!-- About End -->
 
+    <!-- Praxisbilder & Videos Start -->
+    <div class="row mt-5 pt-5">
+      <div class="col-12">
+        <div
+          class="section-title text-center mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="sub-style">
+            <h4 class="sub-title px-3 mb-0">Praxis ansehen</h4>
+          </div>
+
+          <h2 class="display-5 mb-3">Ein Blick in unsere Praxis</h2>
+
+          <p class="mb-0">
+            Verschaffen Sie sich einen ersten Eindruck von unseren
+            Räumlichkeiten und der Atmosphäre vor Ort.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Praxis Carousel -->
+    <div class="praxis-carousel-wrapper position-relative">
+      <div class="praxis-carousel" id="praxisCarousel">
+        <!-- Bild 1 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481362/IMG-20260904-WA0015_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Einblick in die Praxis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481362/IMG-20260904-WA0015_2.jpg"
+              alt="Praxis Integralis in Altenstadt"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 2 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260904-WA0014_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Behandlungsbereich der Praxis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260904-WA0014_2.jpg"
+              alt="Behandlungsbereich bei Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 3 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Räumlichkeiten von Integralis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg"
+              alt="Räumlichkeiten von Integralis in Altenstadt"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 4 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0040_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Praxisbereich Integralis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0040_2.jpg"
+              alt="Praxisbereich Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 5 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0044_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Behandlungsräume von Integralis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0044_2.jpg"
+              alt="Behandlungsräume von Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 6 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0020_3.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Einblick in unsere Praxis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0020_3.jpg"
+              alt="Einblick in die Praxis Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 7 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0041_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Praxis Integralis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0041_2.jpg"
+              alt="Praxis Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 8 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788441541/bb8048ae-5e86-4226-a1c0-f5644db85339.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Unsere Praxisräume"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788441541/bb8048ae-5e86-4226-a1c0-f5644db85339.jpg"
+              alt="Praxisräume von Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Video 1 -->
+        <div class="praxis-slide praxis-video">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481363/VID-20260904-WA0006_2.mp4"
+            data-lightbox="praxis-gallery"
+            data-title="Video-Einblick in die Praxis"
+          >
+            <video muted loop autoplay playsinline preload="metadata">
+              <source
+                src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481363/VID-20260904-WA0006_2.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div class="praxis-video-overlay">
+              <span class="praxis-play-button">
+                <i class="fa fa-play"></i>
+              </span>
+              <span class="praxis-video-label">Video ansehen</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="praxis-slide praxis-video">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481362/VID-20260904-WA0005_2.mp4"
+            data-lightbox="praxis-gallery"
+            data-title="Rundgang durch die Praxis"
+          >
+            <video muted loop autoplay playsinline preload="metadata">
+              <source
+                src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481362/VID-20260904-WA0005_2.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div class="praxis-video-overlay">
+              <span class="praxis-play-button">
+                <i class="fa fa-play"></i>
+              </span>
+              <span class="praxis-video-label">Video ansehen</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <button
+        type="button"
+        class="praxis-carousel-btn praxis-carousel-prev"
+        id="praxisPrev"
+        aria-label="Vorherige Bilder"
+      >
+        <i class="fa fa-chevron-left"></i>
+      </button>
+
+      <button
+        type="button"
+        class="praxis-carousel-btn praxis-carousel-next"
+        id="praxisNext"
+        aria-label="Nächste Bilder"
+      >
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Carousel CSS -->
+    <style>
+      .praxis-carousel-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 5px;
+      }
+
+      .praxis-carousel {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        padding: 5px 5px 20px;
+        cursor: grab;
+      }
+
+      .praxis-carousel::-webkit-scrollbar {
+        display: none;
+      }
+
+      .praxis-carousel:active {
+        cursor: grabbing;
+      }
+
+      .praxis-slide {
+        position: relative;
+        flex: 0 0 calc(33.333% - 16px);
+        min-width: 0;
+        height: 320px;
+        overflow: hidden;
+        border-radius: 14px;
+        background: #f5f5f5;
+      }
+
+      .praxis-slide a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .praxis-slide img,
+      .praxis-slide video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .praxis-slide:hover img,
+      .praxis-slide:hover video {
+        transform: scale(1.05);
+      }
+
+      .praxis-slide-overlay,
+      .praxis-video-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+
+      .praxis-slide:hover .praxis-slide-overlay,
+      .praxis-slide:hover .praxis-video-overlay {
+        opacity: 1;
+      }
+
+      .praxis-slide-overlay i {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        font-size: 18px;
+      }
+
+      .praxis-video-overlay {
+        flex-direction: column;
+        gap: 12px;
+        background: rgba(0, 0, 0, 0.25);
+      }
+
+      .praxis-play-button {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        font-size: 20px;
+        padding-left: 3px;
+      }
+
+      .praxis-video-label {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+
+      /* Carousel Buttons */
+      .praxis-carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        width: 48px;
+        height: 48px;
+
+        border: none;
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .praxis-carousel-btn:hover {
+        transform: translateY(-50%) scale(1.08);
+        background: #fff;
+      }
+
+      .praxis-carousel-prev {
+        left: 15px;
+      }
+
+      .praxis-carousel-next {
+        right: 15px;
+      }
+
+      /* Tablet */
+      @media (max-width: 991px) {
+        .praxis-slide {
+          flex: 0 0 calc(50% - 12px);
+          height: 300px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 575px) {
+        .praxis-carousel {
+          gap: 16px;
+          padding-left: 0;
+          padding-right: 30px;
+        }
+
+        .praxis-slide {
+          flex: 0 0 88%;
+          height: 300px;
+          border-radius: 12px;
+        }
+
+        .praxis-carousel-btn {
+          width: 42px;
+          height: 42px;
+        }
+
+        .praxis-carousel-prev {
+          left: 8px;
+        }
+
+        .praxis-carousel-next {
+          right: 8px;
+        }
+
+        .praxis-slide-overlay {
+          opacity: 1;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.18),
+            transparent 40%
+          );
+          align-items: flex-end;
+          padding-bottom: 20px;
+        }
+
+        .praxis-slide-overlay i {
+          width: 42px;
+          height: 42px;
+          font-size: 15px;
+        }
+
+        .praxis-video-overlay {
+          opacity: 1;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.35),
+            transparent 55%
+          );
+        }
+      }
+    </style>
+
+    <!-- Carousel JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.getElementById("praxisCarousel");
+        const prevBtn = document.getElementById("praxisPrev");
+        const nextBtn = document.getElementById("praxisNext");
+
+        if (!carousel) return;
+
+        function getScrollAmount() {
+          const slide = carousel.querySelector(".praxis-slide");
+
+          if (!slide) return 350;
+
+          return slide.offsetWidth + 24;
+        }
+
+        nextBtn.addEventListener("click", function () {
+          carousel.scrollBy({
+            left: getScrollAmount(),
+            behavior: "smooth",
+          });
+        });
+
+        prevBtn.addEventListener("click", function () {
+          carousel.scrollBy({
+            left: -getScrollAmount(),
+            behavior: "smooth",
+          });
+        });
+
+        /* Mouse Drag */
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener("mousedown", function (e) {
+          isDown = true;
+          carousel.classList.add("is-dragging");
+          startX = e.pageX - carousel.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+        });
+
+        carousel.addEventListener("mouseleave", function () {
+          isDown = false;
+          carousel.classList.remove("is-dragging");
+        });
+
+        carousel.addEventListener("mouseup", function () {
+          isDown = false;
+          carousel.classList.remove("is-dragging");
+        });
+
+        carousel.addEventListener("mousemove", function (e) {
+          if (!isDown) return;
+
+          e.preventDefault();
+
+          const x = e.pageX - carousel.offsetLeft;
+          const walk = (x - startX) * 1.5;
+
+          carousel.scrollLeft = scrollLeft - walk;
+        });
+      });
+    </script>
+    <!-- Praxisbilder & Videos Ende -->
+    ```
+
     <!-- Behandlungsablauf Start -->
     <div class="container-fluid process bg-light py-5">
       <div class="container py-5">
@@ -980,22 +3087,22 @@
                 class="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#faqThree"
+                data-bs-target="#faqTwo"
                 aria-expanded="false"
-                aria-controls="faqThree"
+                aria-controls="faqTwo"
               >
-                Wie lange dauert eine Behandlung?
+                Kann ich meinen Termin absagen?
               </button>
             </h2>
             <div
-              id="faqThree"
+              id="faqTwo"
               class="accordion-collapse collapse"
               data-bs-parent="#faqAccordion"
             >
               <div class="accordion-body">
-                Je nach Therapieform dauert eine Behandlung in der Regel
-                zwischen 20 und 30 Minuten. Die genaue Dauer besprechen wir mit
-                Ihnen individuell.
+                Außerhalb 24 Stunden vor Ihrem Termin koennen Sie diesen
+                kostenfrei absagen. Bitte informieren Sie uns rechtzeitig, wenn
+                Sie Ihren Termin nicht wahrnehmen koennen. Paragraph 615 BGB
               </div>
             </div>
           </div>
@@ -1072,12 +3179,15 @@
                     <div class="mb-4">
                       <h5 class="mb-3">
                         <i class="fa fa-check text-primary me-2"></i>
-                        Oeffnungszeiten
+                        Öffnungszeiten
                       </h5>
                       <p class="mb-0">
-                        Montag und Mittwoch: 10 - 19 Uhr<br />
-                        Dienstag und Donnerstag: 08 - 16 Uhr<br />
-                        Freitag: 08 - 14 Uhr
+                        Montag: 08 - 20 Uhr<br />
+                        Dienstag: 08 - 20 Uhr<br />
+                        Mittwoch: 07 - 19 Uhr<br />
+                        Donnerstag: 08 - 20 Uhr<br />
+                        Freitag: 07 - 14 Uhr<br />
+                        Telefonisch erreichbar: Montag - Freitag 08 - 14 Uhr
                       </p>
                     </div>
                     <div class="mb-4">
@@ -1108,7 +3218,7 @@
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
             <div class="appointment-form rounded p-5">
               <p class="fs-4 text-uppercase text-primary">Ihr Weg zum Termin</p>
-              <h2 class="display-5 mb-4">So funktioniert es in 4 Schritten</h2>
+              <h2 class="display-5 mb-4">So funktioniert es in 3 Schritten</h2>
               <ol class="appointment-steps">
                 <li>
                   <span><i class="fas fa-phone-alt"></i></span>
@@ -1116,16 +3226,6 @@
                     <strong>Rufen Sie uns an</strong
                     ><small
                       >Unter 06047 / 3292615 erreichen Sie uns direkt.</small
-                    >
-                  </div>
-                </li>
-                <li>
-                  <span><i class="fas fa-comment-medical"></i></span>
-                  <div>
-                    <strong>Beschwerden schildern</strong
-                    ><small
-                      >Wir klÃ¤ren gemeinsam Ihr Anliegen und Ihre
-                      Verordnung.</small
                     >
                   </div>
                 </li>
@@ -1201,7 +3301,9 @@
           <div class="col-md-6 col-lg-6 col-xl-3">
             <div class="footer-item d-flex flex-column">
               <h4 class="mb-4 text-white">Schnellzugriff</h4>
-              <a href="index.html"><i class="fas fa-angle-right me-2"></i> Startseite</a>
+              <a href="index.html"
+                ><i class="fas fa-angle-right me-2"></i> Startseite</a
+              >
               <a href="about.html"
                 ><i class="fas fa-angle-right me-2"></i> Praxis</a
               >
@@ -1245,10 +3347,6 @@
                 ><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstrasse 47,
                 63674 Altenstadt</a
               >
-              <a href="mailto:info@integralis-physio.de"
-                ><i class="fas fa-envelope me-2"></i>
-                info@integralis-physio.de</a
-              >
               <a href="tel:+4960473292615"
                 ><i class="fas fa-phone me-2"></i> 06047 / 3292615</a
               >
@@ -1261,30 +3359,6 @@
       </div>
     </div>
     <!-- Footer End -->
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-      <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-md-6 text-center text-md-start mb-md-0">
-            <span class="text-white"
-              ><a href="index.html"
-                ><i class="fas fa-copyright text-light me-2"></i>Integralis
-                Praxis fuer Physiotherapie</a
-              ></span
-            >
-          </div>
-          <div class="col-md-6 text-center text-md-end text-white">
-            <!--/*** This template is free as long as you keep the below authorâ€™s credit link/attribution link/backlink. ***/-->
-            <!--/*** If you'd like to use the template without the below authorâ€™s credit link/attribution link/backlink, ***/-->
-            <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-            Designed By
-            <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Copyright End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-lg-square back-to-top"
