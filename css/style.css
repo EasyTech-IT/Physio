@@ -1943,6 +1943,70 @@ select:focus-visible {
 /* ========================================== Mobile ========================================== */
 /* ========================================= MOBILE – FEATURE / FLIP CARDS ========================================= */
 @media (max-width: 767.98px) {
+  .process {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .process .section-title {
+    margin-bottom: 28px !important;
+  }
+
+  .process .section-title h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 0;
+  }
+
+  .process-timeline::before {
+    display: block;
+    top: 34px;
+    bottom: 34px;
+    left: 24px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .process-step {
+    display: grid;
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .process-step-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0;
+    font-size: 22px;
+  }
+
+  .process-step-number {
+    top: -6px;
+    right: -6px;
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .process-step-content h5 {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .process-step-content p {
+    max-width: none;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
   /* Section */
   .feature {
     padding-top: 30px !important;
