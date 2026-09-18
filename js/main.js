@@ -1,20 +1,20 @@
-(function ($) {
+﻿(function ($) {
   "use strict";
 
   $(function () {
     var pageName = window.location.pathname.split("/").pop() || "index.html";
     var pageMetadata = {
       "index.html": [
-        "Integralis - Praxis fuer Physiotherapie",
-        "Integralis Physiotherapie in Altenstadt: individuelle Behandlung, Krankengymnastik, Bobath, Lymphdrainage und Hausbesuche.",
+        "Integralis - Praxis für Physiotherapie",
+        "Integralis Physiotherapie in Altenstadt: individuelle Behandlung, Krankengymnastik, Lymphdrainage und Massage.",
       ],
       "about.html": [
         "Praxis - Integralis Physiotherapie",
-        "Lernen Sie Nico Gugliotta und den ganzheitlichen Ansatz der Integralis Praxis fuer Physiotherapie in Altenstadt kennen.",
+        "Lernen Sie Nico Gugliotta und den ganzheitlichen Ansatz der Integralis Praxis für Physiotherapie in Altenstadt kennen.",
       ],
       "service.html": [
         "Therapieangebote - Integralis Physiotherapie",
-        "Klassische Massage, Krankengymnastik, Bobath, Lymphdrainage, Wärme- und Kältetherapie sowie Hausbesuche in Altenstadt.",
+        "Klassische Massage, Krankengymnastik, Lymphdrainage, Wärme- und Kältetherapie in Altenstadt.",
       ],
       "preise.html": [
         "Preise - Integralis Physiotherapie",
@@ -54,7 +54,7 @@
     $("meta[name='description']").attr("content", metadata[1]);
     $("meta[name='keywords']").attr(
       "content",
-      "Physiotherapie Altenstadt, Krankengymnastik, Bobath, Lymphdrainage, Hausbesuche, Massage",
+      "Physiotherapie Altenstadt, Krankengymnastik, Lymphdrainage, Massage",
     );
     if (!$("meta[property='og:description']").length) {
       $("head").append(
@@ -94,12 +94,12 @@
       .first()
       .find(".d-flex.flex-wrap")
       .html(
-        '<a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Vogelsbergstrasse 47, 63674 Altenstadt</a>' +
+        '<a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Vogelsbergstraße 47, 63674 Altenstadt</a>' +
           '<a href="tel:+4960473292615" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>06047 / 3292615</a>',
       );
 
     $(".navbar-brand").html(
-      '<img class="integralis-logo" src="https://res.cloudinary.com/dlpdbr0ey/image/upload/c_crop,g_north_west,h_503,w_1192/f_auto/q_auto/copy_of_brave_screenshot_wwwgooglede_1_l3e4o9.png" alt="Integralis Praxis fuer Physiotherapie">',
+      '<img class="integralis-logo" src="https://res.cloudinary.com/dlpdbr0ey/image/upload/c_crop,g_north_west,h_503,w_1192/f_auto/q_auto/copy_of_brave_screenshot_wwwgooglede_1_l3e4o9.png" alt="Integralis Praxis für Physiotherapie">',
     );
     $(".navbar").addClass("nav-island");
     $(".navbar-nav").html(links);
@@ -224,7 +224,7 @@
       $(".testimonial")
         .removeClass("d-none")
         .html(
-          '<div class="container py-5"><div class="section-title mb-5"><div class="sub-style"><h4 class="sub-title text-white px-3 mb-0">Google Rezensionen</h4></div><h2 class="display-3 mb-3">Erfahrungen unserer Patientinnen und Patienten</h2><p class="text-white-50 mb-0">Auszug aus veröffentlichten Google-Rezensionen</p></div><div class="review-grid"><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Ich kann die Praxis wirklich nur weiterempfehlen. Man fühlt sich von Anfang an gut aufgehoben und die Behandlung hat mir sehr geholfen.</blockquote><footer><strong>Nicole Chodor</strong><span>Google Rezension, vor 5 Monaten</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Mein Mann hat nach drei Schlaganfällen bei Nico und seinem Team riesige Fortschritte gemacht. Vielen lieben Dank an euch.</blockquote><footer><strong>Ines Jeckeln-Wagner</strong><span>Google Rezension, vor einem Jahr</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Ich habe mich immer gut aufgehoben gefühlt und kann Nico und sein Team uneingeschränkt weiterempfehlen.</blockquote><footer><strong>Carina Langhans</strong><span>Google Rezension, vor 2 Jahren</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Kompetent, sympathisch und professionell. Die Terminvergabe war unkompliziert und meine Beschwerden sind endlich weg.</blockquote><footer><strong>Serap Ak</strong><span>Google Rezension, vor 4 Jahren</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Eine kompetente Behandlung hat zu einer deutlichen Linderung meiner Rückenschmerzen geführt. Die Tipps helfen mir im Alltag.</blockquote><footer><strong>Benjamin Fathi</strong><span>Google Rezension, vor 5 Jahren</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Sehr kompetente Behandlung nach einer Knie-OP. Nach jedem Termin war eine spürbare Verbesserung bei der Bewegung da.</blockquote><footer><strong>Harald Schneider</strong><span>Google Rezension, vor 5 Jahren</span></footer></article></div></div>',
+          '<div class="container py-5"><div class="section-title mb-5"><div class="sub-style"><h4 class="sub-title text-white px-3 mb-0">Google Rezensionen</h4></div><h2 class="display-3 mb-3">Erfahrungen unserer Patientinnen und Patienten</h2><p class="text-white mb-0">Auszug aus veröffentlichten Google-Rezensionen</p></div><div class="review-grid"><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Ich kann die Praxis wirklich nur weiterempfehlen. Man fühlt sich von Anfang an gut aufgehoben und die Behandlung hat mir sehr geholfen.</blockquote><footer><strong>Nicole Chodor</strong><span>Google Rezension, vor 5 Monaten</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Mein Mann hat nach drei Schlaganfällen bei Nico und seinem Team riesige Fortschritte gemacht. Vielen lieben Dank an euch.</blockquote><footer><strong>Ines Jeckeln-Wagner</strong><span>Google Rezension, vor einem Jahr</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Ich habe mich immer gut aufgehoben gefühlt und kann Nico und sein Team uneingeschränkt weiterempfehlen.</blockquote><footer><strong>Carina Langhans</strong><span>Google Rezension, vor 2 Jahren</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Kompetent, sympathisch und professionell. Die Terminvergabe war unkompliziert und meine Beschwerden sind endlich weg.</blockquote><footer><strong>Serap Ak</strong><span>Google Rezension, vor 4 Jahren</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Eine kompetente Behandlung hat zu einer deutlichen Linderung meiner Rückenschmerzen geführt. Die Tipps helfen mir im Alltag.</blockquote><footer><strong>Benjamin Fathi</strong><span>Google Rezension, vor 5 Jahren</span></footer></article><article class="review-card"><div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div><blockquote>Sehr kompetente Behandlung nach einer Knie-OP. Nach jedem Termin war eine spürbare Verbesserung bei der Bewegung da.</blockquote><footer><strong>Harald Schneider</strong><span>Google Rezension, vor 5 Jahren</span></footer></article></div></div>',
         );
       var reviewCards = $(".review-card");
       var reviewIndex = 0;
@@ -313,15 +313,15 @@
     }
 
     $(".footer .row").html(
-      '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="text-white mb-4"><i class="fas fa-heartbeat footer-title-icon"></i>Integralis</h4><p>Praxis fuer Physiotherapie in der Alten Molkerei in Altenstadt.</p></div></div>' +
+      '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="text-white mb-4"><i class="fas fa-heartbeat footer-title-icon"></i>Integralis</h4><p>Praxis für Physiotherapie in der Alten Molkerei in Altenstadt.</p></div></div>' +
         '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-compass footer-title-icon"></i>Schnellzugriff</h4><a href="index.html"><i class="fas fa-angle-right me-2"></i> Startseite</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Leistungen</a><a href="about.html"><i class="fas fa-angle-right me-2"></i> Praxis</a><a href="index.html#faq"><i class="fas fa-angle-right me-2"></i> FAQ</a><a href="contact.html"><i class="fas fa-angle-right me-2"></i> Kontakt</a><a href="#impressum" data-legal-modal="#impressumModal"><i class="fas fa-angle-right me-2"></i> Impressum</a><a href="#datenschutz" data-legal-modal="#datenschutzModal"><i class="fas fa-angle-right me-2"></i> Datenschutz</a></div></div>' +
-        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-notes-medical footer-title-icon"></i>Therapieangebote</h4><a href="service.html"><i class="fas fa-angle-right me-2"></i> Klassische Massage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Krankengymnastik</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Bobath</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Lymphdrainage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Wärme- und Kältetherapie</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Hausbesuche</a></div></div>' +
-        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-address-card footer-title-icon"></i>Kontakt</h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstrasse 47, 63674 Altenstadt</a><a href="tel:+4960473292615"><i class="fas fa-phone me-2"></i> 06047 / 3292615</a><span class="mb-3"><i class="fas fa-clock me-2"></i> Mo + Mi 10 - 19 Uhr</span></div></div>',
+        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-notes-medical footer-title-icon"></i>Therapieangebote</h4><a href="service.html"><i class="fas fa-angle-right me-2"></i> Klassische Massage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Krankengymnastik</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Lymphdrainage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Wärme- und Kältetherapie</a></div></div>' +
+        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-address-card footer-title-icon"></i>Kontakt</h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstraße 47, 63674 Altenstadt</a><a href="tel:+4960473292615"><i class="fas fa-phone me-2"></i> 06047 / 3292615</a><span class="mb-3"><i class="fas fa-clock me-2"></i> Mo + Mi 10 - 19 Uhr</span></div></div>',
     );
     $(".copyright .text-white")
       .first()
       .html(
-        '<a href="index.html"><i class="fas fa-copyright text-light me-2"></i>Integralis Praxis fuer Physiotherapie</a>',
+        '<a href="index.html"><i class="fas fa-copyright text-light me-2"></i>Integralis Praxis für Physiotherapie</a>',
       );
     $(".copyright .text-md-end")
       .contents()
@@ -353,7 +353,7 @@
         ],
         faq: [
           [
-            "Brauche ich fuer eine Massage ein Rezept?",
+            "Brauche ich für eine Massage ein Rezept?",
             "Als ergänzende Maßnahme innerhalb einer Verordnung ist kein separates Rezept nötig. Als alleinige Leistung ist eine Behandlung auch als Selbstzahler möglich.",
           ],
           [
@@ -370,8 +370,8 @@
           "Geeignet für Menschen, die Bewegungsabläufe verbessern, Beschwerden reduzieren oder ihre Belastbarkeit steigern möchten.",
         steps: [
           "Erstgespräch und Befundaufnahme Ihrer aktuellen Beweglichkeit.",
-          "Individuell angeleitete Übungen fuer Kraft und Koordination.",
-          "Regelmäßige Anpassung des Uebungsprogramms an Ihren Fortschritt.",
+          "Individuell angeleitete Übungen für Kraft und Koordination.",
+          "Regelmäßige Anpassung des Übungsprogramms an Ihren Fortschritt.",
         ],
         benefits: [
           "Verbessert Kraft und Beweglichkeit",
@@ -380,39 +380,12 @@
         ],
         faq: [
           [
-            "Brauche ich ein Rezept fuer Krankengymnastik?",
+            "Brauche ich ein Rezept für Krankengymnastik?",
             "Ja, in der Regel benötigen Sie eine ärztliche Verordnung. Selbstzahler können auch ohne Rezept behandelt werden.",
           ],
           [
-            "Wie viele Behandlungen sind ueblich?",
+            "Wie viele Behandlungen sind üblich?",
             "Die Anzahl richtet sich nach Ihrer Verordnung und wird gemeinsam mit Ihnen und Ihrem Arzt abgestimmt.",
-          ],
-        ],
-      },
-      "Krankengymnastik nach Bobath": {
-        slug: "krankengymnastik-bobath",
-        description:
-          "Die neurologische Behandlung nach Bobath unterstützt funktionelle Bewegungen und orientiert sich an Ihren persönlichen Fähigkeiten.",
-        audience:
-          "Geeignet bei neurologischen Erkrankungen oder nach neurologischen Beeinträchtigungen, zum Beispiel nach einem Schlaganfall.",
-        steps: [
-          "Ausführliche Befundaufnahme Ihrer neurologischen Situation.",
-          "Behandlung nach dem Bobath-Konzept zur Foerderung funktioneller Bewegungen.",
-          "Laufende Anpassung der Therapie an Ihre Fortschritte.",
-        ],
-        benefits: [
-          "Foerdert funktionelle Bewegungsabläufe",
-          "Orientiert sich an Ihren persönlichen Fähigkeiten",
-          "Schwerpunkt unserer Praxis seit 2010",
-        ],
-        faq: [
-          [
-            "Für wen ist Bobath besonders geeignet?",
-            "Insbesondere für Patientinnen und Patienten nach Schlaganfall oder mit anderen neurologischen Erkrankungen.",
-          ],
-          [
-            "Ist ein Hausbesuch im Rahmen der Bobath-Therapie möglich?",
-            "Ja, bei eingeschränkter Mobilität führen wir die Behandlung auch bei Ihnen zu Hause durch.",
           ],
         ],
       },
@@ -423,7 +396,7 @@
         audience:
           "Geeignet bei ärztlich verordneter Behandlung von Lymphödemen oder nach bestimmten Eingriffen.",
         steps: [
-          "Gespräch über Ihre Verordnung und betroffene Koerperregionen.",
+          "Gespräch über Ihre Verordnung und betroffene Körperregionen.",
           "Sanfte, rhythmische Grifftechnik zur Anregung des Lymphabflusses.",
           "Empfehlung zu Kompression und Verhalten im Alltag.",
         ],
@@ -443,15 +416,15 @@
           ],
         ],
       },
-      Kaeltetherapie: {
-        slug: "kaeltetherapie",
+      Kältetherapie: {
+        slug: "kältetherapie",
         description:
           "Kälte wird gezielt als ergänzende therapeutische Maßnahme eingesetzt und auf Ihre Behandlung abgestimmt.",
         audience:
           "Geeignet bei Beschwerden, bei denen eine lokale Kälteanwendung sinnvoll ist, zum Beispiel bei akuten Reizzuständen.",
         steps: [
-          "Einschätzung, ob eine Kälteanwendung fuer Ihre Beschwerden geeignet ist.",
-          "Gezielte, lokale Kälteanwendung an der betroffenen Koerperregion.",
+          "Einschätzung, ob eine Kälteanwendung für Ihre Beschwerden geeignet ist.",
+          "Gezielte, lokale Kälteanwendung an der betroffenen Körperregion.",
           "Einbindung in Ihren individuellen Behandlungsplan.",
         ],
         benefits: [
@@ -466,14 +439,14 @@
           ],
         ],
       },
-      Waermetherapie: {
-        slug: "waermetherapie",
+      Wärmetherapie: {
+        slug: "wärmetherapie",
         description:
           "Wärmeanwendungen können die Durchblutung fördern und verspannte Muskulatur auf die weitere Behandlung vorbereiten.",
         audience:
           "Geeignet als ergänzende Maßnahme bei muskulären Verspannungen und eingeschränkter Beweglichkeit.",
         steps: [
-          "Einschätzung, ob eine Wärmeanwendung fuer Ihre Beschwerden geeignet ist.",
+          "Einschätzung, ob eine Wärmeanwendung für Ihre Beschwerden geeignet ist.",
           "Gezielte Wärmeanwendung zur Lockerung der Muskulatur.",
           "Anschließende Behandlung profitiert von der besseren Durchblutung.",
         ],
@@ -486,29 +459,6 @@
           [
             "Wie lange dauert eine Wärmeanwendung?",
             "In der Regel wenige Minuten, abgestimmt auf Ihre Behandlung und Verordnung.",
-          ],
-        ],
-      },
-      Hausbesuche: {
-        slug: "hausbesuche",
-        description:
-          "Wenn ein Besuch in der Praxis nicht möglich ist, führen wir die physiotherapeutische Behandlung nach ärztlicher Verordnung bei Ihnen zu Hause durch.",
-        audience:
-          "Geeignet für Patientinnen und Patienten mit eingeschränkter Mobilität.",
-        steps: [
-          "Telefonische Abstimmung Ihres Hausbesuchs und Ihrer Verordnung.",
-          "Behandlung nach ärztlicher Verordnung direkt bei Ihnen zu Hause.",
-          "Laufende Abstimmung weiterer Termine.",
-        ],
-        benefits: [
-          "Keine Anfahrt zur Praxis nötig",
-          "Behandlung in gewohnter Umgebung",
-          "Nach ärztlicher Verordnung möglich",
-        ],
-        faq: [
-          [
-            "Brauche ich fuer einen Hausbesuch ein spezielles Rezept?",
-            "Ihr Arzt oder Ihre Ärztin vermerkt den Hausbesuch auf der Verordnung. Sprechen Sie uns bei Fragen gerne an.",
           ],
         ],
       },
@@ -558,14 +508,14 @@
         '<section class="service-modal-section"><h3 class="h5"><i class="fas fa-list-ol text-primary me-2" aria-hidden="true"></i>Wie läuft die Behandlung ab?</h3><ol id="serviceModalSteps" class="service-modal-steps"></ol></section>' +
         '<section class="service-modal-section"><h3 class="h5"><i class="fas fa-star text-primary me-2" aria-hidden="true"></i>Ihre Vorteile</h3><ul id="serviceModalBenefits" class="service-modal-benefits"></ul></section>' +
         '<section class="service-modal-section"><h3 class="h5"><i class="fas fa-comments text-primary me-2" aria-hidden="true"></i>Häufige Fragen</h3><div id="serviceModalFaq" class="service-modal-faq"></div></section>' +
-        '</div><div class="modal-footer"><a href="tel:+4960473292615" class="btn btn-primary w-100"><i class="fas fa-phone-alt me-2" aria-hidden="true"></i>Termin vereinbaren</a></div></div></div></div><div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="impressumModalTitle">Impressum</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><h3 class="h5">Angaben gemäß § 5 TMG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt</p><p class="small text-muted mb-0">Bitte vor Veröffentlichung gegebenenfalls Berufsbezeichnung, zuständige Kammer, Aufsichtsbehörde und Umsatzsteuer-Identifikationsnummer ergänzen.</p></div></div></div></div><div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="datenschutzModalTitle">Datenschutzerklärung</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Website verarbeitet Daten nur, soweit dies für die technische Bereitstellung und Ihre Kontaktaufnahme erforderlich ist.</p><h3 class="h5">Verantwortliche Stelle</h3><p>Integralis Praxis für Physiotherapie, Nico Gugliotta, Vogelsbergstrasse 47, 63674 Altenstadt<br><a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktaufnahme</h3><p>Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht ohne Ihre Einwilligung weiter.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.</p><p class="small text-muted mb-0">Bitte diese Datenschutzerklärung vor Veröffentlichung rechtlich prüfen und um Angaben zu Hosting, Server-Protokollen, Karten und weiteren eingesetzten Diensten ergänzen.</p></div></div></div></div>',
+        '</div><div class="modal-footer"><a href="tel:+4960473292615" class="btn btn-primary w-100"><i class="fas fa-phone-alt me-2" aria-hidden="true"></i>Termin vereinbaren</a></div></div></div></div><div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="impressumModalTitle">Impressum</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><h3 class="h5">Angaben gemäß § 5 TMG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstraße 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta, Vogelsbergstraße 47, 63674 Altenstadt</p><p class="small text-muted mb-0">Bitte vor Veröffentlichung gegebenenfalls Berufsbezeichnung, zuständige Kammer, Aufsichtsbehörde und Umsatzsteuer-Identifikationsnummer ergänzen.</p></div></div></div></div><div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered"><div class="modal-content integralis-modal"><div class="modal-header"><h2 class="modal-title h4" id="datenschutzModalTitle">Datenschutzerklärung</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body"><p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Website verarbeitet Daten nur, soweit dies für die technische Bereitstellung und Ihre Kontaktaufnahme erforderlich ist.</p><h3 class="h5">Verantwortliche Stelle</h3><p>Integralis Praxis für Physiotherapie, Nico Gugliotta, Vogelsbergstraße 47, 63674 Altenstadt<br><a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktaufnahme</h3><p>Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht ohne Ihre Einwilligung weiter.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.</p><p class="small text-muted mb-0">Bitte diese Datenschutzerklärung vor Veröffentlichung rechtlich prüfen und um Angaben zu Hosting, Server-Protokollen, Karten und weiteren eingesetzten Diensten ergänzen.</p></div></div></div></div>',
     );
 
     $("#impressumModal .modal-body").html(
-      '<h3 class="h5">Angaben gemäß § 5 DDG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt</p>',
+      '<h3 class="h5">Angaben gemäß § 5 DDG</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstraße 47, Alte Molkerei<br>63674 Altenstadt</p><h3 class="h5">Kontakt</h3><p>Telefon: <a href="tel:+4960473292615">06047 / 3292615</a><br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Verantwortlich für den Inhalt</h3><p>Nico Gugliotta<br>Vogelsbergstraße 47, Alte Molkerei<br>63674 Altenstadt</p>',
     );
     $("#datenschutzModal .modal-body").html(
-      '<p>Wir verarbeiten personenbezogene Daten nur, soweit dies für den Betrieb dieser Website und die Bearbeitung Ihrer Anfrage erforderlich ist.</p><h3 class="h5">Verantwortlicher</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt<br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktformular</h3><p>Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben zur Bearbeitung der Anfrage an unseren Versanddienstleister FormSubmit übermittelt und an <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a> weitergeleitet. Die Übermittlung erfolgt nur nach dem Absenden des Formulars.</p><h3 class="h5">Externe Dienste</h3><p>Diese Website nutzt Google Fonts, Font Awesome, Bootstrap sowie Cloudinary für Schriftarten, Symbole, Bibliotheksdateien und Bilder. Beim Aufruf können technische Daten wie IP-Adresse und Zeitpunkt an die jeweiligen Anbieter übertragen werden. Außerdem verlinken wir zu Google Maps für die Routenplanung.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben im Rahmen der gesetzlichen Vorschriften das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zur Ausübung Ihrer Rechte genügt eine Nachricht an die oben genannte E-Mail-Adresse.</p>',
+      '<p>Wir verarbeiten personenbezogene Daten nur, soweit dies für den Betrieb dieser Website und die Bearbeitung Ihrer Anfrage erforderlich ist.</p><h3 class="h5">Verantwortlicher</h3><p>Integralis Praxis für Physiotherapie<br>Nico Gugliotta<br>Vogelsbergstraße 47, Alte Molkerei<br>63674 Altenstadt<br>E-Mail: <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a></p><h3 class="h5">Kontaktformular</h3><p>Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben zur Bearbeitung der Anfrage an unseren Versanddienstleister FormSubmit übermittelt und an <a href="mailto:info@integralis-physio.de">info@integralis-physio.de</a> weitergeleitet. Die Übermittlung erfolgt nur nach dem Absenden des Formulars.</p><h3 class="h5">Externe Dienste</h3><p>Diese Website nutzt Google Fonts, Font Awesome, Bootstrap sowie Cloudinary für Schriftarten, Symbole, Bibliotheksdateien und Bilder. Beim Aufruf können technische Daten wie IP-Adresse und Zeitpunkt an die jeweiligen Anbieter übertragen werden. Außerdem verlinken wir zu Google Maps für die Routenplanung.</p><h3 class="h5">Ihre Rechte</h3><p>Sie haben im Rahmen der gesetzlichen Vorschriften das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zur Ausübung Ihrer Rechte genügt eine Nachricht an die oben genannte E-Mail-Adresse.</p>',
     );
 
     var openServiceModal = function (name) {
@@ -690,8 +640,8 @@
       "appointment.html": {
         title: "Termin vereinbaren",
         eyebrow: "Termin vereinbaren",
-        heading: "Wir nehmen uns Zeit fuer Sie.",
-        text: "Rufen Sie uns an, um einen passenden Termin fuer Ihre Behandlung zu vereinbaren.",
+        heading: "Wir nehmen uns Zeit für Sie.",
+        text: "Rufen Sie uns an, um einen passenden Termin für Ihre Behandlung zu vereinbaren.",
         cards: [
           [
             "Oeffnungszeiten",
@@ -699,14 +649,14 @@
           ],
           [
             "Praxisadresse",
-            "Vogelsbergstrasse 47, Alte Molkerei<br>63674 Altenstadt",
+            "Vogelsbergstraße 47, Alte Molkerei<br>63674 Altenstadt",
           ],
         ],
       },
       "feature.html": {
         title: "Ihre Praxis",
         eyebrow: "Integralis",
-        heading: "Ganzheitlich behandeln. Persoenlich begleiten.",
+        heading: "Ganzheitlich behandeln. Persönlich begleiten.",
         text: "Ihre individuellen Beschwerden, Lebensumstände und Ziele stehen im Mittelpunkt jeder Behandlung.",
         cards: [
           [
@@ -729,12 +679,12 @@
       },
       "team.html": {
         title: "Ihr Therapeut",
-        eyebrow: "Ueber mich",
+        eyebrow: "Über mich",
         heading: "Nico Gugliotta",
         text: "Seit 2010 staatlich anerkannter Physiotherapeut mit Schwerpunkt auf neurologischer physiotherapeutischer Behandlung.",
         cards: [
           [
-            "Persoenlich fuer Sie da",
+            "Persönlich für Sie da",
             "In der Praxis Integralis in der Alten Molkerei in Altenstadt.",
           ],
         ],
@@ -761,15 +711,11 @@
       ],
       [
         "Praxis in der Alten Molkerei",
-        "Ihre Physiotherapiepraxis in der Vogelsbergstrasse 47 in Altenstadt.",
+        "Ihre Physiotherapiepraxis in der Vogelsbergstraße 47 in Altenstadt.",
       ],
       [
         "Alle Kassen und Privatrezepte",
         "Wir behandeln gesetzlich und privat Versicherte nach Verordnung.",
-      ],
-      [
-        "Hausbesuche",
-        "Bei Bedarf kommen wir für Ihre physiotherapeutische Behandlung zu Ihnen.",
       ],
       ["Direkt erreichbar", "Vereinbaren Sie Ihren Termin telefonisch."],
     ];
@@ -780,7 +726,7 @@
         .text(pageName === "about.html" ? "Die Praxis" : "Ihre Vorteile");
       benefits
         .find(".section-title h1")
-        .text("Zeit fuer eine Therapie, die Sie sieht.");
+        .text("Zeit für eine Therapie, die Sie sieht.");
       benefits
         .find(".section-title p")
         .text(

@@ -557,6 +557,12 @@ select:focus-visible {
   opacity: 0.78;
 }
 
+.contact-form-panel .contact-panel-heading h2,
+.contact-form-panel .contact-panel-heading p {
+  color: var(--bs-white);
+  opacity: 0.92;
+}
+
 .contact-panel-icon {
   display: grid;
   width: 46px;
@@ -1454,7 +1460,7 @@ select:focus-visible {
   position: relative;
   height: calc(100% - 220px);
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding: 24px !important;
   background: var(--white) !important;
   border-radius: 0 0 14px 14px !important;
@@ -1475,9 +1481,16 @@ select:focus-visible {
   width: 70px;
 } /* ========================================== Content Inner ========================================== */
 .service .service-item .service-content-inner {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 100%;
   padding-top: 4px;
   transition: transform 0.35s ease;
+}
+.service .service-item .service-content-inner .btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 .service .service-item:hover .service-content-inner {
   transform: translateY(-2px);
@@ -1620,18 +1633,6 @@ select:focus-visible {
   border: 10px solid;
   border-color: var(--bs-white) var(--bs-white) var(--bs-white) var(--bs-white);
   border-radius: 50%;
-}
-
-.about .about-img .about-experience {
-  position: absolute;
-  top: 125px;
-  left: -125px;
-  transform: rotate(-90deg);
-  background: transparent;
-  color: var(--bs-primary);
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 4px;
 }
 
 /*** About End ***/
@@ -2325,8 +2326,8 @@ select:focus-visible {
 /*** testimonial Start ***/
 .testimonial {
   background:
-    linear-gradient(rgba(21, 185, 217, 0.9), rgba(21, 185, 217, 0.9)),
-    url(../img/carousel-1.jpg);
+    linear-gradient(rgba(0, 40, 46, 0.82), rgba(0, 40, 46, 0.82)),
+    url(https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2685,12 +2686,14 @@ select:focus-visible {
 }
 .footer .footer-item a {
   line-height: 35px;
-  color: var(--bs-body);
+  color: rgba(255, 255, 255, 0.85);
   transition: 0.5s;
 }
 
-.footer .footer-item p {
+.footer .footer-item p,
+.footer .footer-item span {
   line-height: 35px;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .footer .footer-item a:hover {
