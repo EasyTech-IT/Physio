@@ -56,44 +56,37 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-      <div class="row gx-0 align-items-center" style="height: 45px">
-        <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-          <div class="d-flex flex-wrap">
+    <div class="container-fluid bg-dark px-3 px-lg-5 py-2 py-lg-0">
+      <div class="row gx-0 align-items-center" style="min-height: 45px">
+        <!-- Info-Bereich (Adresse, Zeiten, Telefon) -->
+        <div class="col-lg-9 text-center text-lg-start mb-2 mb-lg-0">
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start gap-2 gap-lg-4"
+            style="font-size: 13px"
+          >
+            <!-- Adresse -->
             <a
-              href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"
-              class="text-light me-4"
-              ><i class="fas fa-map-marker-alt text-primary me-2"></i
-              >Vogelsbergstraße 47, 63674 Altenstadt</a
+              href="https://maps.app.goo.gl/jH27DJKspQsaCZB79"
+              class="text-light text-decoration-none"
             >
-            <a href="tel:+4960473292615" class="text-light me-4"
-              ><i class="fas fa-phone-alt text-primary me-2"></i>06047 /
-              3292615</a
+              <i class="fas fa-map-marker-alt text-primary me-2"></i
+              >Vogelsbergstr. 47, Altenstadt
+            </a>
+
+            <!-- Öffnungszeiten Praxis (Kompakt zusammengefasst) -->
+            <span class="text-light">
+              <i class="fas fa-door-open text-primary me-2"></i>Geöffnet: Mo,
+              Di, Do: 08-20 Uhr | Mi: 07-19 Uhr | Fr: 07-14 Uhr
+            </span>
+
+            <!-- Telefon mit Erreichbarkeit -->
+            <a
+              href="tel:+4960473292615"
+              class="text-light text-decoration-none"
             >
-          </div>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-          <div class="d-flex align-items-center justify-content-end">
-            <a
-              href="#"
-              class="btn btn-light btn-square border rounded-circle nav-fill me-3"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="#"
-              class="btn btn-light btn-square border rounded-circle nav-fill me-3"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              href="#"
-              class="btn btn-light btn-square border rounded-circle nav-fill me-3"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="#"
-              class="btn btn-light btn-square border rounded-circle nav-fill me-0"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+              <i class="fas fa-phone-alt text-primary me-2"></i>06047 3292615
+              <span class="text-white-50 ms-1">(Tel: Mo-Fr 08-14 Uhr)</span>
+            </a>
           </div>
         </div>
       </div>
@@ -144,7 +137,7 @@
         <!-- Slide 1 -->
         <div class="header-carousel-item">
           <img
-            src="https://res.cloudinary.com/dlpdbr0ey/image/upload/v1788199775/ada2ca90-e5e2-428f-a18f-6705523e7b3d_s4lwci.jpg"
+            src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1789759006/1789686222528.png"
             class="img-fluid w-100"
             alt="Physiotherapie Praxis Integralis"
           />
@@ -196,7 +189,7 @@
             preload="auto"
           >
             <source
-              src="img/6111052-uhd_3840_2160_25fps.mp4"
+              src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1789769368/Camera_moving_through_interior_s_-clip-1_20260919000552.mp4"
               type="video/mp4"
             />
             Ihr Browser unterstützt keine HTML5-Videos.
@@ -240,7 +233,7 @@
         <!-- Slide 3 -->
         <div class="header-carousel-item">
           <img
-            src="https://res.cloudinary.com/dlpdbr0ey/image/upload/v1788199779/bb24fc17-e057-442f-bb89-5b5148a8c33d_makxse.jpg"
+            src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1789759006/1789685938440.png"
             class="img-fluid w-100"
             alt="Persönliche Physiotherapie Integralis"
           />
@@ -1619,14 +1612,6 @@
             <div class="integralis-job-gallery">
               <figure>
                 <img
-                  src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788441535/8fd5d85f-bcb2-481c-812d-36ba79ebfa73.jpg"
-                  alt="Integralis Physiotherapie Team"
-                  loading="lazy"
-                />
-              </figure>
-
-              <figure>
-                <img
                   src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788441532/af2460de-0676-44ac-b8d9-ecc2c3b8fe70.jpg"
                   alt="Physiotherapie Behandlung bei Integralis"
                   loading="lazy"
@@ -1984,131 +1969,155 @@
           <div class="sub-style">
             <h4 class="sub-title px-3 mb-0">Therapieangebote</h4>
           </div>
-          <h1 class="display-3 mb-4">Behandlung,<br />die zu Ihnen passt.</h1>
+
+          <h1 class="display-3 mb-4">
+            Behandlung,<br />
+            die zu Ihnen passt.
+          </h1>
+
           <p class="mb-0">
             Gezielte Therapie. Individuelle Betreuung. Für Ihre Gesundheit und
             Beweglichkeit.
           </p>
         </div>
+
         <div class="row g-4 justify-content-center">
+          <!-- Card 1: Physiotherapie -->
           <div
             class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
             data-wow-delay="0.1s"
           >
             <div class="service-item rounded">
-              <div class="service-img rounded-top">
-                <img
-                  src="https://res.cloudinary.com/dlpdbr0ey/image/upload/v1788199779/bb24fc17-e057-442f-bb89-5b5148a8c33d_makxse.jpg"
-                  class="img-fluid rounded-top w-100"
-                  alt=""
-                />
+              <div class="service-icon-wrapper">
+                <div class="icon-box">
+                  <i class="fas fa-child icon-animated"></i>
+                </div>
               </div>
-              <div class="service-content rounded-bottom bg-light p-4">
+
+              <div class="service-content p-4">
                 <div class="service-content-inner">
-                  <h5 class="mb-4">Physiotherapie</h5>
+                  <h5 class="mb-3">Lymphdrainage</h5>
+
                   <p class="mb-4">
-                    Individuelle Behandlung für mehr Beweglichkeit, Funktion und
-                    Wohlbefinden.
+                    Individuelle Behandlung zur Förderung des Lymphflusses und
+                    zur Reduzierung von Schwellungen.
                   </p>
+
                   <a
                     href="service.html"
                     class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2"
-                    >Mehr erfahren</a
                   >
+                    Mehr erfahren
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Card 2: Krankengymnastik -->
           <div
             class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
             data-wow-delay="0.3s"
           >
             <div class="service-item rounded">
-              <div class="service-img rounded-top">
-                <img
-                  src="https://res.cloudinary.com/dlpdbr0ey/image/upload/v1788200431/a93698b6-f15f-4241-8386-c143876a7a61_oxqdlc.jpg"
-                  class="img-fluid rounded-top w-100"
-                  alt=""
-                />
+              <div class="service-icon-wrapper">
+                <div class="icon-box">
+                  <i class="fas fa-dumbbell icon-animated"></i>
+                </div>
               </div>
-              <div class="service-content rounded-bottom bg-light p-4">
+
+              <div class="service-content p-4">
                 <div class="service-content-inner">
-                  <h5 class="mb-4">Krankengymnastik</h5>
+                  <h5 class="mb-3">Krankengymnastik</h5>
+
                   <p class="mb-4">
                     Gezielte Übungen für mehr Kraft, Beweglichkeit und
                     Koordination.
                   </p>
+
                   <a
                     href="service.html"
                     class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2"
-                    >Mehr erfahren</a
                   >
+                    Mehr erfahren
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Card 3: Manuelle Therapie -->
           <div
             class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
             data-wow-delay="0.5s"
           >
             <div class="service-item rounded">
-              <div class="service-img rounded-top">
-                <img
-                  src="https://res.cloudinary.com/dlpdbr0ey/image/upload/v1788200430/80ff0256-8709-4575-874d-664cd903f5de_wfgcxv.jpg"
-                  class="img-fluid rounded-top w-100"
-                  alt=""
-                />
+              <div class="service-icon-wrapper">
+                <div class="icon-box">
+                  <i class="fas fa-hand-paper icon-animated"></i>
+                </div>
               </div>
-              <div class="service-content rounded-bottom bg-light p-4">
+
+              <div class="service-content p-4">
                 <div class="service-content-inner">
-                  <h5 class="mb-4">Manuelle Therapie</h5>
+                  <h5 class="mb-3">Manuelle Therapie</h5>
+
                   <p class="mb-4">
                     Gezielte Behandlung von Funktionsstörungen des
                     Bewegungsapparates.
                   </p>
+
                   <a
                     href="service.html"
                     class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2"
-                    >Mehr erfahren</a
                   >
+                    Mehr erfahren
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Card 4: Wärmetherapie -->
           <div
             class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
             data-wow-delay="0.7s"
           >
             <div class="service-item rounded">
-              <div class="service-img rounded-top">
-                <img
-                  src="https://res.cloudinary.com/dlpdbr0ey/image/upload/v1788200464/4ee69adc-4ad5-4b0b-a46d-e9e177d75cf1_httcqj.jpg"
-                  class="img-fluid rounded-top w-100"
-                  alt=""
-                />
+              <div class="service-icon-wrapper">
+                <div class="icon-box">
+                  <i class="fas fa-fire icon-animated"></i>
+                </div>
               </div>
-              <div class="service-content rounded-bottom bg-light p-4">
+
+              <div class="service-content p-4">
                 <div class="service-content-inner">
-                  <h5 class="mb-4">Lymphdrainage</h5>
+                  <h5 class="mb-3">Wärmetherapie</h5>
+
                   <p class="mb-4">
-                    Sanfte Behandlung zur Förderung des Lymphabflusses und zur
-                    Reduzierung von Schwellungen.
+                    Anwendung von Wärme zur Linderung von Schmerzen und zur
+                    Förderung der Durchblutung.
                   </p>
+
                   <a
                     href="service.html"
                     class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2"
-                    >Mehr erfahren</a
                   >
+                    Mehr erfahren
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- CTA Button -->
           <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
             <a
               class="btn btn-primary rounded-pill text-white py-3 px-5"
               href="service.html"
-              >Alle Therapieangebote</a
             >
+              Alle Therapieangebote
+            </a>
           </div>
         </div>
       </div>
@@ -2126,28 +2135,32 @@
           <div class="sub-style">
             <h4 class="sub-title px-3 mb-0">Warum Integralis?</h4>
           </div>
+
           <h1 class="display-3 mb-4">Therapie, die zu Ihnen passt.</h1>
+
           <p class="mb-0">
             Ihre Beschwerden, Ihre Ziele und Ihre Lebenssituation stehen im
             Mittelpunkt. Wir nehmen uns die Zeit für eine individuelle und
             persönliche Behandlung.
           </p>
         </div>
-        <!-- Feature Cards -->
+
+        <!-- Feature Grid -->
         <div class="row g-4 justify-content-center">
           <!-- 01 -->
           <div
-            class="col-12 col-sm-6 col-lg-4 col-xl-3 wow fadeInUp"
+            class="col-12 col-sm-6 col-lg-4 wow fadeInUp"
             data-wow-delay="0.1s"
           >
             <div class="feature-card">
               <div class="feature-card-inner">
-                <!-- Vorderseite -->
                 <div class="feature-card-front">
-                  <div class="feature-icon"><i class="fas fa-award"></i></div>
+                  <div class="feature-icon">
+                    <i class="fas fa-award"></i>
+                  </div>
                   <h5>Erfahrung seit 2010</h5>
                 </div>
-                <!-- Rückseite -->
+
                 <div class="feature-card-back">
                   <div class="feature-icon small">
                     <i class="fas fa-award"></i>
@@ -2161,9 +2174,10 @@
               </div>
             </div>
           </div>
+
           <!-- 02 -->
           <div
-            class="col-12 col-sm-6 col-lg-4 col-xl-3 wow fadeInUp"
+            class="col-12 col-sm-6 col-lg-4 wow fadeInUp"
             data-wow-delay="0.2s"
           >
             <div class="feature-card">
@@ -2174,6 +2188,7 @@
                   </div>
                   <h5>Individuelle Therapie</h5>
                 </div>
+
                 <div class="feature-card-back">
                   <div class="feature-icon small">
                     <i class="fas fa-user-cog"></i>
@@ -2187,17 +2202,21 @@
               </div>
             </div>
           </div>
+
           <!-- 03 -->
           <div
-            class="col-12 col-sm-6 col-lg-4 col-xl-3 wow fadeInUp"
+            class="col-12 col-sm-6 col-lg-4 wow fadeInUp"
             data-wow-delay="0.3s"
           >
             <div class="feature-card">
               <div class="feature-card-inner">
                 <div class="feature-card-front">
-                  <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+                  <div class="feature-icon">
+                    <i class="fas fa-user-md"></i>
+                  </div>
                   <h5>Persönliche Betreuung</h5>
                 </div>
+
                 <div class="feature-card-back">
                   <div class="feature-icon small">
                     <i class="fas fa-user-md"></i>
@@ -2211,9 +2230,10 @@
               </div>
             </div>
           </div>
+
           <!-- 04 -->
           <div
-            class="col-12 col-sm-6 col-lg-4 col-xl-3 wow fadeInUp"
+            class="col-12 col-sm-6 col-lg-4 wow fadeInUp"
             data-wow-delay="0.4s"
           >
             <div class="feature-card">
@@ -2224,6 +2244,7 @@
                   </div>
                   <h5>Kassen- &amp; Privatrezepte</h5>
                 </div>
+
                 <div class="feature-card-back">
                   <div class="feature-icon small">
                     <i class="fas fa-file-medical"></i>
@@ -2237,9 +2258,10 @@
               </div>
             </div>
           </div>
+
           <!-- 05 -->
           <div
-            class="col-12 col-sm-6 col-lg-4 col-xl-3 wow fadeInUp"
+            class="col-12 col-sm-6 col-lg-4 wow fadeInUp"
             data-wow-delay="0.5s"
           >
             <div class="feature-card">
@@ -2250,6 +2272,7 @@
                   </div>
                   <h5>Zentrale Lage</h5>
                 </div>
+
                 <div class="feature-card-back">
                   <div class="feature-icon small">
                     <i class="fas fa-map-marker-alt"></i>
@@ -2263,9 +2286,10 @@
               </div>
             </div>
           </div>
+
           <!-- 06 -->
           <div
-            class="col-12 col-sm-6 col-lg-4 col-xl-3 wow fadeInUp"
+            class="col-12 col-sm-6 col-lg-4 wow fadeInUp"
             data-wow-delay="0.6s"
           >
             <div class="feature-card">
@@ -2276,6 +2300,7 @@
                   </div>
                   <h5>Persönliche Beratung</h5>
                 </div>
+
                 <div class="feature-card-back">
                   <div class="feature-icon small">
                     <i class="fas fa-comments"></i>
@@ -2289,6 +2314,7 @@
               </div>
             </div>
           </div>
+
           <!-- CTA -->
           <div
             class="col-12 text-center mt-4 wow fadeInUp"
@@ -2298,7 +2324,8 @@
               href="tel:+4960473292615"
               class="btn btn-primary rounded-pill text-white py-3 px-5"
             >
-              <i class="fas fa-phone-alt me-2"></i> Termin vereinbaren
+              <i class="fas fa-phone-alt me-2"></i>
+              Termin vereinbaren
             </a>
           </div>
         </div>
@@ -2367,195 +2394,8 @@
     </div>
     <!-- About End -->
 
-    <!-- Praxisbilder & Videos Start -->
-    <div class="row mt-5 pt-5">
-      <div class="col-12">
-        <div
-          class="section-title text-center mb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-        >
-          <div class="sub-style">
-            <h4 class="sub-title px-3 mb-0">Praxis ansehen</h4>
-          </div>
 
-          <h2 class="display-5 mb-3">Ein Blick in unsere Praxis</h2>
 
-          <p class="mb-0">
-            Verschaffen Sie sich einen ersten Eindruck von unseren
-            Räumlichkeiten und der Atmosphäre vor Ort.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Praxis Carousel -->
-    <div class="praxis-carousel-wrapper position-relative">
-      <div class="praxis-carousel" id="praxisCarousel">
-        <!-- Bild 1 -->
-        <div class="praxis-slide">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481362/IMG-20260904-WA0015_2.jpg"
-            data-lightbox="praxis-gallery"
-            data-title="Einblick in die Praxis"
-          >
-            <img
-              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481362/IMG-20260904-WA0015_2.jpg"
-              alt="Praxis Integralis in Altenstadt"
-            />
-            <div class="praxis-slide-overlay">
-              <i class="fa fa-search-plus"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- Bild 2 -->
-        <div class="praxis-slide">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260904-WA0014_2.jpg"
-            data-lightbox="praxis-gallery"
-            data-title="Behandlungsbereich der Praxis"
-          >
-            <img
-              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260904-WA0014_2.jpg"
-              alt="Behandlungsbereich bei Integralis"
-            />
-            <div class="praxis-slide-overlay">
-              <i class="fa fa-search-plus"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- Bild 3 -->
-        <div class="praxis-slide">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg"
-            data-lightbox="praxis-gallery"
-            data-title="Räumlichkeiten von Integralis"
-          >
-            <img
-              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg"
-              alt="Räumlichkeiten von Integralis in Altenstadt"
-            />
-            <div class="praxis-slide-overlay">
-              <i class="fa fa-search-plus"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- Bild 4 -->
-        <div class="praxis-slide">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0040_2.jpg"
-            data-lightbox="praxis-gallery"
-            data-title="Praxisbereich Integralis"
-          >
-            <img
-              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0040_2.jpg"
-              alt="Praxisbereich Integralis"
-            />
-            <div class="praxis-slide-overlay">
-              <i class="fa fa-search-plus"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- Bild 5 -->
-        <div class="praxis-slide">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0044_2.jpg"
-            data-lightbox="praxis-gallery"
-            data-title="Behandlungsräume von Integralis"
-          >
-            <img
-              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0044_2.jpg"
-              alt="Behandlungsräume von Integralis"
-            />
-            <div class="praxis-slide-overlay">
-              <i class="fa fa-search-plus"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- Bild 6 -->
-        <div class="praxis-slide">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0020_3.jpg"
-            data-lightbox="praxis-gallery"
-            data-title="Einblick in unsere Praxis"
-          >
-            <img
-              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0020_3.jpg"
-              alt="Einblick in die Praxis Integralis"
-            />
-            <div class="praxis-slide-overlay">
-              <i class="fa fa-search-plus"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- Bild 7 -->
-        <div class="praxis-slide">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0041_2.jpg"
-            data-lightbox="praxis-gallery"
-            data-title="Praxis Integralis"
-          >
-            <img
-              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0041_2.jpg"
-              alt="Praxis Integralis"
-            />
-            <div class="praxis-slide-overlay">
-              <i class="fa fa-search-plus"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- Video 1 -->
-        <div class="praxis-slide praxis-video">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481363/VID-20260904-WA0006_2.mp4"
-            data-lightbox="praxis-gallery"
-            data-title="Video-Einblick in die Praxis"
-          >
-            <video muted loop autoplay playsinline preload="metadata">
-              <source
-                src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481363/VID-20260904-WA0006_2.mp4"
-                type="video/mp4"
-              />
-            </video>
-
-            <div class="praxis-video-overlay">
-              <span class="praxis-play-button">
-                <i class="fa fa-play"></i>
-              </span>
-              <span class="praxis-video-label">Video ansehen</span>
-            </div>
-          </a>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="praxis-slide praxis-video">
-          <a
-            href="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481362/VID-20260904-WA0005_2.mp4"
-            data-lightbox="praxis-gallery"
-            data-title="Rundgang durch die Praxis"
-          >
-            <video muted loop autoplay playsinline preload="metadata">
-              <source
-                src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481362/VID-20260904-WA0005_2.mp4"
-                type="video/mp4"
-              />
-            </video>
-
-            <div class="praxis-video-overlay">
-              <span class="praxis-play-button">
-                <i class="fa fa-play"></i>
-              </span>
-              <span class="praxis-video-label">Video ansehen</span>
-            </div>
-          </a>
-        </div>
-      </div>
 
       <!-- Navigation -->
       <button
@@ -3221,98 +3061,172 @@
     <!-- Book Appointment Start -->
     <div class="container-fluid appointment py-5">
       <div class="container py-5">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-            <div class="section-title text-start">
-              <h4 class="sub-title pe-3 mb-0">Termin vereinbaren</h4>
-              <h1 class="display-4 mb-4">Wir nehmen uns Zeit für Sie.</h1>
-              <p class="mb-4">
-                Rufen Sie uns an, um Ihren Termin zu vereinbaren. Wir finden
-                gemeinsam einen passenden Zeitpunkt für Ihre Behandlung.
-              </p>
-              <div class="row g-4">
-                <div class="col-sm-6">
-                  <div class="d-flex flex-column h-100">
-                    <div class="mb-4">
-                      <h5 class="mb-3">
-                        <i class="fa fa-check text-primary me-2"></i>
-                        Öffnungszeiten
-                      </h5>
-                      <p class="mb-0">
-                        Montag: 08 - 20 Uhr<br />
-                        Dienstag: 08 - 20 Uhr<br />
-                        Mittwoch: 07 - 19 Uhr<br />
-                        Donnerstag: 08 - 20 Uhr<br />
-                        Freitag: 07 - 14 Uhr<br />
-                        Telefonisch erreichbar: Montag - Freitag 08 - 14 Uhr
-                      </p>
-                    </div>
-                    <div class="mb-4">
-                      <h5 class="mb-3">
-                        <i class="fa fa-check text-primary me-2"></i> Die
-                        Praxisadresse
-                      </h5>
-                      <p class="mb-0">
-                        Vogelsbergstraße 47, Alte Molkerei<br />
-                        63674 Altenstadt
-                      </p>
-                    </div>
-                    <div class="text-start mb-4">
-                      <a
-                        href="tel:+4960473292615"
-                        class="btn btn-primary rounded-pill text-white py-3 px-5"
-                        >06047 / 3292615</a
-                      >
-                    </div>
+        <div class="row g-5 align-items-stretch">
+          <!-- ==========================================
+           LEFT COLUMN
+           ========================================== -->
+          <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="appointment-info h-100">
+              <!-- Section Heading -->
+              <div class="section-title text-start mb-5">
+                <h4 class="sub-title pe-3 mb-3">Termin vereinbaren</h4>
+
+                <h1 class="display-4 mb-4">
+                  Wir nehmen uns<br />
+                  Zeit für Sie.
+                </h1>
+
+                <p class="mb-0">
+                  Rufen Sie uns an, um Ihren Termin zu vereinbaren. Wir finden
+                  gemeinsam einen passenden Zeitpunkt für Ihre Behandlung.
+                </p>
+              </div>
+
+              <!-- Information Grid -->
+              <div class="appointment-details">
+                <!-- Opening Hours -->
+                <div class="appointment-detail">
+                  <div class="appointment-detail-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+
+                  <div class="appointment-detail-content">
+                    <h5 class="mb-3">Öffnungszeiten</h5>
+
+                    <p class="mb-0">
+                      Montag: 08 – 20 Uhr<br />
+                      Dienstag: 08 – 20 Uhr<br />
+                      Mittwoch: 07 – 19 Uhr<br />
+                      Donnerstag: 08 – 20 Uhr<br />
+                      Freitag: 07 – 14 Uhr
+                    </p>
+
+                    <small>
+                      Telefonisch erreichbar: Montag – Freitag 08 – 14 Uhr
+                    </small>
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="ratio ratio-1x1 h-100"></div>
+
+                <!-- Address -->
+                <div class="appointment-detail">
+                  <div class="appointment-detail-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+
+                  <div class="appointment-detail-content">
+                    <h5 class="mb-3">Praxisadresse</h5>
+
+                    <p class="mb-0">
+                      Vogelsbergstraße 47, Alte Molkerei<br />
+                      63674 Altenstadt
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Phone CTA -->
+              <div class="appointment-phone mt-5">
+                <div class="appointment-phone-content">
+                  <span> Termin telefonisch vereinbaren </span>
+
+                  <strong> 06047 / 3292615 </strong>
+                </div>
+
+                <a
+                  href="tel:+4960473292615"
+                  class="btn btn-primary rounded-pill text-white py-3 px-4"
+                >
+                  <i class="fas fa-phone-alt me-2"></i>
+                  Jetzt anrufen
+                </a>
               </div>
             </div>
           </div>
+
+          <!-- ==========================================
+           RIGHT COLUMN
+           ========================================== -->
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-            <div class="appointment-form rounded p-5">
-              <p class="fs-4 text-uppercase text-primary">Ihr Weg zum Termin</p>
-              <h2 class="display-5 mb-4">So funktioniert es in 3 Schritten</h2>
-              <ol class="appointment-steps">
-                <li>
-                  <span><i class="fas fa-phone-alt"></i></span>
-                  <div>
-                    <strong>Rufen Sie uns an</strong
-                    ><small
-                      >Unter 06047 / 3292615 erreichen Sie uns direkt.</small
-                    >
+            <div class="appointment-form rounded p-5 h-100">
+              <!-- Card Header -->
+              <div class="appointment-form-header mb-5">
+                <p class="fs-6 text-uppercase text-primary mb-2">
+                  Ihr Weg zum Termin
+                </p>
+
+                <h2 class="display-5 mb-0">So funktioniert es</h2>
+
+                <p class="mt-3 mb-0">
+                  In nur drei einfachen Schritten zu Ihrer persönlichen
+                  Behandlung.
+                </p>
+              </div>
+
+              <!-- Steps -->
+              <div class="appointment-steps">
+                <!-- Step 1 -->
+                <div class="appointment-step">
+                  <div class="appointment-step-number">01</div>
+
+                  <div class="appointment-step-icon">
+                    <i class="fas fa-phone-alt"></i>
                   </div>
-                </li>
-                <li>
-                  <span><i class="fas fa-calendar-check"></i></span>
-                  <div>
-                    <strong>Termin abstimmen</strong
-                    ><small
-                      >Wir finden einen passenden Zeitpunkt für Ihre
-                      Behandlung.</small
-                    >
+
+                  <div class="appointment-step-content">
+                    <strong> Rufen Sie uns an </strong>
+
+                    <small>
+                      Unter 06047 / 3292615 erreichen Sie uns direkt.
+                    </small>
                   </div>
-                </li>
-                <li>
-                  <span><i class="fas fa-heartbeat"></i></span>
-                  <div>
-                    <strong>Therapie beginnen</strong
-                    ><small
-                      >Wir starten mit einer individuell abgestimmten
-                      Behandlung.</small
-                    >
+                </div>
+
+                <!-- Step 2 -->
+                <div class="appointment-step">
+                  <div class="appointment-step-number">02</div>
+
+                  <div class="appointment-step-icon">
+                    <i class="fas fa-calendar-check"></i>
                   </div>
-                </li>
-              </ol>
-              <a
-                href="tel:+4960473292615"
-                class="btn btn-primary text-white w-100 py-3 px-5"
-                ><i class="fas fa-phone-alt me-2"></i>Jetzt Termin
-                vereinbaren</a
-              >
+
+                  <div class="appointment-step-content">
+                    <strong> Termin abstimmen </strong>
+
+                    <small>
+                      Wir finden gemeinsam einen passenden Zeitpunkt für Ihre
+                      Behandlung.
+                    </small>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="appointment-step">
+                  <div class="appointment-step-number">03</div>
+
+                  <div class="appointment-step-icon">
+                    <i class="fas fa-heartbeat"></i>
+                  </div>
+
+                  <div class="appointment-step-content">
+                    <strong> Therapie beginnen </strong>
+
+                    <small>
+                      Wir starten mit einer individuell abgestimmten Behandlung.
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA -->
+              <div class="appointment-form-cta mt-5">
+                <a
+                  href="tel:+4960473292615"
+                  class="btn btn-primary text-white w-100 py-3 px-5"
+                >
+                  <i class="fas fa-phone-alt me-2"></i>
+                  Jetzt Termin vereinbaren
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -3393,8 +3307,7 @@
           <div class="col-md-6 col-lg-6 col-xl-3">
             <div class="footer-item d-flex flex-column">
               <h4 class="mb-4 text-white">Kontakt</h4>
-              <a
-                href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"
+              <a href="https://maps.app.goo.gl/jH27DJKspQsaCZB79"
                 ><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstraße 47,
                 63674 Altenstadt</a
               >

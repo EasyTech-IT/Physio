@@ -822,25 +822,44 @@
      HEADER
 ========================================================= -->
 
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-      <div class="row gx-0 align-items-center" style="height: 45px">
-        <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-          <div class="d-flex flex-wrap">
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-3 px-lg-5 py-2 py-lg-0">
+      <div class="row gx-0 align-items-center" style="min-height: 45px">
+        <!-- Info-Bereich (Adresse, Zeiten, Telefon) -->
+        <div class="col-lg-9 text-center text-lg-start mb-2 mb-lg-0">
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start gap-2 gap-lg-4"
+            style="font-size: 13px"
+          >
+            <!-- Adresse -->
             <a
-              href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"
-              class="text-light me-4"
-              ><i class="fas fa-map-marker-alt text-primary me-2"></i
-              >Vogelsbergstraße 47, 63674 Altenstadt</a
+              href="https://maps.app.goo.gl/jH27DJKspQsaCZB79"
+              class="text-light text-decoration-none"
             >
-            <a href="tel:+4960473292615" class="text-light me-4"
-              ><i class="fas fa-phone-alt text-primary me-2"></i>06047 /
-              3292615</a
+              <i class="fas fa-map-marker-alt text-primary me-2"></i
+              >Vogelsbergstr. 47, Altenstadt
+            </a>
+
+            <!-- Öffnungszeiten Praxis (Kompakt zusammengefasst) -->
+            <span class="text-light">
+              <i class="fas fa-door-open text-primary me-2"></i>Geöffnet: Mo,
+              Di, Do: 08-20 Uhr | Mi: 07-19 Uhr | Fr: 07-14 Uhr
+            </span>
+
+            <!-- Telefon mit Erreichbarkeit -->
+            <a
+              href="tel:+4960473292615"
+              class="text-light text-decoration-none"
             >
+              <i class="fas fa-phone-alt text-primary me-2"></i>06047 3292615
+              <span class="text-white-50 ms-1">(Tel: Mo-Fr 08-14 Uhr)</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- Topbar End -->
+    <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
       <nav
         class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0"
@@ -857,12 +876,18 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarCollapse"
-          aria-label="Navigation öffnen"
         >
           <span class="fa fa-bars"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto py-0"></div>
+          <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link">Startseite</a>
+            <a href="about.html" class="nav-item nav-link">Praxis</a>
+            <a href="service.html" class="nav-item nav-link active"
+              >Therapieangebote</a
+            >
+            <a href="contact.html" class="nav-item nav-link">Kontakt</a>
+          </div>
           <a
             href="tel:+4960473292615"
             class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0"
@@ -871,6 +896,7 @@
         </div>
       </nav>
     </div>
+    <!-- Navbar End -->
 
     <!-- =========================================================
      HERO
@@ -885,7 +911,7 @@
             rgba(79, 174, 8, 0.72),
             rgba(104, 189, 26, 0.72)
           ),
-          url(&quot;https://res.cloudinary.com/k3cqt6uc/image/upload/v1788500256/11846289-c833-41e0-8d65-ded209c34d41.jpg&quot;);
+          url(&quot;https://res.cloudinary.com/k3cqt6uc/image/upload/v1789759002/1789686237739.png&quot;);
       "
     >
       <div class="hero-inner">

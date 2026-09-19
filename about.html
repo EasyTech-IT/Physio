@@ -56,44 +56,37 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-      <div class="row gx-0 align-items-center" style="height: 45px">
-        <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-          <div class="d-flex flex-wrap">
+    <div class="container-fluid bg-dark px-3 px-lg-5 py-2 py-lg-0">
+      <div class="row gx-0 align-items-center" style="min-height: 45px">
+        <!-- Info-Bereich (Adresse, Zeiten, Telefon) -->
+        <div class="col-lg-9 text-center text-lg-start mb-2 mb-lg-0">
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start gap-2 gap-lg-4"
+            style="font-size: 13px"
+          >
+            <!-- Adresse -->
             <a
-              href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"
-              class="text-light me-4"
-              ><i class="fas fa-map-marker-alt text-primary me-2"></i
-              >Vogelsbergstraße 47, 63674 Altenstadt</a
+              href="https://maps.app.goo.gl/jH27DJKspQsaCZB79"
+              class="text-light text-decoration-none"
             >
-            <a href="tel:+4960473292615" class="text-light me-4"
-              ><i class="fas fa-phone-alt text-primary me-2"></i>06047 /
-              3292615</a
+              <i class="fas fa-map-marker-alt text-primary me-2"></i
+              >Vogelsbergstr. 47, Altenstadt
+            </a>
+
+            <!-- Öffnungszeiten Praxis (Kompakt zusammengefasst) -->
+            <span class="text-light">
+              <i class="fas fa-door-open text-primary me-2"></i>Geöffnet: Mo,
+              Di, Do: 08-20 Uhr | Mi: 07-19 Uhr | Fr: 07-14 Uhr
+            </span>
+
+            <!-- Telefon mit Erreichbarkeit -->
+            <a
+              href="tel:+4960473292615"
+              class="text-light text-decoration-none"
             >
-          </div>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-          <div class="d-flex align-items-center justify-content-end">
-            <a
-              href="#"
-              class="btn btn-light btn-square border rounded-circle nav-fill me-3"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="#"
-              class="btn btn-light btn-square border rounded-circle nav-fill me-3"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              href="#"
-              class="btn btn-light btn-square border rounded-circle nav-fill me-3"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="#"
-              class="btn btn-light btn-square border rounded-circle nav-fill me-0"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+              <i class="fas fa-phone-alt text-primary me-2"></i>06047 3292615
+              <span class="text-white-50 ms-1">(Tel: Mo-Fr 08-14 Uhr)</span>
+            </a>
           </div>
         </div>
       </div>
@@ -142,7 +135,11 @@
     <!-- Header Start -->
     <div
       class="container-fluid bg-breadcrumb about-page-header"
-      style="background-image: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)), url('https://res.cloudinary.com/k3cqt6uc/image/upload/v1788500756/a646d174-7c5d-418a-9a12-5b21d3f29f37.jpg')"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+          url(&quot;https://res.cloudinary.com/k3cqt6uc/image/upload/v1788500756/a646d174-7c5d-418a-9a12-5b21d3f29f37.jpg&quot;);
+      "
     >
       <div class="container text-center py-5" style="max-width: 900px">
         <h3
@@ -220,1031 +217,1148 @@
     </div>
     <!-- About End -->
 
-    <!-- Philosophy Start -->
-    <div class="container-fluid philosophy py-5">
+    <!-- ==========================================
+     Philosophy Start
+========================================== -->
+    <div class="container-fluid philosophy philosophy-modern py-5">
       <div class="container py-5">
-        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="sub-style">
-            <h4 class="sub-title px-3 mb-0">Unsere Philosophie</h4>
+        <!-- START: Section Header -->
+        <div
+          class="philosophy-header text-center mx-auto mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="philosophy-eyebrow">
+            <span class="philosophy-eyebrow-line"></span>
+            <span>Unsere Philosophie</span>
+            <span class="philosophy-eyebrow-line"></span>
           </div>
-          <h1 class="display-3 mb-4">Ganzheitlich bedeutet: Sie im Blick.</h1>
-          <p class="mb-0">
-           Integralis ist das lateinische Wort für ganzheitlich. Für mich bedeutet das, nicht nur die akute Beschwerde zu behandeln, sondern Ursachen, Lebensumstände und Ihre persönlichen Ziele mit einzubeziehen.
+
+          <h1 class="philosophy-title">
+            Ganzheitlich bedeutet:<br />
+            <span>Sie im Blick.</span>
+          </h1>
+
+          <p class="philosophy-intro">
+            Integralis ist das lateinische Wort für ganzheitlich. Für uns
+            bedeutet das, nicht nur die akute Beschwerde zu behandeln, sondern
+            Ursachen, Lebensumstände und Ihre persönlichen Ziele mit
+            einzubeziehen.
           </p>
         </div>
-        <div class="row g-4 justify-content-center">
+        <!-- END: Section Header -->
+
+        <!-- START: Philosophy Grid -->
+        <div class="row g-4 philosophy-grid justify-content-center">
+          <!-- START: Philosophy Item 01 -->
           <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row-cols-1 feature-item p-4">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-search fa-4x text-primary"></i>
-                  </div>
-                </div>
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Ganzheitlicher Blick auf die Ursachen</h5>
-                  <p class="mb-0">
-                    Ich schaue über die akute Beschwerde hinaus auf individuelle Ursachen und Lebensverhältnisse. Statt nur ein Symptom zu behandeln, passe ich die Therapie genau an Ihre persönlichen Bedürfnisse an.
-                  </p>
-                </div>
+            <div class="philosophy-item">
+              <div class="philosophy-icon">
+                <i class="fas fa-search"></i>
+              </div>
+
+              <div class="philosophy-number">01</div>
+
+              <div class="philosophy-content">
+                <h3>Ganzheitlicher Blick auf die Ursachen</h3>
+
+                <p>
+                  Wir schauen über die akute Beschwerde hinaus auf individuelle
+                  Ursachen und Lebensverhältnisse. Die Therapie wird gezielt an
+                  Ihre persönlichen Bedürfnisse angepasst.
+                </p>
               </div>
             </div>
           </div>
+          <!-- END: Philosophy Item 01 -->
+
+          <!-- START: Philosophy Item 02 -->
           <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="row-cols-1 feature-item p-4">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-hourglass-half fa-4x text-primary"></i>
-                  </div>
-                </div>
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Zeit für Ihre Gesundheit</h5>
-                  <p class="mb-0">
-                    Jede Behandlung nimmt sich genau die Zeit, die Sie wirklich brauchen – vertrauen Sie auf 13 Jahre Berufserfahrung statt auf ein starres Standardprogramm.
-                  </p>
-                </div>
+            <div class="philosophy-item">
+              <div class="philosophy-icon">
+                <i class="fas fa-hourglass-half"></i>
+              </div>
+
+              <div class="philosophy-number">02</div>
+
+              <div class="philosophy-content">
+                <h3>Zeit für Ihre Gesundheit</h3>
+
+                <p>
+                  Jede Behandlung nimmt sich die Zeit, die Sie wirklich
+                  brauchen. Dabei setzen wir auf persönliche Betreuung und
+                  langjährige Berufserfahrung statt auf ein starres
+                  Standardprogramm.
+                </p>
               </div>
             </div>
           </div>
+          <!-- END: Philosophy Item 02 -->
+
+          <!-- START: Philosophy Item 03 -->
           <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row-cols-1 feature-item p-4">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-handshake fa-4x text-primary"></i>
-                  </div>
-                </div>
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Vertrauen und Kontinuität</h5>
-                  <p class="mb-0">
-                    Sie werden durchgehend von derselben Person behandelt und
-                    über Ihre gesamte Therapie begleitet.
-                  </p>
-                </div>
+            <div class="philosophy-item">
+              <div class="philosophy-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+
+              <div class="philosophy-number">03</div>
+
+              <div class="philosophy-content">
+                <h3>Vertrauen und Kontinuität</h3>
+
+                <p>
+                  Sie werden persönlich begleitet und erhalten eine
+                  kontinuierliche Betreuung über den gesamten Verlauf Ihrer
+                  Therapie.
+                </p>
               </div>
             </div>
           </div>
+          <!-- END: Philosophy Item 03 -->
         </div>
+        <!-- END: Philosophy Grid -->
       </div>
     </div>
-    <!-- Philosophy End -->
+    <!-- ==========================================
+     Philosophy End
+========================================== -->
 
-    <!-- Team Start -->
-    <div class="container-fluid team py-5">
-      <div class="container py-5">
-        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="sub-style">
-            <h4 class="sub-title px-3 mb-0">Unser Team</h4>
-          </div>
-          <h1 class="display-3 mb-4">Die Menschen hinter Integralis</h1>
-          <p class="mb-0">
-            Keine anonyme Praxis: Unser Team begleitet Sie persönlich von der
-            ersten Anfrage bis zur laufenden Behandlung.
-          </p>
-        </div>
-        <!-- Platzhalter-Team: Namen/Rollen der Kolleginnen und Kollegen bitte durch echte Angaben ersetzen -->
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item rounded">
-              <div class="team-img rounded-top h-100">
-                <img
-                  src="https://www.integralis-physio.de/wp-content/uploads/2020/09/1-685x1024.jpg"
-                  class="img-fluid rounded-top w-100"
-                  alt="Nico Gugliotta, Physiotherapeut bei Integralis"
-                />
-              </div>
-              <div
-                class="team-content text-center border border-primary border-top-0 rounded-bottom p-4"
-              >
-                <span class="badge bg-primary rounded-pill mb-2"
-                  >Praxisinhaber</span
-                >
-                <h5>Nico</h5>
-                <p class="mb-2">
-                  Physiotherapeut, Schwerpunkt neurologische Physiotherapie
-                  (Bobath)
-                </p>
-                <p class="small fst-italic mb-0">
-                  „Ihre Beschwerden wirklich zu verstehen – dafür nehme ich mir Zeit.“
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="team-item rounded">
-              <div class="team-img rounded-top h-100">
-                <img
-                  src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502683/copy_of_4af8c2e5-95584648-ac79-675654776bfd.png"
-                  class="img-fluid rounded-top w-100"
-                  alt="Anna Beispiel, Physiotherapeutin bei Integralis"
-                />
-              </div>
-              <div
-                class="team-content text-center border border-primary border-top-0 rounded-bottom p-4"
-              >
-                <h5>Jasmin</h5>
-                <p class="mb-0">
-                  Physiotherapeutin, Schwerpunkt manuelle Therapie
-                </p>
-                <p class="small fst-italic mb-0">
-                 Gezielte Handgriffe für mehr Schmerzfreiheit und eine spürbar bessere Beweglichkeit im Alltag.
-                </p>
-              </div>
-            </div>
-          </div>
-           <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="team-item rounded">
-              <div class="team-img rounded-top h-100">
-                <img
-                  src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502731/copy_of_4af8c2e5-58-4648-ac79-675654776bfd.png"
-                  class="img-fluid rounded-top w-100"
-                  alt="Anna Beispiel, Physiotherapeutin bei Integralis"
-                />
-              </div>
-              <div
-                class="team-content text-center border border-primary border-top-0 rounded-bottom p-4"
-              >
-                <h5>Eva</h5>
-                <p class="mb-0">
-                  MFA / Bademeisterin / Masseurin / Lymphdrainage
-                </p>
-                <p class="small fst-italic mb-0">
-                  Wir bringen Sie sicher, fit und belastbar zurück in Ihr Training.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item rounded">
-              <div class="team-img rounded-top h-100">
-                <img
-                  src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502590/copy_of_4af8c2e5-9558-4648-ac79-675654776bfd.png"
-                  class="img-fluid rounded-top w-100"
-                  alt="Markus Beispiel, Physiotherapeut bei Integralis"
-                />
-              </div>
-              <div
-                class="team-content text-center border border-primary border-top-0 rounded-bottom p-4"
-              >
-                <h5>Leo</h5>
-                <p class="mb-0">Physiotherapeut</p>
-                <p class="small fst-italic mb-0">
-                 Entlastung des Gewebes für ein spürbares, leichteres Körpergefühl.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="team-item rounded">
-              <div class="team-img rounded-top h-100">
-                <img
-                  src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502641/4af8c2e5-9558-4648-ac79-675654776bfd_bf0e83.png"
-                  class="img-fluid rounded-top w-100"
-                  alt="Julia Beispiel, Physiotherapeutin bei Integralis"
-                />
-              </div>
-              <div
-                class="team-content text-center border border-primary border-top-0 rounded-bottom p-4"
-              >
-                <h5>Lisa</h5>
-                <p class="mb-0">Physiotherapeutin (Schwerpunkt Sport / Reha)</p>
-                <p class="small fst-italic mb-0">
-                 Zielgerichtete Reha für Sport und Freizeit.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="team-item rounded">
-              <div class="team-img rounded-top h-100">
-                <img
-                  src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502767/copy_of_4af8c2e5-95-4648-ac79-675654776bfd.png"
-                  class="img-fluid rounded-top w-100"
-                  alt="Sara Beispiel, Praxisorganisation bei Integralis"
-                />
-              </div>
-              <div
-                class="team-content text-center border border-primary border-top-0 rounded-bottom p-4"
-              >
-                <h5>Sarah</h5>
-                <p class="mb-0">Organisation &amp; Abläufe</p>
-                <p class="small fst-italic mb-0">
-                  Ein lächelnder Empfang und reibungslose Abläufe – ich sorge dafür, dass Sie sich ab der ersten Minute gut aufgehoben fühlen.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="team-item team-item-hiring rounded h-100">
-              <div
-                class="team-content team-content-hiring text-center border border-primary rounded h-100 p-4 d-flex flex-column align-items-center justify-content-center"
-              >
-                <i class="fas fa-user-plus fa-4x text-primary mb-3"></i>
-                <h5>Wir suchen Verstärkung</h5>
-                <p class="mb-4">
-                  Werden Sie Teil unseres Teams bei Integralis in Altenstadt.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
-
-    <!-- Rooms Start -->
-
-    <div class="container-fluid rooms bg-light py-5">
+    <!-- =========================================================
+     Team Start
+     ========================================================= -->
+    <div class="container-fluid team team-modern py-5">
       <div class="container py-5">
         <!-- Section Heading -->
-        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="sub-style">
-            <h4 class="sub-title px-3 mb-0">Räumlichkeiten</h4>
+        <div class="team-heading wow fadeInUp" data-wow-delay="0.1s">
+          <div class="team-eyebrow">
+            <span></span>
+            Unser Team
           </div>
 
-          <h1 class="display-3 mb-4">So finden Sie sich bei uns zurecht.</h1>
+          <div class="team-heading-grid">
+            <h1>
+              Die Menschen<br />
+              hinter Integralis
+            </h1>
+          </div>
+        </div>
 
-          <p class="mb-0">
-            Ein Einblick in unsere Praxis in der Alten Molkerei in Altenstadt
-            - von den Behandlungsräumen bis zur Ausstattung.
+        <!-- =====================================================
+         TEAM GRID
+         ===================================================== -->
+        <div class="team-modern-grid">
+          <!-- Team 01 -->
+          <article class="team-modern-item wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-modern-image">
+              <img
+                src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788559318/copy_of_brave_screenshot_wwwgooglede.png"
+                alt="Nico, Physiotherapeut bei Integralis"
+                loading="lazy"
+              />
+
+              <div class="team-modern-index">01</div>
+            </div>
+
+            <div class="team-modern-info">
+              <div class="team-modern-role">Praxisinhaber</div>
+
+              <h3>Nico</h3>
+
+              <p class="team-modern-position">
+                Physiotherapeut · Schwerpunkt neurologische Physiotherapie
+                (Bobath)
+              </p>
+            </div>
+          </article>
+
+          <!-- Team 02 -->
+          <article class="team-modern-item wow fadeInUp" data-wow-delay="0.2s">
+            <div class="team-modern-image">
+              <img
+                src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502683/copy_of_4af8c2e5-95584648-ac79-675654776bfd.png"
+                alt="Jasmin, Physiotherapeutin bei Integralis"
+                loading="lazy"
+              />
+
+              <div class="team-modern-index">02</div>
+            </div>
+
+            <div class="team-modern-info">
+              <div class="team-modern-role">Physiotherapie</div>
+
+              <h3>Jasmin</h3>
+
+              <p class="team-modern-position">
+                Physiotherapeutin · Schwerpunkt manuelle Therapie
+              </p>
+            </div>
+          </article>
+
+          <!-- Team 03 -->
+          <article class="team-modern-item wow fadeInUp" data-wow-delay="0.3s">
+            <div class="team-modern-image">
+              <img
+                src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502731/copy_of_4af8c2e5-58-4648-ac79-675654776bfd.png"
+                alt="Eva, MFA und Masseurin bei Integralis"
+                loading="lazy"
+              />
+
+              <div class="team-modern-index">03</div>
+            </div>
+
+            <div class="team-modern-info">
+              <div class="team-modern-role">Therapie &amp; Massage</div>
+
+              <h3>Eva</h3>
+
+              <p class="team-modern-position">
+                MFA · Bademeisterin · Masseurin · Lymphdrainage
+              </p>
+            </div>
+          </article>
+
+          <!-- Team 04 -->
+          <article class="team-modern-item wow fadeInUp" data-wow-delay="0.4s">
+            <div class="team-modern-image">
+              <img
+                src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502590/copy_of_4af8c2e5-9558-4648-ac79-675654776bfd.png"
+                alt="Leo, Physiotherapeut bei Integralis"
+                loading="lazy"
+              />
+
+              <div class="team-modern-index">04</div>
+            </div>
+
+            <div class="team-modern-info">
+              <div class="team-modern-role">Physiotherapie</div>
+
+              <h3>Leo</h3>
+
+              <p class="team-modern-position">Physiotherapeut</p>
+            </div>
+          </article>
+
+          <!-- Team 05 -->
+          <article class="team-modern-item wow fadeInUp" data-wow-delay="0.5s">
+            <div class="team-modern-image">
+              <img
+                src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502641/4af8c2e5-9558-4648-ac79-675654776bfd_bf0e83.png"
+                alt="Lisa, Physiotherapeutin bei Integralis"
+                loading="lazy"
+              />
+
+              <div class="team-modern-index">05</div>
+            </div>
+
+            <div class="team-modern-info">
+              <div class="team-modern-role">Sport &amp; Rehabilitation</div>
+
+              <h3>Lisa</h3>
+
+              <p class="team-modern-position">
+                Physiotherapeutin · Schwerpunkt Sport / Reha
+              </p>
+            </div>
+          </article>
+
+          <!-- Team 06 -->
+          <article class="team-modern-item wow fadeInUp" data-wow-delay="0.6s">
+            <div class="team-modern-image">
+              <img
+                src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788502767/copy_of_4af8c2e5-95-4648-ac79-675654776bfd.png"
+                alt="Sarah, Organisation und Abläufe bei Integralis"
+                loading="lazy"
+              />
+
+              <div class="team-modern-index">06</div>
+            </div>
+
+            <div class="team-modern-info">
+              <div class="team-modern-role">Praxisorganisation</div>
+
+              <h3>Sarah</h3>
+
+              <p class="team-modern-position">Organisation &amp; Abläufe</p>
+            </div>
+          </article>
+
+          <!-- ===================================================
+           JOB CARD
+           =================================================== -->
+          <article
+            class="team-modern-item team-modern-job wow fadeInUp"
+            data-wow-delay="0.7s"
+          >
+            <div class="team-modern-job-inner">
+              <div class="team-modern-job-icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+
+              <div class="team-modern-role">Karriere bei Integralis</div>
+
+              <h3>
+                Wir suchen<br />
+                Verstärkung.
+              </h3>
+
+              <p>
+                Sie möchten Teil unseres Teams werden? Lernen Sie Integralis in
+                Altenstadt kennen.
+              </p>
+
+              <a href="contact.html" class="team-modern-job-button">
+                Stelle ansehen
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!-- =========================================================
+     Team End
+     ========================================================= -->
+
+    <!-- ==========================================
+     Rooms Start
+========================================== -->
+    <div class="container-fluid rooms rooms-modern py-5">
+      <div class="container py-5">
+        <!-- START: Section Header -->
+        <div
+          class="rooms-header text-center mx-auto mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="rooms-eyebrow">
+            <span class="rooms-eyebrow-line"></span>
+            <span>Räumlichkeiten</span>
+            <span class="rooms-eyebrow-line"></span>
+          </div>
+
+          <h1 class="rooms-title">
+            So finden Sie sich<br />
+            <span>bei uns zurecht.</span>
+          </h1>
+
+          <p class="rooms-intro">
+            Ein Einblick in unsere Praxis in der Alten Molkerei in Altenstadt –
+            von den Behandlungsräumen bis zur Ausstattung.
           </p>
         </div>
+        <!-- END: Section Header -->
 
-        <!-- Features -->
-        <div class="row g-4 justify-content-center">
-          <!-- Praxisräume -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row-cols-1 feature-item p-4 h-100">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-clinic-medical fa-4x text-primary"></i>
-                  </div>
-                </div>
-
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Praxisräume</h5>
-                  <p class="mb-0">
-                    Helle und freundliche Räumlichkeiten in der Alten Molkerei
-                    in Altenstadt.
-                  </p>
-                </div>
+        <!-- START: Rooms Grid -->
+        <div class="row g-0 rooms-grid">
+          <!-- 01 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="rooms-item wow fadeInUp" data-wow-delay="0.1s">
+              <div class="rooms-icon">
+                <i class="fas fa-clinic-medical"></i>
               </div>
+
+              <span class="rooms-number">01</span>
+
+              <h3>Praxisräume</h3>
+
+              <p>
+                Helle und freundliche Räumlichkeiten in der Alten Molkerei in
+                Altenstadt.
+              </p>
             </div>
           </div>
 
-          <!-- Behandlungsräume -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="row-cols-1 feature-item p-4 h-100">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-procedures fa-4x text-primary"></i>
-                  </div>
-                </div>
-
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Behandlungsräume</h5>
-                  <p class="mb-0">
-                    Ruhige und angenehme Behandlungsräume für eine
-                    konzentrierte und ungestörte Therapie.
-                  </p>
-                </div>
+          <!-- 02 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="rooms-item wow fadeInUp" data-wow-delay="0.2s">
+              <div class="rooms-icon">
+                <i class="fas fa-procedures"></i>
               </div>
+
+              <span class="rooms-number">02</span>
+
+              <h3>Behandlungsräume</h3>
+
+              <p>
+                Ruhige und angenehme Räume für eine konzentrierte und ungestörte
+                Therapie.
+              </p>
             </div>
           </div>
 
-          <!-- Ausstattung -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="row-cols-1 feature-item p-4 h-100">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-first-aid fa-4x text-primary"></i>
-                  </div>
-                </div>
-
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Ausstattung</h5>
-                  <p class="mb-0">
-                    Geeignete Ausstattung für Krankengymnastik, manuelle
-                    Therapie und Lymphdrainage.
-                  </p>
-                </div>
+          <!-- 03 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="rooms-item wow fadeInUp" data-wow-delay="0.3s">
+              <div class="rooms-icon">
+                <i class="fas fa-first-aid"></i>
               </div>
+
+              <span class="rooms-number">03</span>
+
+              <h3>Ausstattung</h3>
+
+              <p>
+                Geeignete Ausstattung für Krankengymnastik, manuelle Therapie
+                und Lymphdrainage.
+              </p>
             </div>
           </div>
 
-          <!-- Atmosphäre -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="row-cols-1 feature-item p-4 h-100">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-leaf fa-4x text-primary"></i>
-                  </div>
-                </div>
-
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Atmosphäre</h5>
-                  <p class="mb-0">
-                    Eine ruhige und angenehme Atmosphäre, in der Sie sich
-                    während Ihrer Behandlung wohlfühlen können.
-                  </p>
-                </div>
+          <!-- 04 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="rooms-item wow fadeInUp" data-wow-delay="0.4s">
+              <div class="rooms-icon">
+                <i class="fas fa-leaf"></i>
               </div>
+
+              <span class="rooms-number">04</span>
+
+              <h3>Atmosphäre</h3>
+
+              <p>
+                Eine ruhige und angenehme Atmosphäre, in der Sie sich während
+                Ihrer Behandlung wohlfühlen.
+              </p>
             </div>
           </div>
 
-          <!-- Lage -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row-cols-1 feature-item p-4 h-100">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-map-marker-alt fa-4x text-primary"></i>
-                  </div>
-                </div>
-
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Lage</h5>
-                  <p class="mb-0">
-                    Sie finden uns zentral in Altenstadt, Vogelsbergstraße 47.
-                  </p>
-                </div>
+          <!-- 05 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="rooms-item wow fadeInUp" data-wow-delay="0.1s">
+              <div class="rooms-icon">
+                <i class="fas fa-map-marker-alt"></i>
               </div>
+
+              <span class="rooms-number">05</span>
+
+              <h3>Lage</h3>
+
+              <p>Sie finden uns zentral in Altenstadt, Vogelsbergstraße 47.</p>
             </div>
           </div>
 
-          <!-- Parkmöglichkeiten -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="row-cols-1 feature-item p-4 h-100">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-parking fa-4x text-primary"></i>
-                  </div>
-                </div>
-
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Parkmöglichkeiten</h5>
-                  <p class="mb-0">
-                    Bei Fragen zu Parkmöglichkeiten in der Nähe der Praxis
-                    sprechen Sie uns gerne an.
-                  </p>
-                </div>
+          <!-- 06 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="rooms-item wow fadeInUp" data-wow-delay="0.2s">
+              <div class="rooms-icon">
+                <i class="fas fa-parking"></i>
               </div>
+
+              <span class="rooms-number">06</span>
+
+              <h3>Parkmöglichkeiten</h3>
+
+              <p>
+                Bei Fragen zu Parkmöglichkeiten in der Nähe der Praxis sprechen
+                Sie uns gerne an.
+              </p>
             </div>
           </div>
 
-          <!-- Barrierefreiheit -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="row-cols-1 feature-item p-4 h-100">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-wheelchair fa-4x text-primary"></i>
-                  </div>
-                </div>
-
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Barrierefreiheit</h5>
-                  <p class="mb-0">
-                    Sprechen Sie uns gerne an. Wir informieren Sie über die
-                    Zugangsmöglichkeiten der Praxis.
-                  </p>
-                </div>
+          <!-- 07 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="rooms-item wow fadeInUp" data-wow-delay="0.3s">
+              <div class="rooms-icon">
+                <i class="fas fa-wheelchair"></i>
               </div>
+
+              <span class="rooms-number">07</span>
+
+              <h3>Barrierefreiheit</h3>
+
+              <p>
+                Sprechen Sie uns gerne an. Wir informieren Sie über die
+                Zugangsmöglichkeiten der Praxis.
+              </p>
             </div>
           </div>
 
-          <!-- Anfahrt -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="row-cols-1 feature-item p-4 h-100">
-              <div class="col-12">
-                <div class="feature-icon mb-4">
-                  <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-route fa-4x text-primary"></i>
-                  </div>
-                </div>
-
-                <div class="feature-content d-flex flex-column">
-                  <h5 class="mb-4">Anfahrt</h5>
-                  <p class="mb-0">
-                    Unsere Praxis ist gut aus Altenstadt und der näheren
-                    Umgebung erreichbar.
-                  </p>
-                </div>
+          <!-- 08 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="rooms-item wow fadeInUp" data-wow-delay="0.4s">
+              <div class="rooms-icon">
+                <i class="fas fa-route"></i>
               </div>
+
+              <span class="rooms-number">08</span>
+
+              <h3>Anfahrt</h3>
+
+              <p>
+                Unsere Praxis ist gut aus Altenstadt und der näheren Umgebung
+                erreichbar.
+              </p>
             </div>
           </div>
         </div>
+        <!-- END: Rooms Grid -->
+      </div>
+    </div>
+    <!-- ==========================================
+     Rooms End
+========================================== -->
 
+    <!-- Praxisbilder & Videos Start -->
+    <div class="row mt-5 pt-5">
+      <div class="col-12">
+        <div
+          class="section-title text-center mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="sub-style">
+            <h4 class="sub-title px-3 mb-0">Praxis ansehen</h4>
+          </div>
 
-<!-- Praxisbilder & Videos Start -->
-<div class="row mt-5 pt-5">
-  <div class="col-12">
-    <div
-      class="section-title text-center mb-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="sub-style">
-        <h4 class="sub-title px-3 mb-0">Praxis ansehen</h4>
+          <h2 class="display-5 mb-3">Ein Blick in unsere Praxis</h2>
+
+          <p class="mb-0">
+            Verschaffen Sie sich einen ersten Eindruck von unseren
+            Räumlichkeiten und der Atmosphäre vor Ort.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Praxis Carousel -->
+    <div class="praxis-carousel-wrapper position-relative">
+      <div class="praxis-carousel" id="praxisCarousel">
+        <!-- Bild 1 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481362/IMG-20260904-WA0015_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Einblick in die Praxis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481362/IMG-20260904-WA0015_2.jpg"
+              alt="Praxis Integralis in Altenstadt"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 2 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260904-WA0014_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Behandlungsbereich der Praxis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260904-WA0014_2.jpg"
+              alt="Behandlungsbereich bei Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 3 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Räumlichkeiten von Integralis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg"
+              alt="Räumlichkeiten von Integralis in Altenstadt"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 4 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0040_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Praxisbereich Integralis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0040_2.jpg"
+              alt="Praxisbereich Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 5 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0044_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Behandlungsräume von Integralis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0044_2.jpg"
+              alt="Behandlungsräume von Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 6 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0020_3.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Einblick in unsere Praxis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0020_3.jpg"
+              alt="Einblick in die Praxis Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bild 7 -->
+        <div class="praxis-slide">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0041_2.jpg"
+            data-lightbox="praxis-gallery"
+            data-title="Praxis Integralis"
+          >
+            <img
+              src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0041_2.jpg"
+              alt="Praxis Integralis"
+            />
+            <div class="praxis-slide-overlay">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Video 1 -->
+        <div class="praxis-slide praxis-video">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481363/VID-20260904-WA0006_2.mp4"
+            data-lightbox="praxis-gallery"
+            data-title="Video-Einblick in die Praxis"
+          >
+            <video muted loop autoplay playsinline preload="metadata">
+              <source
+                src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481363/VID-20260904-WA0006_2.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div class="praxis-video-overlay">
+              <span class="praxis-play-button">
+                <i class="fa fa-play"></i>
+              </span>
+              <span class="praxis-video-label">Video ansehen</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="praxis-slide praxis-video">
+          <a
+            href="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481362/VID-20260904-WA0005_2.mp4"
+            data-lightbox="praxis-gallery"
+            data-title="Rundgang durch die Praxis"
+          >
+            <video muted loop autoplay playsinline preload="metadata">
+              <source
+                src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481362/VID-20260904-WA0005_2.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div class="praxis-video-overlay">
+              <span class="praxis-play-button">
+                <i class="fa fa-play"></i>
+              </span>
+              <span class="praxis-video-label">Video ansehen</span>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <h2 class="display-5 mb-3">Ein Blick in unsere Praxis</h2>
-
-      <p class="mb-0">
-        Verschaffen Sie sich einen ersten Eindruck von unseren
-        Räumlichkeiten und der Atmosphäre vor Ort.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- Praxis Carousel -->
-<div class="praxis-carousel-wrapper position-relative">
-
-  <div class="praxis-carousel" id="praxisCarousel">
-
-    <!-- Bild 1 -->
-    <div class="praxis-slide">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481362/IMG-20260904-WA0015_2.jpg"
-        data-lightbox="praxis-gallery"
-        data-title="Einblick in die Praxis"
+      <!-- Navigation -->
+      <button
+        type="button"
+        class="praxis-carousel-btn praxis-carousel-prev"
+        id="praxisPrev"
+        aria-label="Vorherige Bilder"
       >
-        <img
-          src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481362/IMG-20260904-WA0015_2.jpg"
-          alt="Praxis Integralis in Altenstadt"
-        />
-        <div class="praxis-slide-overlay">
-          <i class="fa fa-search-plus"></i>
-        </div>
-      </a>
-    </div>
+        <i class="fa fa-chevron-left"></i>
+      </button>
 
-    <!-- Bild 2 -->
-    <div class="praxis-slide">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260904-WA0014_2.jpg"
-        data-lightbox="praxis-gallery"
-        data-title="Behandlungsbereich der Praxis"
+      <button
+        type="button"
+        class="praxis-carousel-btn praxis-carousel-next"
+        id="praxisNext"
+        aria-label="Nächste Bilder"
       >
-        <img
-          src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260904-WA0014_2.jpg"
-          alt="Behandlungsbereich bei Integralis"
-        />
-        <div class="praxis-slide-overlay">
-          <i class="fa fa-search-plus"></i>
-        </div>
-      </a>
+        <i class="fa fa-chevron-right"></i>
+      </button>
     </div>
 
-    <!-- Bild 3 -->
-    <div class="praxis-slide">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg"
-        data-lightbox="praxis-gallery"
-        data-title="Räumlichkeiten von Integralis"
-      >
-        <img
-          src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0037_2.jpg"
-          alt="Räumlichkeiten von Integralis in Altenstadt"
-        />
-        <div class="praxis-slide-overlay">
-          <i class="fa fa-search-plus"></i>
-        </div>
-      </a>
-    </div>
+    <!-- Carousel CSS -->
+    <style>
+      .praxis-carousel-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 5px;
+      }
 
-    <!-- Bild 4 -->
-    <div class="praxis-slide">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0040_2.jpg"
-        data-lightbox="praxis-gallery"
-        data-title="Praxisbereich Integralis"
-      >
-        <img
-          src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0040_2.jpg"
-          alt="Praxisbereich Integralis"
-        />
-        <div class="praxis-slide-overlay">
-          <i class="fa fa-search-plus"></i>
-        </div>
-      </a>
-    </div>
+      .praxis-carousel {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        padding: 5px 5px 20px;
+        cursor: grab;
+      }
 
-    <!-- Bild 5 -->
-    <div class="praxis-slide">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0044_2.jpg"
-        data-lightbox="praxis-gallery"
-        data-title="Behandlungsräume von Integralis"
-      >
-        <img
-          src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0044_2.jpg"
-          alt="Behandlungsräume von Integralis"
-        />
-        <div class="praxis-slide-overlay">
-          <i class="fa fa-search-plus"></i>
-        </div>
-      </a>
-    </div>
+      .praxis-carousel::-webkit-scrollbar {
+        display: none;
+      }
 
-    <!-- Bild 6 -->
-    <div class="praxis-slide">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0020_3.jpg"
-        data-lightbox="praxis-gallery"
-        data-title="Einblick in unsere Praxis"
-      >
-        <img
-          src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0020_3.jpg"
-          alt="Einblick in die Praxis Integralis"
-        />
-        <div class="praxis-slide-overlay">
-          <i class="fa fa-search-plus"></i>
-        </div>
-      </a>
-    </div>
+      .praxis-carousel:active {
+        cursor: grabbing;
+      }
 
-    <!-- Bild 7 -->
-    <div class="praxis-slide">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0041_2.jpg"
-        data-lightbox="praxis-gallery"
-        data-title="Praxis Integralis"
-      >
-        <img
-          src="https://res.cloudinary.com/k3cqt6uc/image/upload/v1788481361/IMG-20260903-WA0041_2.jpg"
-          alt="Praxis Integralis"
-        />
-        <div class="praxis-slide-overlay">
-          <i class="fa fa-search-plus"></i>
-        </div>
-      </a>
-    </div>
+      .praxis-slide {
+        position: relative;
+        flex: 0 0 calc(33.333% - 16px);
+        min-width: 0;
+        height: 320px;
+        overflow: hidden;
+        border-radius: 14px;
+        background: #f5f5f5;
+      }
 
-    <!-- Video 1 -->
-    <div class="praxis-slide praxis-video">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481363/VID-20260904-WA0006_2.mp4"
-        data-lightbox="praxis-gallery"
-        data-title="Video-Einblick in die Praxis"
-      >
-        <video
-          muted
-          loop
-          autoplay
-          playsinline
-          preload="metadata"
-        >
-          <source
-            src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481363/VID-20260904-WA0006_2.mp4"
-            type="video/mp4"
-          />
-        </video>
+      .praxis-slide a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
 
-        <div class="praxis-video-overlay">
-          <span class="praxis-play-button">
-            <i class="fa fa-play"></i>
-          </span>
-          <span class="praxis-video-label">Video ansehen</span>
-        </div>
-      </a>
-    </div>
+      .praxis-slide img,
+      .praxis-slide video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
 
-    <!-- Video 2 -->
-    <div class="praxis-slide praxis-video">
-      <a
-        href="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481362/VID-20260904-WA0005_2.mp4"
-        data-lightbox="praxis-gallery"
-        data-title="Rundgang durch die Praxis"
-      >
-        <video
-          muted
-          loop
-          autoplay
-          playsinline
-          preload="metadata"
-        >
-          <source
-            src="https://res.cloudinary.com/k3cqt6uc/video/upload/v1788481362/VID-20260904-WA0005_2.mp4"
-            type="video/mp4"
-          />
-        </video>
+      .praxis-slide:hover img,
+      .praxis-slide:hover video {
+        transform: scale(1.05);
+      }
 
-        <div class="praxis-video-overlay">
-          <span class="praxis-play-button">
-            <i class="fa fa-play"></i>
-          </span>
-          <span class="praxis-video-label">Video ansehen</span>
-        </div>
-      </a>
-    </div>
+      .praxis-slide-overlay,
+      .praxis-video-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
 
-  </div>
+      .praxis-slide:hover .praxis-slide-overlay,
+      .praxis-slide:hover .praxis-video-overlay {
+        opacity: 1;
+      }
 
-  <!-- Navigation -->
-  <button
-    type="button"
-    class="praxis-carousel-btn praxis-carousel-prev"
-    id="praxisPrev"
-    aria-label="Vorherige Bilder"
-  >
-    <i class="fa fa-chevron-left"></i>
-  </button>
+      .praxis-slide-overlay i {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        font-size: 18px;
+      }
 
-  <button
-    type="button"
-    class="praxis-carousel-btn praxis-carousel-next"
-    id="praxisNext"
-    aria-label="Nächste Bilder"
-  >
-    <i class="fa fa-chevron-right"></i>
-  </button>
+      .praxis-video-overlay {
+        flex-direction: column;
+        gap: 12px;
+        background: rgba(0, 0, 0, 0.25);
+      }
 
-</div>
+      .praxis-play-button {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        font-size: 20px;
+        padding-left: 3px;
+      }
 
-<!-- Carousel CSS -->
-<style>
-  .praxis-carousel-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 0 5px;
-  }
+      .praxis-video-label {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
 
-  .praxis-carousel {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    padding: 5px 5px 20px;
-    cursor: grab;
-  }
+      /* Carousel Buttons */
+      .praxis-carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
 
-  .praxis-carousel::-webkit-scrollbar {
-    display: none;
-  }
+        width: 48px;
+        height: 48px;
 
-  .praxis-carousel:active {
-    cursor: grabbing;
-  }
+        border: none;
+        border-radius: 50%;
 
-  .praxis-slide {
-    position: relative;
-    flex: 0 0 calc(33.333% - 16px);
-    min-width: 0;
-    height: 320px;
-    overflow: hidden;
-    border-radius: 14px;
-    background: #f5f5f5;
-  }
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
 
-  .praxis-slide a {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-  .praxis-slide img,
-  .praxis-slide video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 
-  .praxis-slide:hover img,
-  .praxis-slide:hover video {
-    transform: scale(1.05);
-  }
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
 
-  .praxis-slide-overlay,
-  .praxis-video-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
+      .praxis-carousel-btn:hover {
+        transform: translateY(-50%) scale(1.08);
+        background: #fff;
+      }
 
-  .praxis-slide:hover .praxis-slide-overlay,
-  .praxis-slide:hover .praxis-video-overlay {
-    opacity: 1;
-  }
+      .praxis-carousel-prev {
+        left: 15px;
+      }
 
-  .praxis-slide-overlay i {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.95);
-    color: #333;
-    font-size: 18px;
-  }
+      .praxis-carousel-next {
+        right: 15px;
+      }
 
-  .praxis-video-overlay {
-    flex-direction: column;
-    gap: 12px;
-    background: rgba(0, 0, 0, 0.25);
-  }
+      /* Tablet */
+      @media (max-width: 991px) {
+        .praxis-slide {
+          flex: 0 0 calc(50% - 12px);
+          height: 300px;
+        }
+      }
 
-  .praxis-play-button {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.95);
-    color: #333;
-    font-size: 20px;
-    padding-left: 3px;
-  }
+      /* Mobile */
+      @media (max-width: 575px) {
+        .praxis-carousel {
+          gap: 16px;
+          padding-left: 0;
+          padding-right: 30px;
+        }
 
-  .praxis-video-label {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
+        .praxis-slide {
+          flex: 0 0 88%;
+          height: 300px;
+          border-radius: 12px;
+        }
 
-  /* Carousel Buttons */
-  .praxis-carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+        .praxis-carousel-btn {
+          width: 42px;
+          height: 42px;
+        }
 
-    width: 48px;
-    height: 48px;
+        .praxis-carousel-prev {
+          left: 8px;
+        }
 
-    border: none;
-    border-radius: 50%;
+        .praxis-carousel-next {
+          right: 8px;
+        }
 
-    background: rgba(255, 255, 255, 0.95);
-    color: #333;
+        .praxis-slide-overlay {
+          opacity: 1;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.18),
+            transparent 40%
+          );
+          align-items: flex-end;
+          padding-bottom: 20px;
+        }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        .praxis-slide-overlay i {
+          width: 42px;
+          height: 42px;
+          font-size: 15px;
+        }
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        .praxis-video-overlay {
+          opacity: 1;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.35),
+            transparent 55%
+          );
+        }
+      }
+    </style>
 
-    cursor: pointer;
-    transition: all 0.25s ease;
-  }
+    <!-- Carousel JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.getElementById("praxisCarousel");
+        const prevBtn = document.getElementById("praxisPrev");
+        const nextBtn = document.getElementById("praxisNext");
 
-  .praxis-carousel-btn:hover {
-    transform: translateY(-50%) scale(1.08);
-    background: #fff;
-  }
+        if (!carousel) return;
 
-  .praxis-carousel-prev {
-    left: 15px;
-  }
+        function getScrollAmount() {
+          const slide = carousel.querySelector(".praxis-slide");
 
-  .praxis-carousel-next {
-    right: 15px;
-  }
+          if (!slide) return 350;
 
-  /* Tablet */
-  @media (max-width: 991px) {
-    .praxis-slide {
-      flex: 0 0 calc(50% - 12px);
-      height: 300px;
-    }
-  }
+          return slide.offsetWidth + 24;
+        }
 
-  /* Mobile */
-  @media (max-width: 575px) {
-    .praxis-carousel {
-      gap: 16px;
-      padding-left: 0;
-      padding-right: 30px;
-    }
+        nextBtn.addEventListener("click", function () {
+          carousel.scrollBy({
+            left: getScrollAmount(),
+            behavior: "smooth",
+          });
+        });
 
-    .praxis-slide {
-      flex: 0 0 88%;
-      height: 300px;
-      border-radius: 12px;
-    }
+        prevBtn.addEventListener("click", function () {
+          carousel.scrollBy({
+            left: -getScrollAmount(),
+            behavior: "smooth",
+          });
+        });
 
-    .praxis-carousel-btn {
-      width: 42px;
-      height: 42px;
-    }
+        /* Mouse Drag */
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
-    .praxis-carousel-prev {
-      left: 8px;
-    }
+        carousel.addEventListener("mousedown", function (e) {
+          isDown = true;
+          carousel.classList.add("is-dragging");
+          startX = e.pageX - carousel.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+        });
 
-    .praxis-carousel-next {
-      right: 8px;
-    }
+        carousel.addEventListener("mouseleave", function () {
+          isDown = false;
+          carousel.classList.remove("is-dragging");
+        });
 
-    .praxis-slide-overlay {
-      opacity: 1;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.18),
-        transparent 40%
-      );
-      align-items: flex-end;
-      padding-bottom: 20px;
-    }
+        carousel.addEventListener("mouseup", function () {
+          isDown = false;
+          carousel.classList.remove("is-dragging");
+        });
 
-    .praxis-slide-overlay i {
-      width: 42px;
-      height: 42px;
-      font-size: 15px;
-    }
+        carousel.addEventListener("mousemove", function (e) {
+          if (!isDown) return;
 
-    .praxis-video-overlay {
-      opacity: 1;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.35),
-        transparent 55%
-      );
-    }
-  }
-</style>
+          e.preventDefault();
 
-<!-- Carousel JS -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.getElementById("praxisCarousel");
-    const prevBtn = document.getElementById("praxisPrev");
-    const nextBtn = document.getElementById("praxisNext");
+          const x = e.pageX - carousel.offsetLeft;
+          const walk = (x - startX) * 1.5;
 
-    if (!carousel) return;
-
-    function getScrollAmount() {
-      const slide = carousel.querySelector(".praxis-slide");
-
-      if (!slide) return 350;
-
-      return slide.offsetWidth + 24;
-    }
-
-    nextBtn.addEventListener("click", function () {
-      carousel.scrollBy({
-        left: getScrollAmount(),
-        behavior: "smooth"
+          carousel.scrollLeft = scrollLeft - walk;
+        });
       });
-    });
+    </script>
+    <!-- Praxisbilder & Videos Ende -->
 
-    prevBtn.addEventListener("click", function () {
-      carousel.scrollBy({
-        left: -getScrollAmount(),
-        behavior: "smooth"
-      });
-    });
-
-    /* Mouse Drag */
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    carousel.addEventListener("mousedown", function (e) {
-      isDown = true;
-      carousel.classList.add("is-dragging");
-      startX = e.pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-    });
-
-    carousel.addEventListener("mouseleave", function () {
-      isDown = false;
-      carousel.classList.remove("is-dragging");
-    });
-
-    carousel.addEventListener("mouseup", function () {
-      isDown = false;
-      carousel.classList.remove("is-dragging");
-    });
-
-    carousel.addEventListener("mousemove", function (e) {
-      if (!isDown) return;
-
-      e.preventDefault();
-
-      const x = e.pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 1.5;
-
-      carousel.scrollLeft = scrollLeft - walk;
-    });
-  });
-</script>
-<!-- Praxisbilder & Videos Ende -->
     <!-- Book Appointment Start -->
     <div class="container-fluid appointment py-5">
       <div class="container py-5">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-            <div class="section-title text-start">
-              <h4 class="sub-title pe-3 mb-0">Termin vereinbaren</h4>
-              <h1 class="display-4 mb-4">Wir nehmen uns Zeit für Sie.</h1>
-              <p class="mb-4">
-                Rufen Sie uns an, um Ihren Termin zu vereinbaren. Wir finden
-                gemeinsam einen passenden Zeitpunkt für Ihre Behandlung.
-              </p>
-              <div class="row g-4">
-                <div class="col-sm-6">
-                  <div class="d-flex flex-column h-100">
-                    <div class="mb-4">
-                      <h5 class="mb-3">
-                        <i class="fa fa-check text-primary me-2"></i>
-                        Öffnungszeiten
-                      </h5>
-                      <p class="mb-0">
-                        Montag: 08 - 20 Uhr<br />
-                        Dienstag: 08 - 20 Uhr<br />
-                        Mittwoch: 07 - 19 Uhr<br />
-                        Donnerstag: 08 - 20 Uhr<br />
-                        Freitag: 07 - 14 Uhr<br />
-                        Telefonisch erreichbar: Montag - Freitag 08 - 14 Uhr
-                      </p>
-                    </div>
-                    <div class="mb-4">
-                      <h5 class="mb-3">
-                        <i class="fa fa-check text-primary me-2"></i> Die
-                        Praxisadresse
-                      </h5>
-                      <p class="mb-0">
-                        Vogelsbergstraße 47, Alte Molkerei<br />
-                        63674 Altenstadt
-                      </p>
-                    </div>
-                    <div class="text-start mb-4">
-                      <a
-                        href="tel:+4960473292615"
-                        class="btn btn-primary rounded-pill text-white py-3 px-5"
-                        >06047 / 3292615</a
-                      >
-                    </div>
+        <div class="row g-5 align-items-stretch">
+          <!-- ==========================================
+           LEFT COLUMN
+           ========================================== -->
+          <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="appointment-info h-100">
+              <!-- Section Heading -->
+              <div class="section-title text-start mb-5">
+                <h4 class="sub-title pe-3 mb-3">Termin vereinbaren</h4>
+
+                <h1 class="display-4 mb-4">
+                  Wir nehmen uns<br />
+                  Zeit für Sie.
+                </h1>
+
+                <p class="mb-0">
+                  Rufen Sie uns an, um Ihren Termin zu vereinbaren. Wir finden
+                  gemeinsam einen passenden Zeitpunkt für Ihre Behandlung.
+                </p>
+              </div>
+
+              <!-- Information Grid -->
+              <div class="appointment-details">
+                <!-- Opening Hours -->
+                <div class="appointment-detail">
+                  <div class="appointment-detail-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+
+                  <div class="appointment-detail-content">
+                    <h5 class="mb-3">Öffnungszeiten</h5>
+
+                    <p class="mb-0">
+                      Montag: 08 – 20 Uhr<br />
+                      Dienstag: 08 – 20 Uhr<br />
+                      Mittwoch: 07 – 19 Uhr<br />
+                      Donnerstag: 08 – 20 Uhr<br />
+                      Freitag: 07 – 14 Uhr
+                    </p>
+
+                    <small>
+                      Telefonisch erreichbar: Montag – Freitag 08 – 14 Uhr
+                    </small>
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="ratio ratio-1x1 h-100"></div>
+
+                <!-- Address -->
+                <div class="appointment-detail">
+                  <div class="appointment-detail-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+
+                  <div class="appointment-detail-content">
+                    <h5 class="mb-3">Praxisadresse</h5>
+
+                    <p class="mb-0">
+                      Vogelsbergstraße 47, Alte Molkerei<br />
+                      63674 Altenstadt
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Phone CTA -->
+              <div class="appointment-phone mt-5">
+                <div class="appointment-phone-content">
+                  <span> Termin telefonisch vereinbaren </span>
+
+                  <strong> 06047 / 3292615 </strong>
+                </div>
+
+                <a
+                  href="tel:+4960473292615"
+                  class="btn btn-primary rounded-pill text-white py-3 px-4"
+                >
+                  <i class="fas fa-phone-alt me-2"></i>
+                  Jetzt anrufen
+                </a>
               </div>
             </div>
           </div>
+
+          <!-- ==========================================
+           RIGHT COLUMN
+           ========================================== -->
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-            <div class="appointment-form rounded p-5">
-              <p class="fs-4 text-uppercase text-primary">Ihr Weg zum Termin</p>
-              <h2 class="display-5 mb-4">So funktioniert es in 3 Schritten</h2>
-              <ol class="appointment-steps">
-                <li>
-                  <span><i class="fas fa-phone-alt"></i></span>
-                  <div>
-                    <strong>Rufen Sie uns an</strong
-                    ><small
-                      >Unter 06047 / 3292615 erreichen Sie uns direkt.</small
-                    >
+            <div class="appointment-form rounded p-5 h-100">
+              <!-- Card Header -->
+              <div class="appointment-form-header mb-5">
+                <p class="fs-6 text-uppercase text-primary mb-2">
+                  Ihr Weg zum Termin
+                </p>
+
+                <h2 class="display-5 mb-0">So funktioniert es</h2>
+
+                <p class="mt-3 mb-0">
+                  In nur drei einfachen Schritten zu Ihrer persönlichen
+                  Behandlung.
+                </p>
+              </div>
+
+              <!-- Steps -->
+              <div class="appointment-steps">
+                <!-- Step 1 -->
+                <div class="appointment-step">
+                  <div class="appointment-step-number">01</div>
+
+                  <div class="appointment-step-icon">
+                    <i class="fas fa-phone-alt"></i>
                   </div>
-                </li>
-                <li>
-                  <span><i class="fas fa-calendar-check"></i></span>
-                  <div>
-                    <strong>Termin abstimmen</strong
-                    ><small
-                      >Wir finden einen passenden Zeitpunkt für Ihre
-                      Behandlung.</small
-                    >
+
+                  <div class="appointment-step-content">
+                    <strong> Rufen Sie uns an </strong>
+
+                    <small>
+                      Unter 06047 / 3292615 erreichen Sie uns direkt.
+                    </small>
                   </div>
-                </li>
-                <li>
-                  <span><i class="fas fa-heartbeat"></i></span>
-                  <div>
-                    <strong>Therapie beginnen</strong
-                    ><small
-                      >Wir starten mit einer individuell abgestimmten
-                      Behandlung.</small
-                    >
+                </div>
+
+                <!-- Step 2 -->
+                <div class="appointment-step">
+                  <div class="appointment-step-number">02</div>
+
+                  <div class="appointment-step-icon">
+                    <i class="fas fa-calendar-check"></i>
                   </div>
-                </li>
-              </ol>
-              <a
-                href="tel:+4960473292615"
-                class="btn btn-primary text-white w-100 py-3 px-5"
-                ><i class="fas fa-phone-alt me-2"></i>Jetzt Termin
-                vereinbaren</a
-              >
+
+                  <div class="appointment-step-content">
+                    <strong> Termin abstimmen </strong>
+
+                    <small>
+                      Wir finden gemeinsam einen passenden Zeitpunkt für Ihre
+                      Behandlung.
+                    </small>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="appointment-step">
+                  <div class="appointment-step-number">03</div>
+
+                  <div class="appointment-step-icon">
+                    <i class="fas fa-heartbeat"></i>
+                  </div>
+
+                  <div class="appointment-step-content">
+                    <strong> Therapie beginnen </strong>
+
+                    <small>
+                      Wir starten mit einer individuell abgestimmten Behandlung.
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA -->
+              <div class="appointment-form-cta mt-5">
+                <a
+                  href="tel:+4960473292615"
+                  class="btn btn-primary text-white w-100 py-3 px-5"
+                >
+                  <i class="fas fa-phone-alt me-2"></i>
+                  Jetzt Termin vereinbaren
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1328,8 +1442,7 @@
           <div class="col-md-6 col-lg-6 col-xl-3">
             <div class="footer-item d-flex flex-column">
               <h4 class="mb-4 text-white">Contact Info</h4>
-              <a
-                href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"
+              <a href="https://maps.app.goo.gl/jH27DJKspQsaCZB79"
                 ><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstraße 47,
                 63674 Altenstadt</a
               >
