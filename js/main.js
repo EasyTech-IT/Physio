@@ -305,34 +305,191 @@
         }
       });
 
+    /* ============================================================
+   START – INTEGRALIS CONTACT & FOOTER UPDATE
+   ============================================================ */
+
     if (pageName === "contact.html") {
       $(".contact .section-title").after(
-        '<div class="contact-quick-actions wow fadeInUp" data-wow-delay="0.2s"><a href="tel:+4960473292615" class="contact-action contact-action-phone"><i class="fas fa-phone-alt"></i><span><strong>Jetzt anrufen</strong><small>06047 / 3292615</small></span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt" class="contact-action contact-action-map" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i><span><strong>Route planen</strong><small>Alte Molkerei, Altenstadt</small></span></a></div>',
+        '<div class="contact-quick-actions wow fadeInUp" data-wow-delay="0.2s">' +
+          '<a href="tel:+4960473292615" class="contact-action contact-action-phone">' +
+          '<i class="fas fa-phone-alt"></i>' +
+          "<span>" +
+          "<strong>Jetzt anrufen</strong>" +
+          "<small>06047 / 3292615</small>" +
+          "</span>" +
+          "</a>" +
+          '<a href="https://maps.app.goo.gl/jH27DJKspQsaCZB79" class="contact-action contact-action-map" target="_blank" rel="noopener noreferrer">' +
+          '<i class="fas fa-map-marker-alt"></i>' +
+          "<span>" +
+          "<strong>Route planen</strong>" +
+          "<small>Vogelsbergstraße 47, Altenstadt</small>" +
+          "</span>" +
+          "</a>" +
+          "</div>",
       );
+
       $(".contact-form").addClass("contact-form-panel");
     }
 
+    /* ============================================================
+   FOOTER
+   ============================================================ */
+
     $(".footer .row").html(
-      '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="text-white mb-4"><i class="fas fa-heartbeat footer-title-icon"></i>Integralis</h4><p>Praxis für Physiotherapie in der Alten Molkerei in Altenstadt.</p></div></div>' +
-        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-compass footer-title-icon"></i>Schnellzugriff</h4><a href="index.html"><i class="fas fa-angle-right me-2"></i> Startseite</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Leistungen</a><a href="about.html"><i class="fas fa-angle-right me-2"></i> Praxis</a><a href="index.html#faq"><i class="fas fa-angle-right me-2"></i> FAQ</a><a href="contact.html"><i class="fas fa-angle-right me-2"></i> Kontakt</a><a href="#impressum" data-legal-modal="#impressumModal"><i class="fas fa-angle-right me-2"></i> Impressum</a><a href="#datenschutz" data-legal-modal="#datenschutzModal"><i class="fas fa-angle-right me-2"></i> Datenschutz</a></div></div>' +
-        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-notes-medical footer-title-icon"></i>Therapieangebote</h4><a href="service.html"><i class="fas fa-angle-right me-2"></i> Klassische Massage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Krankengymnastik</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Lymphdrainage</a><a href="service.html"><i class="fas fa-angle-right me-2"></i> Wärme- und Kältetherapie</a></div></div>' +
-        '<div class="col-md-6 col-lg-6 col-xl-3"><div class="footer-item d-flex flex-column"><h4 class="mb-4 text-white"><i class="fas fa-address-card footer-title-icon"></i>Kontakt</h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Vogelsbergstra%C3%9Fe+47%2C+63674+Altenstadt"><i class="fa fa-map-marker-alt me-2"></i> Vogelsbergstraße 47, 63674 Altenstadt</a><a href="tel:+4960473292615"><i class="fas fa-phone me-2"></i> 06047 / 3292615</a><span class="mb-3"><i class="fas fa-clock me-2"></i> Mo + Mi 10 - 19 Uhr</span></div></div>',
+      /* ------------------------------------------------------------
+     1. PRAXIS
+     ------------------------------------------------------------ */
+      '<div class="col-md-6 col-lg-6 col-xl-3">' +
+        '<div class="footer-item d-flex flex-column">' +
+        '<h4 class="text-white mb-4">' +
+        '<i class="fas fa-heartbeat footer-title-icon"></i>' +
+        "Integralis" +
+        "</h4>" +
+        "<p>" +
+        "Praxis für Physiotherapie in der Alten Molkerei in Altenstadt." +
+        "</p>" +
+        "</div>" +
+        "</div>" +
+        /* ------------------------------------------------------------
+     2. SCHNELLZUGRIFF
+     ------------------------------------------------------------ */
+        '<div class="col-md-6 col-lg-6 col-xl-3">' +
+        '<div class="footer-item d-flex flex-column">' +
+        '<h4 class="mb-4 text-white">' +
+        '<i class="fas fa-compass footer-title-icon"></i>' +
+        "Schnellzugriff" +
+        "</h4>" +
+        '<a href="index.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Startseite" +
+        "</a>" +
+        '<a href="service.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Leistungen" +
+        "</a>" +
+        '<a href="about.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Praxis" +
+        "</a>" +
+        '<a href="index.html#faq">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "FAQ" +
+        "</a>" +
+        '<a href="contact.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Kontakt" +
+        "</a>" +
+        '<a href="#impressum" data-legal-modal="#impressumModal">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Impressum" +
+        "</a>" +
+        '<a href="#datenschutz" data-legal-modal="#datenschutzModal">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Datenschutz" +
+        "</a>" +
+        "</div>" +
+        "</div>" +
+        /* ------------------------------------------------------------
+     3. THERAPIEANGEBOTE
+     ------------------------------------------------------------ */
+        '<div class="col-md-6 col-lg-6 col-xl-3">' +
+        '<div class="footer-item d-flex flex-column">' +
+        '<h4 class="mb-4 text-white">' +
+        '<i class="fas fa-notes-medical footer-title-icon"></i>' +
+        "Therapieangebote" +
+        "</h4>" +
+        '<a href="service.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Klassische Massage" +
+        "</a>" +
+        '<a href="service.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Krankengymnastik" +
+        "</a>" +
+        '<a href="service.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Lymphdrainage" +
+        "</a>" +
+        '<a href="service.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Manuelle Therapie" +
+        "</a>" +
+        '<a href="service.html">' +
+        '<i class="fas fa-angle-right me-2"></i>' +
+        "Wärme- und Kältetherapie" +
+        "</a>" +
+        "</div>" +
+        "</div>" +
+        /* ------------------------------------------------------------
+     4. KONTAKT & ÖFFNUNGSZEITEN
+     ------------------------------------------------------------ */
+        '<div class="col-md-6 col-lg-6 col-xl-3">' +
+        '<div class="footer-item d-flex flex-column">' +
+        '<h4 class="mb-4 text-white">' +
+        '<i class="fas fa-address-card footer-title-icon"></i>' +
+        "Kontakt" +
+        "</h4>" +
+        '<a href="https://maps.app.goo.gl/jH27DJKspQsaCZB79" target="_blank" rel="noopener noreferrer">' +
+        '<i class="fas fa-map-marker-alt me-2"></i>' +
+        "Vogelsbergstraße 47<br>" +
+        '<span class="footer-contact-indent">63674 Altenstadt</span>' +
+        "</a>" +
+        '<a href="tel:+4960473292615">' +
+        '<i class="fas fa-phone me-2"></i>' +
+        "06047 / 3292615" +
+        "</a>" +
+        '<span class="footer-opening-hours">' +
+        '<i class="fas fa-clock me-2"></i>' +
+        "<strong>Geöffnet</strong><br>" +
+        '<span class="footer-hours-indent">' +
+        "Mo, Di, Do: 08–20 Uhr<br>" +
+        "Mi: 07–19 Uhr<br>" +
+        "Fr: 07–14 Uhr" +
+        "</span>" +
+        "</span>" +
+        '<span class="footer-phone-hours">' +
+        '<i class="fas fa-phone-alt me-2"></i>' +
+        "Telefonisch: Mo–Fr 08–14 Uhr" +
+        "</span>" +
+        "</div>" +
+        "</div>",
     );
+
+    /* ============================================================
+   COPYRIGHT
+   ============================================================ */
+
     $(".copyright .text-white")
       .first()
       .html(
-        '<a href="index.html"><i class="fas fa-copyright text-light me-2"></i>Integralis Praxis für Physiotherapie</a>',
+        '<a href="index.html">' +
+          '<i class="fas fa-copyright text-light me-2"></i>' +
+          "Integralis Praxis für Physiotherapie" +
+          "</a>",
       );
+
+    /* ------------------------------------------------------------
+   COPYRIGHT RECHTS – EASYTECH
+   ------------------------------------------------------------ */
+
     $(".copyright .text-md-end")
       .contents()
       .filter(function () {
         return this.nodeType === 3;
       })
       .remove();
+
     $(".copyright .text-md-end a")
       .attr("href", "https://easytechit.de/")
-      .text("Easy Tech Solutions")
+      .attr("target", "_blank")
+      .attr("rel", "noopener noreferrer")
+      .text("EasyTech IT-Solutions")
       .before("Gestaltet von ");
+
+    /* ============================================================
+   END – INTEGRALIS CONTACT & FOOTER UPDATE
+   ============================================================ */
 
     var serviceDetails = {
       "Klassische Massage": {
