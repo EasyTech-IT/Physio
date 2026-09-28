@@ -9,7 +9,7 @@
 
     <meta
       name="description"
-      content="Kontakt zur Integralis Praxis für Physiotherapie in Altenstadt. Telefon, Öffnungszeiten, Anfahrt und Rückrufanfrage."
+      content="Kontakt zur Integralis Praxis für Physiotherapie in Altenstadt. Telefon, Öffnungszeiten und Anfahrt."
     />
 
     <meta
@@ -563,14 +563,14 @@
 
       .contact-grid {
         display: grid;
-
-        grid-template-columns:
-          minmax(0, 1.12fr)
-          minmax(360px, 0.88fr);
-
+        grid-template-columns: 1fr;
         gap: 24px;
-
         align-items: stretch;
+      }
+
+      .contact-grid-single {
+        max-width: 900px;
+        margin: 0 auto;
       }
 
       /* =========================================================
@@ -667,168 +667,6 @@
 
         font-size: 12px;
         line-height: 1.5;
-      }
-
-      /* =========================================================
-       FORM
-    ========================================================== */
-
-      .contact-form-grid {
-        display: grid;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 15px;
-      }
-
-      .contact-field {
-        position: relative;
-      }
-
-      .contact-field.full {
-        grid-column: 1 / -1;
-      }
-
-      .contact-field label {
-        display: block;
-
-        margin: 0 0 7px;
-
-        color: var(--contact-dark);
-
-        font-size: 12px;
-        font-weight: 700;
-      }
-
-      .contact-field label span {
-        color: var(--integralis-green-dark);
-      }
-
-      .contact-field input,
-      .contact-field textarea {
-        width: 100%;
-
-        border: 1px solid rgba(38, 51, 47, 0.12);
-        border-radius: 13px;
-
-        background: #fbfdfb;
-
-        color: var(--contact-dark);
-
-        font-family: "Open Sans", sans-serif;
-        font-size: 13px;
-
-        outline: none;
-
-        transition:
-          border-color 0.2s ease,
-          background 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-
-      .contact-field input {
-        height: 49px;
-
-        padding: 0 15px;
-      }
-
-      .contact-field textarea {
-        min-height: 130px;
-
-        padding: 14px 15px;
-
-        resize: vertical;
-      }
-
-      .contact-field input::placeholder,
-      .contact-field textarea::placeholder {
-        color: #a0aaa5;
-      }
-
-      .contact-field input:focus,
-      .contact-field textarea:focus {
-        border-color: rgba(95, 171, 11, 0.6);
-
-        background: #ffffff;
-
-        box-shadow: 0 0 0 4px rgba(95, 171, 11, 0.09);
-      }
-
-      .contact-form-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        gap: 20px;
-
-        margin-top: 17px;
-      }
-
-      .contact-form-note {
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-
-        max-width: 330px;
-
-        color: var(--contact-muted);
-
-        font-size: 11px;
-        line-height: 1.6;
-      }
-
-      .contact-form-note i {
-        flex: 0 0 auto;
-
-        margin-top: 2px;
-
-        color: var(--integralis-green);
-      }
-
-      .contact-submit {
-        flex: 0 0 auto;
-
-        min-height: 48px;
-
-        padding: 0 23px;
-
-        border: 1px solid var(--integralis-green);
-        border-radius: 50px;
-
-        background: var(--integralis-green);
-
-        color: #ffffff;
-
-        font-size: 12px;
-        font-weight: 700;
-
-        box-shadow: 0 8px 22px rgba(95, 171, 11, 0.18);
-
-        transition:
-          background 0.2s ease,
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-
-      .contact-submit:hover {
-        background: var(--integralis-green-dark);
-        border-color: var(--integralis-green-dark);
-
-        transform: translateY(-2px);
-
-        box-shadow: 0 12px 28px rgba(63, 120, 8, 0.2);
-      }
-
-      .contact-form-status {
-        grid-column: 1 / -1;
-
-        margin: 0;
-
-        padding: 11px 14px;
-
-        border-radius: 10px;
-
-        font-size: 12px;
       }
 
       /* =========================================================
@@ -1263,16 +1101,8 @@
           min-height: 390px;
         }
 
-        .contact-grid {
-          grid-template-columns: 1fr;
-        }
-
         .contact-panel {
           height: auto;
-        }
-
-        .contact-info-panel {
-          min-height: auto;
         }
 
         .contact-info-list {
@@ -1382,29 +1212,6 @@
 
         .contact-panel-header h3 {
           font-size: 20px;
-        }
-
-        .contact-form-grid {
-          grid-template-columns: 1fr;
-
-          gap: 13px;
-        }
-
-        .contact-field.full {
-          grid-column: auto;
-        }
-
-        .contact-form-bottom {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .contact-form-note {
-          max-width: none;
-        }
-
-        .contact-submit {
-          width: 100%;
         }
 
         .contact-trust {
@@ -1612,11 +1419,11 @@
       ====================================================== -->
 
         <!-- =====================================================
-           QUICK ACTIONS
-      ====================================================== -->
+           CONTACT ACTIONS
+        ====================================================== -->
 
         <div class="contact-actions wow fadeInUp" data-wow-delay="0.15s">
-          <!-- CALL -->
+          <!-- TELEFON -->
 
           <a href="tel:+4960473292615" class="contact-action">
             <div class="contact-action-icon">
@@ -1624,10 +1431,12 @@
             </div>
 
             <div class="contact-action-content">
-              <span class="contact-action-title"> Direkt anrufen </span>
+              <span class="contact-action-title"
+                >Termin telefonisch vereinbaren</span
+              >
 
               <span class="contact-action-text">
-                06047 / 3292615 · telefonisch Mo–Fr 08–14 Uhr erreichbar
+                06047 / 3292615 · telefonisch Montag–Freitag 08–14 Uhr
               </span>
             </div>
 
@@ -1647,7 +1456,7 @@
             </div>
 
             <div class="contact-action-content">
-              <span class="contact-action-title"> Route planen </span>
+              <span class="contact-action-title">Route zur Praxis</span>
 
               <span class="contact-action-text">
                 Vogelsbergstraße 47 · 63674 Altenstadt · Alte Molkerei
@@ -1659,158 +1468,13 @@
         </div>
 
         <!-- =====================================================
-           MAIN GRID
-      ====================================================== -->
+           INFORMATION
+        ====================================================== -->
 
-        <div class="contact-grid">
-          <!-- ===================================================
-             FORM PANEL
-        ==================================================== -->
-
-          <section class="contact-panel wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="contact-panel-header">
-              <div class="contact-panel-header-icon">
-                <i class="fas fa-paper-plane"></i>
-              </div>
-
-              <div>
-                <h3>Rückruf anfragen</h3>
-
-                <p>Teilen Sie uns kurz mit, wie wir Sie erreichen können.</p>
-              </div>
-            </div>
-
-            <form
-              id="contactForm"
-              action="https://formsubmit.co/info@integralis-physio.de"
-              method="POST"
-              novalidate
-            >
-              <!-- FormSubmit -->
-
-              <input
-                type="hidden"
-                name="_subject"
-                value="Kontaktanfrage über die Integralis Website"
-              />
-
-              <input type="hidden" name="_captcha" value="false" />
-
-              <input type="hidden" name="_template" value="table" />
-
-              <div class="contact-form-grid">
-                <!-- NAME -->
-
-                <div class="contact-field">
-                  <label for="contactName"> Ihr Name <span>*</span> </label>
-
-                  <input
-                    type="text"
-                    id="contactName"
-                    name="name"
-                    placeholder="Vor- und Nachname"
-                    autocomplete="name"
-                    required
-                  />
-                </div>
-
-                <!-- TELEFON -->
-
-                <div class="contact-field">
-                  <label for="contactPhone">
-                    Telefonnummer <span>*</span>
-                  </label>
-
-                  <input
-                    type="tel"
-                    id="contactPhone"
-                    name="phone"
-                    placeholder="z. B. 06047 / 123456"
-                    autocomplete="tel"
-                    required
-                  />
-                </div>
-
-                <!-- BETREFF -->
-
-                <div class="contact-field">
-                  <label for="contactSubject"> Anliegen <span>*</span> </label>
-
-                  <input
-                    type="text"
-                    id="contactSubject"
-                    name="subject"
-                    placeholder="Worum geht es?"
-                    required
-                  />
-                </div>
-
-                <!-- RÜCKRUFZEIT -->
-
-                <div class="contact-field">
-                  <label for="contactPreferredTime">
-                    Bevorzugte Rückrufzeit
-                  </label>
-
-                  <input
-                    type="text"
-                    id="contactPreferredTime"
-                    name="preferred_time"
-                    placeholder="z. B. vormittags"
-                  />
-                </div>
-
-                <!-- NACHRICHT -->
-
-                <div class="contact-field full">
-                  <label for="contactMessage">
-                    Ihre Nachricht <span>*</span>
-                  </label>
-
-                  <textarea
-                    id="contactMessage"
-                    name="message"
-                    placeholder="Wie können wir Ihnen weiterhelfen?"
-                    required
-                  ></textarea>
-                </div>
-
-                <!-- STATUS -->
-
-                <div
-                  id="contactFormStatus"
-                  class="contact-form-status alert d-none"
-                  role="status"
-                ></div>
-              </div>
-
-              <!-- FORM BOTTOM -->
-
-              <div class="contact-form-bottom">
-                <div class="contact-form-note">
-                  <i class="fas fa-shield-alt"></i>
-
-                  <span>
-                    Ihre Angaben werden ausschließlich zur Bearbeitung Ihrer
-                    Anfrage verwendet.
-                  </span>
-                </div>
-
-                <button type="submit" class="contact-submit">
-                  Rückruf anfragen
-                  <i class="fas fa-arrow-right ms-2"></i>
-                </button>
-              </div>
-            </form>
-          </section>
-
-          <!-- ===================================================
-             INFORMATION PANEL
-        ==================================================== -->
-
-          <aside
-            class="contact-panel contact-info-panel wow fadeInRight"
-            data-wow-delay="0.25s"
+        <div class="contact-grid contact-grid-single">
+          <section
+            class="contact-panel contact-info-panel wow fadeInUp"
+            data-wow-delay="0.2s"
           >
             <div class="contact-panel-header">
               <div class="contact-panel-header-icon">
@@ -1819,7 +1483,6 @@
 
               <div>
                 <h3>Praxisinformationen</h3>
-
                 <p>Integralis Physiotherapie · Alten Molkerei</p>
               </div>
             </div>
@@ -1835,7 +1498,7 @@
                 </div>
 
                 <div class="contact-info-content">
-                  <span class="contact-info-label"> Adresse </span>
+                  <span class="contact-info-label">Adresse</span>
 
                   <span class="contact-info-value">
                     Vogelsbergstraße 47<br />
@@ -1853,13 +1516,11 @@
                 </div>
 
                 <div class="contact-info-content">
-                  <span class="contact-info-label"> Telefon </span>
+                  <span class="contact-info-label">Telefon</span>
 
                   <span class="contact-info-value">
-                    <a href="tel:+4960473292615"> 06047 / 3292615 </a>
-
+                    <a href="tel:+4960473292615">06047 / 3292615</a>
                     <br />
-
                     Telefonisch erreichbar: Montag–Freitag 08–14 Uhr
                   </span>
                 </div>
@@ -1873,7 +1534,7 @@
                 </div>
 
                 <div class="contact-info-content">
-                  <span class="contact-info-label"> Hausbesuche </span>
+                  <span class="contact-info-label">Hausbesuche</span>
 
                   <span class="contact-info-value">
                     Hausbesuche sind nach Absprache möglich.
@@ -1889,7 +1550,7 @@
                 </div>
 
                 <div class="contact-info-content">
-                  <span class="contact-info-label"> Verordnungen </span>
+                  <span class="contact-info-label">Verordnungen</span>
 
                   <span class="contact-info-value">
                     Behandlung auf Kassen- und Privatrezept.
@@ -1945,10 +1606,9 @@
               class="contact-route"
             >
               <i class="fas fa-directions"></i>
-
               Route zur Praxis planen
             </a>
-          </aside>
+          </section>
         </div>
 
         <!-- =====================================================
@@ -2155,40 +1815,6 @@
 
         if (typeof WOW !== "undefined") {
           new WOW().init();
-        }
-
-        /* =======================================================
-         CONTACT FORM VALIDATION
-      ======================================================== */
-
-        const form = document.getElementById("contactForm");
-        const status = document.getElementById("contactFormStatus");
-
-        if (form) {
-          form.addEventListener("submit", function (event) {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-
-              form.classList.add("was-validated");
-
-              const firstInvalid = form.querySelector(":invalid");
-
-              if (firstInvalid) {
-                firstInvalid.focus();
-              }
-
-              return;
-            }
-
-            if (status) {
-              status.classList.remove("d-none", "alert-danger");
-
-              status.classList.add("alert-success");
-
-              status.textContent =
-                "Ihre Anfrage wird übermittelt. Vielen Dank.";
-            }
-          });
         }
 
         /* =======================================================
