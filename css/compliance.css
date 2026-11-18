@@ -1,0 +1,353 @@
+:root {
+  --primary: #5fab0b;
+  --primary-dark: #3f7808;
+  --primary-light: #eaf5d9;
+  --secondary: #007b8b;
+  --secondary-dark: #005a66;
+  --background: #f7faf8;
+  --white: #ffffff;
+  --text: #26332f;
+  --text-muted: #53645d;
+  --compliance-surface: #ffffff;
+  --compliance-overlay: rgba(20, 37, 31, 0.58);
+  --compliance-border: #dce5df;
+}
+
+.compliance-banner {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10050;
+  max-width: 720px;
+  margin-left: auto;
+  padding: 24px;
+  border: 1px solid var(--compliance-border);
+  border-radius: 16px;
+  background: var(--compliance-surface);
+  box-shadow: 0 18px 55px rgba(20, 37, 31, 0.2);
+  color: var(--text);
+}
+
+.compliance-banner[hidden],
+.compliance-settings[hidden] {
+  display: none;
+}
+
+.compliance-banner h2 {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.compliance-banner p {
+  max-width: 62ch;
+  margin-bottom: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.compliance-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.compliance-button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.compliance-button:hover,
+.compliance-button:focus-visible {
+  background: var(--primary-dark);
+}
+
+.compliance-button--secondary {
+  border-color: var(--secondary-dark);
+  background: #fff;
+  color: var(--secondary-dark);
+}
+
+.compliance-button--secondary:hover,
+.compliance-button--secondary:focus-visible {
+  background: #edf6f7;
+  color: var(--secondary-dark);
+}
+
+.compliance-quick-access {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10040;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--secondary-dark);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(20, 37, 31, 0.2);
+  cursor: pointer;
+}
+
+.compliance-quick-access:hover,
+.compliance-quick-access:focus-visible {
+  background: var(--primary-dark);
+}
+
+.compliance-quick-access svg {
+  width: 22px;
+  height: 22px;
+}
+
+.compliance-settings {
+  position: fixed;
+  inset: 0;
+  z-index: 10060;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: var(--compliance-overlay);
+}
+
+.compliance-settings__dialog {
+  width: min(560px, 100%);
+  max-height: min(720px, calc(100vh - 40px));
+  overflow: auto;
+  padding: 28px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 22px 70px rgba(20, 37, 31, 0.3);
+  color: var(--text);
+}
+
+.compliance-settings__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.compliance-settings__close {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #edf3ef;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.compliance-category {
+  margin: 22px 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--compliance-border);
+}
+
+.compliance-category__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.compliance-badge {
+  flex: 0 0 auto;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.compliance-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 14px;
+}
+
+.compliance-links a,
+.compliance-links button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.legal-page {
+  background: var(--background);
+  color: var(--text);
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.legal-page a {
+  color: #005a66;
+}
+
+.legal-page a:hover,
+.legal-page a:focus-visible {
+  color: #3f7808;
+}
+
+.legal-page code {
+  color: #8f245c;
+}
+
+.legal-header,
+.legal-footer {
+  background: var(--secondary-dark);
+  color: #fff;
+}
+
+.legal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 88px;
+}
+
+.legal-brand {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.legal-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 22px;
+}
+
+.legal-nav__links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.legal-nav__links a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.legal-main {
+  padding: 64px 0 88px;
+}
+
+.legal-article {
+  width: min(780px, 100%);
+  margin: 0 auto;
+}
+
+.legal-article h1 {
+  margin-bottom: 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.legal-article h2 {
+  margin: 42px 0 12px;
+  font-size: 1.45rem;
+}
+
+.legal-article p,
+.legal-article li,
+.legal-article address {
+  max-width: 72ch;
+  line-height: 1.75;
+}
+
+.legal-article address {
+  font-style: normal;
+}
+
+.legal-notice {
+  margin: 28px 0;
+  padding: 18px 20px;
+  border: 1px solid #d6e4db;
+  border-radius: 10px;
+  background: #f0f7f2;
+}
+
+.legal-placeholder {
+  color: #7a3d00;
+  font-weight: 700;
+}
+
+.legal-footer {
+  padding: 30px 0 46px;
+}
+
+.legal-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.legal-footer .compliance-links {
+  margin-top: 0;
+}
+
+@media (max-width: 767.98px) {
+  .compliance-banner {
+    right: 12px;
+    bottom: 90px;
+    left: 12px;
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+    padding: 20px;
+  }
+
+  .compliance-banner__actions {
+    display: grid;
+  }
+
+  .compliance-quick-access {
+    bottom: 92px;
+    left: 12px;
+  }
+
+  .legal-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px 0;
+  }
+
+  .legal-nav__links {
+    justify-content: flex-start;
+  }
+
+  .legal-main {
+    padding: 44px 0 68px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compliance-banner,
+  .compliance-settings,
+  .compliance-quick-access {
+    transition: none !important;
+  }
+}

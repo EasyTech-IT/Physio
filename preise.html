@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -11,19 +11,13 @@
       name="description"
       content="Preise und Leistungen der Integralis Physiotherapie in Altenstadt."
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      href="vendor/fontawesome/css/all.css"
     />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/compliance.css" rel="stylesheet" />
 
     <style>
       /* =====================================================
@@ -867,7 +861,7 @@
         <a href="index.html" class="navbar-brand p-0">
           <img
             class="integralis-logo"
-            src="https://res.cloudinary.com/dlpdbr0ey/image/upload/c_crop,g_north_west,h_503,w_1192/f_auto/q_auto/copy_of_brave_screenshot_wwwgooglede_1_l3e4o9.png"
+            src="img/external/0df73046d55521bf.png"
             alt="Integralis Praxis für Physiotherapie"
           />
         </a>
@@ -911,7 +905,7 @@
             rgba(79, 174, 8, 0.72),
             rgba(104, 189, 26, 0.72)
           ),
-          url(&quot;https://res.cloudinary.com/k3cqt6uc/image/upload/v1789759002/1789686237739.png&quot;);
+          url(&quot;img/external/a738fbb1b0684536.png&quot;);
       "
     >
       <div class="hero-inner">
@@ -1492,7 +1486,19 @@
 
     <div class="container-fluid footer py-5">
       <div class="container py-5">
-        <div class="row g-5"></div>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7">
+            <h2 class="h4 text-white mb-2">Integralis Physiotherapie</h2>
+            <p class="mb-0">Vogelsbergstraße 47 · 63674 Altenstadt</p>
+          </div>
+          <div class="col-lg-5">
+            <nav class="compliance-links text-lg-end" aria-label="Rechtliche Informationen">
+              <a href="impressum.html">Impressum</a>
+              <a href="datenschutz.html">Datenschutz</a>
+              <a href="agb.html">AGB</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1503,8 +1509,9 @@
       ><i class="fa fa-arrow-up"></i
     ></a>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/compliance.js"></script>
   </body>
 </html>

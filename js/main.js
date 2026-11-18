@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
   "use strict";
 
   $(function () {
@@ -99,7 +99,7 @@
       );
 
     $(".navbar-brand").html(
-      '<img class="integralis-logo" src="https://res.cloudinary.com/dlpdbr0ey/image/upload/c_crop,g_north_west,h_503,w_1192/f_auto/q_auto/copy_of_brave_screenshot_wwwgooglede_1_l3e4o9.png" alt="Integralis Praxis für Physiotherapie">',
+      '<img class="integralis-logo" src="img/external/0df73046d55521bf.png" alt="Integralis Praxis für Physiotherapie">',
     );
     $(".navbar").addClass("nav-island");
     $(".navbar-nav").html(links);

@@ -1,2 +1,5 @@
+Contact: tel:+4960473292615
 Expires: 2030-12-31T22:59:00.000Z
-Policy: integralis-physio.de
+Canonical: https://integralis-physio.de/.well-known/security.txt
+Preferred-Languages: de
+Policy: https://integralis-physio.de/
