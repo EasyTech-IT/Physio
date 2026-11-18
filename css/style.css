@@ -1,7 +1,7 @@
 /* Integralis brand tokens */
 :root {
-  --primary: #5fab0b;
-  --primary-dark: #3f7808;
+  --primary: #3f7808;
+  --primary-dark: #2f5c06;
   --primary-light: #eaf5d9;
   --secondary: #007b8b;
   --secondary-dark: #005a66;
@@ -9,12 +9,13 @@
   --background: #f7faf8;
   --white: #ffffff;
   --text: #26332f;
-  --text-muted: #66736e;
+  --text-muted: #53645d;
   --bs-primary: var(--primary);
   --bs-secondary: var(--secondary);
   --bs-light: var(--background);
   --bs-dark: var(--text);
   --bs-white: var(--white);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 body {
@@ -47,6 +48,14 @@ h6,
 
 .text-secondary {
   color: var(--secondary) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.82) !important;
 }
 
 .bg-primary {
@@ -554,7 +563,7 @@ select:focus-visible {
 .contact-panel-heading p {
   margin: 0;
   color: inherit;
-  opacity: 0.78;
+  opacity: 1;
 }
 
 .contact-form-panel .contact-panel-heading h2,
@@ -770,7 +779,13 @@ select:focus-visible {
 /*** Button Start ***/
 .btn {
   font-weight: 600;
-  transition: 0.5s;
+  transition: transform 160ms var(--ease-out);
+}
+
+.btn:active,
+button:active,
+.compliance-button:active {
+  scale: 0.97;
 }
 
 .btn-square {
@@ -810,8 +825,17 @@ select:focus-visible {
 }
 
 .btn.btn-primary:hover {
-  box-shadow: inset 300px 0 0 0 var(--bs-light) !important;
-  color: var(--bs-primary) !important;
+  box-shadow: none !important;
+  color: var(--white) !important;
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+.btn-primary:hover .text-primary,
+.btn-primary:focus .text-primary,
+.btn-primary:hover *,
+.btn-primary:focus * {
+  color: var(--white) !important;
 }
 
 .btn.btn-light {
@@ -821,6 +845,37 @@ select:focus-visible {
 .btn.btn-light:hover {
   box-shadow: inset 300px 0 0 0 var(--bs-primary);
   color: var(--bs-light) !important;
+}
+
+.btn-light:hover *,
+.btn-light:focus * {
+  color: var(--white) !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:hover *,
+.btn-outline-light:focus,
+.btn-outline-light:focus * {
+  color: var(--text) !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:hover *,
+.btn-outline-primary:focus,
+.btn-outline-primary:focus * {
+  color: var(--white) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
 }
 
 .btn-hover {
@@ -1080,7 +1135,10 @@ select:focus-visible {
   color: var(--white);
   font-size: 22px;
   border: 0;
-  transition: all 0.3s ease;
+  transition:
+    transform 180ms var(--ease-out),
+    background-color 180ms ease,
+    color 180ms ease;
   z-index: 10;
 }
 .header-carousel .owl-nav .owl-prev {
@@ -1124,7 +1182,7 @@ select:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
 .header-carousel
@@ -1147,7 +1205,7 @@ select:focus-visible {
   } /* Overlay etwas stärker */
   .header-carousel .header-carousel-item .carousel-caption {
     padding: 40px 20px;
-    background: rgba(0, 0, 0, 0.48);
+    background: rgba(0, 0, 0, 0.72);
   } /* Text Container */
   .header-carousel
     .header-carousel-item
@@ -1406,7 +1464,7 @@ select:focus-visible {
 
   margin-bottom: 7px;
 
-  color: #5fab0b;
+  color: #3f7808;
 
   font-size: 10px;
   font-weight: 700;
@@ -1523,7 +1581,7 @@ select:focus-visible {
 
   border-radius: 999px;
 
-  background: #5fab0b;
+  background: #3f7808;
 
   color: #ffffff;
 
@@ -1930,8 +1988,9 @@ select:focus-visible {
 }
 
 .appointment .appointment-form .btn.btn-primary:hover {
-  box-shadow: inset 600px 0 0 0 var(--bs-light) !important;
-  color: var(--bs-primary) !important;
+  box-shadow: none !important;
+  color: var(--white) !important;
+  background: var(--primary-dark) !important;
 }
 
 .appointment-steps {
@@ -2351,7 +2410,9 @@ select:focus-visible {
   height: 100px;
   background: var(--bs-secondary);
   border-radius: 50%;
-  transition: all 300ms;
+  transition:
+    transform 180ms var(--ease-out),
+    background-color 180ms ease;
 }
 
 .video .btn-play span {
@@ -2463,7 +2524,7 @@ select:focus-visible {
   border-radius: 14px;
 
   background: rgba(95, 171, 11, 0.1);
-  color: var(--bs-primary, #5fab0b);
+  color: var(--bs-primary, #3f7808);
 
   font-size: 18px;
 }
@@ -2623,7 +2684,7 @@ select:focus-visible {
   font-size: 13px;
   font-weight: 700;
 
-  color: var(--bs-primary, #5fab0b);
+  color: var(--bs-primary, #3f7808);
 
   text-align: center;
 }
@@ -2642,7 +2703,7 @@ select:focus-visible {
 
   background: rgba(95, 171, 11, 0.1);
 
-  color: var(--bs-primary, #5fab0b);
+  color: var(--bs-primary, #3f7808);
 
   font-size: 18px;
 }
@@ -2814,7 +2875,7 @@ select:focus-visible {
 .review-btn {
   min-width: 220px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: transform 180ms var(--ease-out);
 }
 .review-btn:hover {
   transform: translateY(-2px);
@@ -3424,7 +3485,7 @@ select:focus-visible {
 .philosophy-eyebrow-line {
   width: 28px;
   height: 1px;
-  background: #5fab0b;
+  background: #3f7808;
   opacity: 0.7;
 }
 
@@ -3438,7 +3499,7 @@ select:focus-visible {
 }
 
 .philosophy-title span {
-  color: #5fab0b;
+  color: #3f7808;
 }
 
 .philosophy-intro {
@@ -3507,7 +3568,7 @@ select:focus-visible {
   border: 1px solid rgba(95, 171, 11, 0.15);
   border-radius: 50%;
 
-  color: #5fab0b;
+  color: #3f7808;
 
   transition:
     background 0.3s ease,
@@ -3515,7 +3576,7 @@ select:focus-visible {
 }
 
 .philosophy-item:hover .philosophy-icon {
-  background: #5fab0b;
+  background: #3f7808;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -3530,7 +3591,7 @@ select:focus-visible {
 .philosophy-number {
   margin-bottom: 14px;
 
-  color: #5fab0b;
+  color: #3f7808;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -3684,7 +3745,7 @@ select:focus-visible {
 .rooms-eyebrow-line {
   width: 28px;
   height: 1px;
-  background: #5fab0b;
+  background: #3f7808;
   opacity: 0.7;
 }
 
@@ -3699,7 +3760,7 @@ select:focus-visible {
 }
 
 .rooms-title span {
-  color: #5fab0b;
+  color: #3f7808;
 }
 
 .rooms-intro {
@@ -3781,7 +3842,7 @@ select:focus-visible {
   border-radius: 50%;
 
   background: #eaf5d9;
-  color: #5fab0b;
+  color: #3f7808;
 
   transition:
     background 0.3s ease,
@@ -3790,7 +3851,7 @@ select:focus-visible {
 }
 
 .rooms-item:hover .rooms-icon {
-  background: #5fab0b;
+  background: #3f7808;
   color: #ffffff;
   transform: translateY(-3px);
 }
@@ -3808,7 +3869,7 @@ select:focus-visible {
 
   margin-bottom: 10px;
 
-  color: #5fab0b;
+  color: #3f7808;
 
   font-size: 11px;
   font-weight: 700;
@@ -3996,7 +4057,7 @@ select:focus-visible {
   width: 28px;
   height: 1px;
 
-  background: #5fab0b;
+  background: #3f7808;
   opacity: 0.7;
 }
 
@@ -4012,7 +4073,7 @@ select:focus-visible {
 }
 
 .service-title span {
-  color: #5fab0b;
+  color: #3f7808;
 }
 
 .service-intro {
@@ -4171,7 +4232,7 @@ select:focus-visible {
 
   margin-bottom: 8px;
 
-  color: #5fab0b;
+  color: #3f7808;
 
   font-size: 11px;
   font-weight: 700;
@@ -4348,7 +4409,7 @@ select:focus-visible {
 
   margin-bottom: 22px;
 
-  color: var(--bs-primary, #5fab0b);
+  color: var(--bs-primary, #3f7808);
 
   font-size: 14px;
   font-weight: 700;
@@ -4363,7 +4424,7 @@ select:focus-visible {
 
   display: block;
 
-  background: var(--bs-primary, #5fab0b);
+  background: var(--bs-primary, #3f7808);
 
   border-radius: 10px;
 }
@@ -4502,7 +4563,7 @@ select:focus-visible {
 .team-modern-role {
   margin-bottom: 8px;
 
-  color: var(--bs-primary, #5fab0b);
+  color: var(--bs-primary, #3f7808);
 
   font-size: 11px;
   font-weight: 700;
@@ -4532,7 +4593,8 @@ select:focus-visible {
 
   line-height: 1.65;
 
-  opacity: 0.7;
+  color: #3f514a;
+  opacity: 1;
 }
 
 /* =========================================================
@@ -4567,7 +4629,8 @@ select:focus-visible {
 
   font-style: italic;
 
-  opacity: 0.58;
+  color: #3f514a !important;
+  opacity: 1 !important;
 }
 
 /* =========================================================
@@ -4616,7 +4679,7 @@ select:focus-visible {
 
   background: rgba(95, 171, 11, 0.12);
 
-  color: var(--bs-primary, #5fab0b);
+  color: var(--bs-primary, #3f7808);
 
   font-size: 20px;
 }
@@ -4660,7 +4723,7 @@ select:focus-visible {
 
   border-radius: 50px;
 
-  background: var(--bs-primary, #5fab0b);
+  background: var(--bs-primary, #3f7808);
 
   color: #ffffff;
 
@@ -4926,7 +4989,7 @@ select:focus-visible {
 
 .footer .footer-item a:hover {
   letter-spacing: 2px;
-  color: var(--bs-primary);
+  color: #ffffff;
 }
 
 /*** Footer End ***/
@@ -5528,7 +5591,7 @@ a.footer-contact-item:hover {
 .footer-bottom p {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.82);
 
   font-size: 12px;
 
@@ -5549,7 +5612,7 @@ a.footer-contact-item:hover {
 }
 
 .footer-legal a {
-  color: rgba(255, 255, 255, 0.52);
+  color: rgba(255, 255, 255, 0.82);
 
   font-size: 12px;
 

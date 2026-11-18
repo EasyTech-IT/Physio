@@ -285,9 +285,9 @@
 ========================================================= */
 
       :root {
-        --integralis-green: #55ad0b;
-        --integralis-green-dark: #438d08;
-        --integralis-green-light: #c4ee88;
+        --integralis-green: #3f7808;
+        --integralis-green-dark: #2f5c06;
+        --integralis-green-light: #dceec9;
         --integralis-bg: #f7f9f4;
         --integralis-dark: #303030;
         --integralis-muted: #666;
@@ -445,12 +445,7 @@
         display: grid;
         grid-template-columns: 1.05fr 0.95fr;
 
-        background: linear-gradient(
-          135deg,
-          #4fae08 0%,
-          #65bd18 55%,
-          #c4ee88 100%
-        );
+        background: linear-gradient(135deg, #004955 0%, #174a2d 100%);
 
         color: white;
       }
@@ -502,6 +497,8 @@
       .integralis-job-hero h2 {
         margin: 0 0 16px;
 
+        color: #ffffff;
+
         font-size: clamp(36px, 5vw, 58px);
 
         line-height: 0.98;
@@ -512,7 +509,7 @@
       .integralis-job-hero h2 span {
         display: block;
 
-        color: #eaffd3;
+        color: #dff0cd;
       }
 
       .integralis-job-hero-description {
@@ -2631,7 +2628,7 @@
         height: 100%;
         display: block;
         object-fit: cover;
-        transition: transform 0.5s ease;
+        transition: transform 280ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1));
       }
 
       .praxis-slide:hover img,
@@ -2646,9 +2643,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(0, 0, 0, 0.15);
+        background: rgba(0, 0, 0, 0.72);
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: opacity 180ms ease;
       }
 
       .praxis-slide:hover .praxis-slide-overlay,
@@ -2671,7 +2668,7 @@
       .praxis-video-overlay {
         flex-direction: column;
         gap: 12px;
-        background: rgba(0, 0, 0, 0.25);
+        background: rgba(0, 0, 0, 0.72);
       }
 
       .praxis-play-button {
@@ -2717,7 +2714,9 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 
         cursor: pointer;
-        transition: all 0.25s ease;
+        transition:
+          transform 180ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
+          background-color 180ms ease;
       }
 
       .praxis-carousel-btn:hover {
@@ -2772,7 +2771,7 @@
           opacity: 1;
           background: linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.72),
             transparent 40%
           );
           align-items: flex-end;
@@ -2789,7 +2788,7 @@
           opacity: 1;
           background: linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.72),
             transparent 55%
           );
         }

@@ -929,7 +929,7 @@
         height: 100%;
         display: block;
         object-fit: cover;
-        transition: transform 0.5s ease;
+        transition: transform 280ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1));
       }
 
       .praxis-slide:hover img,
@@ -944,9 +944,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(0, 0, 0, 0.15);
+        background: rgba(0, 0, 0, 0.72);
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: opacity 180ms ease;
       }
 
       .praxis-slide:hover .praxis-slide-overlay,
@@ -969,7 +969,7 @@
       .praxis-video-overlay {
         flex-direction: column;
         gap: 12px;
-        background: rgba(0, 0, 0, 0.25);
+        background: rgba(0, 0, 0, 0.72);
       }
 
       .praxis-play-button {
@@ -1015,7 +1015,9 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 
         cursor: pointer;
-        transition: all 0.25s ease;
+        transition:
+          transform 180ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
+          background-color 180ms ease;
       }
 
       .praxis-carousel-btn:hover {
@@ -1070,7 +1072,7 @@
           opacity: 1;
           background: linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.72),
             transparent 40%
           );
           align-items: flex-end;
@@ -1087,7 +1089,7 @@
           opacity: 1;
           background: linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.72),
             transparent 55%
           );
         }
