@@ -87,8 +87,8 @@ h6,
 .btn-primary:focus,
 .btn-primary:hover {
   color: var(--white) !important;
-  background-color: var(--primary-dark) !important;
-  border-color: var(--primary-dark) !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
 }
 
 a:focus-visible,
@@ -198,9 +198,19 @@ select:focus-visible {
     color: var(--white);
   }
 
+  .mobile-contact-call:hover,
+  .mobile-contact-call:hover * {
+    color: var(--white) !important;
+  }
+
   .mobile-contact-message {
     background: var(--secondary-light);
     color: var(--secondary-dark);
+  }
+
+  .mobile-contact-message:hover,
+  .mobile-contact-message:hover * {
+    color: var(--secondary-dark) !important;
   }
 
   .back-to-top {
@@ -827,14 +837,19 @@ button:active,
 .btn.btn-primary:hover {
   box-shadow: none !important;
   color: var(--white) !important;
-  background-color: var(--primary-dark) !important;
-  border-color: var(--primary-dark) !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
 }
 
 .btn-primary:hover .text-primary,
 .btn-primary:focus .text-primary,
 .btn-primary:hover *,
 .btn-primary:focus * {
+  color: var(--white) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:hover * {
   color: var(--white) !important;
 }
 
@@ -874,8 +889,8 @@ button:active,
 
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
-  background-color: var(--primary-dark) !important;
-  border-color: var(--primary-dark) !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
 }
 
 .btn-hover {
@@ -963,6 +978,7 @@ button:active,
 .topbar {
   padding: 2px 10px 2px 20px;
   background: var(--bs-primary) !important;
+  color: var(--white);
 }
 
 .topbar a,
@@ -971,8 +987,9 @@ button:active,
 }
 
 .topbar a:hover,
-.topbar a i:hover {
-  color: var(--bs-secondary) !important;
+.topbar a i:hover,
+.topbar a:hover * {
+  color: var(--white) !important;
 }
 
 @media (max-width: 576px) {
@@ -1040,6 +1057,16 @@ button:active,
 .dropdown .dropdown-menu a:hover {
   background: var(--bs-primary);
   color: var(--bs-white);
+}
+
+.dropdown .dropdown-menu a:hover *,
+.process-step:hover .process-step-icon *,
+.team .team-item:hover .team-content *,
+.testimonial .testimonial-carousel .owl-nav .owl-prev:hover *,
+.testimonial .testimonial-carousel .owl-nav .owl-next:hover *,
+.compliance-button:hover *,
+.compliance-quick-access:hover * {
+  color: var(--white) !important;
 }
 
 .navbar .nav-item:hover .dropdown-menu {
@@ -1599,6 +1626,11 @@ button:active,
   color: #ffffff;
 }
 
+.service-main-cta-button:hover *,
+.team-modern-job-button:hover * {
+  color: #ffffff !important;
+}
+
 .service-main-cta-button i {
   font-size: 12px;
 }
@@ -1990,7 +2022,12 @@ button:active,
 .appointment .appointment-form .btn.btn-primary:hover {
   box-shadow: none !important;
   color: var(--white) !important;
-  background: var(--primary-dark) !important;
+  background: var(--primary) !important;
+}
+
+.appointment .appointment-form .btn.btn-primary:hover,
+.appointment .appointment-form .btn.btn-primary:hover * {
+  color: var(--white) !important;
 }
 
 .appointment-steps {

@@ -64,7 +64,9 @@
 
 .compliance-button:hover,
 .compliance-button:focus-visible {
-  background: var(--primary-dark);
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
 }
 
 .compliance-button--secondary {
@@ -100,7 +102,8 @@
 
 .compliance-quick-access:hover,
 .compliance-quick-access:focus-visible {
-  background: var(--primary-dark);
+  background: var(--primary);
+  color: var(--white);
 }
 
 .compliance-quick-access svg {
