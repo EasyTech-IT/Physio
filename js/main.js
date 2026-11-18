@@ -380,11 +380,11 @@
         '<i class="fas fa-angle-right me-2"></i>' +
         "Kontakt" +
         "</a>" +
-        '<a href="#impressum" data-legal-modal="#impressumModal">' +
+        '<a href="impressum.html">' +
         '<i class="fas fa-angle-right me-2"></i>' +
         "Impressum" +
         "</a>" +
-        '<a href="#datenschutz" data-legal-modal="#datenschutzModal">' +
+        '<a href="datenschutz.html">' +
         '<i class="fas fa-angle-right me-2"></i>' +
         "Datenschutz" +
         "</a>" +
@@ -744,12 +744,6 @@
         openServiceModal(requestedName);
       }
     }
-
-    $(".footer [data-legal-modal]").on("click", function (event) {
-      event.preventDefault();
-      var modal = document.querySelector($(this).attr("data-legal-modal"));
-      (bootstrap.Modal.getInstance(modal) || new bootstrap.Modal(modal)).show();
-    });
 
     var clearModalOverlay = function () {
       if (!$(".modal.show").length) {
